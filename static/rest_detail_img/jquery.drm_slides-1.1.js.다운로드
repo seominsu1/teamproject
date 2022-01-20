@@ -1,0 +1,295 @@
+/*
+* Slides, A Slideshow Plugin for jQuery
+* Intructions: http://slidesjs.com
+* By: Nathan Searles, http://nathansearles.com
+* Version: 1.0
+* Updated: November 21st, 2010
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+* 2011-07-26 : Version: 1.0
+* 	-. Modified:  by drm
+*
+* 2012-06-20 : Version 1.1
+*		-. append option.cb_next, option.cb_prev callback function
+*
+*/
+
+(function($) {
+	$.fn.slides = function( option ) {
+
+		// override defaults with specified option
+		option = $.extend( {}, $.fn.slides.option, option );
+
+		return this.each(function() {
+
+			// wrap slides in control container, make sure slides are block level
+			$('.' + option.container, $(this)).children().wrapAll('<div class="slides_control"/>').children().css({
+				display:'block'
+			});
+
+			var elem = $(this),
+				control = $('.slides_control', elem),
+				total = control.children().size(),
+				width = control.children().outerWidth(),
+				height = control.children().outerHeight(),
+				start = option.start - 1,
+				next = 0, prev = 0, number = 0, current = 0, loaded, active, clicked, position, direction,
+				disp_num = (option.disp_num > total ? total : option.disp_num),
+				animate_direction = ((option.animate_direction == 'prev') ? 'prev' : 'next'),
+				movable = (disp_num < total);
+
+			// 2 or more slides required
+			if (total < 2) {
+				return;
+			}
+
+			// change current based on start option number
+			if (option.start) {
+				current = start;
+			};
+
+			// set width based on slide width
+			/*
+			elem.css({
+				//-- width: (width * disp_num),
+			});
+			*/
+
+			// make sure overflow is hidden
+			$('.' + option.container, elem).css({
+				overflow: 'hidden',
+				width: (width * disp_num),
+				// fix for ie
+				position: 'relative'
+			});
+
+			control.css({
+				position: 'relative',
+				// size of control width
+				width: (width * (disp_num + 2)),
+				// set height to slide height
+				height: height,
+				// center control to slide
+				left: -width,
+				display: 'none'
+			});
+
+			// set css for slides
+			control.children().css({
+				position: 'absolute',
+				top: 0,
+				left: width,
+				zIndex: 0,
+				display: 'none'
+			});
+
+			for (var n_ii = 0; n_ii < disp_num; n_ii++) {
+				control.children(':eq(' + pos(start+n_ii) + ')').css({ left: ((n_ii + 1) * width), display: 'block' });
+			}
+			control.fadeIn(option.fadeSpeed, function() {
+				// let the script know everything is loaded
+				loaded = true;
+			});
+
+			// click slide for next
+			if (option.bigTarget) {
+				// set cursor to pointer
+				control.children().css({
+					cursor: 'pointer'
+				});
+				// click handler
+				control.children().click(function() {
+					// animate to next on slide click
+					animate(animate_direction);
+					return false;
+				});
+			}
+
+			// pause on mouseover
+			if (option.hoverPause && option.play) {
+				control.children().bind('mouseenter mouseover', function() {
+					// on mouse over stop
+					stop();
+				});
+				control.children().bind('mouseleave mouseout', function() {
+					// on mouse leave start pause timeout
+					pause();
+				});
+			}
+
+			// next button
+			$('.' + option.next, elem).click(function(e) {
+				e.preventDefault();
+				if (option.play) {
+					pause();
+				};
+				animate('next');
+				if (typeof(option.cb_next) == 'function') {
+					option.cb_next(elem);
+				}
+				if (option.autochange_direction) {
+					animate_direction = 'next';
+				}
+			});
+
+			// previous button
+			$('.' + option.prev, elem).click(function(e) {
+				e.preventDefault();
+				if (option.play) {
+					 pause();
+				};
+				animate('prev');
+				if (typeof(option.cb_prev) == 'function') {
+					option.cb_prev(elem);
+				}
+				if (option.autochange_direction) {
+					animate_direction = 'prev';
+				}
+			});
+
+			if (option.play) {
+				// set interval
+				playInterval = setInterval(function() {
+					animate(animate_direction);
+				}, (option.play + option.play_delay));
+				// store interval id
+				elem.data('interval', playInterval);
+			};
+
+			function stop() {
+				// clear interval from stored id
+				clearInterval(elem.data('interval'));
+				clearTimeout(elem.data('pause'));
+			};
+
+			function pause() {
+				if (option.pause) {
+					// clear timeout and interval
+					clearTimeout(elem.data('pause'));
+					clearInterval(elem.data('interval'));
+					// pause slide show for option.pause amount
+					pauseTimeout = setTimeout(function() {
+						// clear pause timeout
+						clearTimeout(elem.data('pause'));
+						// start play interval after pause
+						playInterval = setInterval(	function() {
+							animate(animate_direction);
+						}, option.play);
+						// store play interval
+						elem.data('interval', playInterval);
+					}, option.pause);
+					// store pause interval
+					elem.data('pause', pauseTimeout);
+				}
+				else {
+					// if no pause, just stop
+					stop();
+				}
+			};
+
+			// animate slides
+			function animate(direction, clicked) {
+				if (!active && loaded && movable) {
+					active = true;
+					switch(direction) {
+						case 'next':
+							prev = current;
+							// get next from current + 1
+							next = pos(current + 1);
+							// set position of next slide to right of previous
+							position = width * 2;
+							// distance to slide based on width of slides
+							direction = -width * 2;
+							// store new current slide
+							current = next;
+						break;
+						case 'prev':
+							prev = current;
+							next = pos(current - 1);
+							// set position of next slide to left of previous
+							position = 0;
+							// distance to slide based on width of slides
+							direction = 0;
+							// store new current slide
+							current = next;
+						break;
+					}
+
+					// move next slide to right of previous
+					for (var n_ii = 0; n_ii < disp_num; n_ii++) {
+						control.children(':eq('+ pos(next + n_ii) +')').css({
+							left: (position + (n_ii * width)),
+							display: 'block'
+						});
+					}
+
+					// animate control
+					control.animate({ left: direction }, option.slideSpeed, function() {
+						// after animation reset control position
+						control.css({
+							left: -width
+						});
+						var n_pos;
+						for (var n_ii = 0; n_ii < total; n_ii++) {
+							n_pos = pos(next + n_ii);
+							if (n_ii < disp_num) {
+								// reset and show next
+								control.children(':eq('+ n_pos +')').css({
+									left: ((n_ii + 1) * width),
+									zIndex: 5
+								});
+							}
+							else {
+								control.children(':eq('+ n_pos +')').css({
+									left: width,
+									display: 'none',
+									zIndex: 0
+								});
+							}
+						}
+						// end of animation
+						active = false;
+					});
+				}
+			}; // end animate function
+
+			//-- [drm]
+			function pos(p_idx) {
+				p_idx %= total;
+				return (p_idx < 0) ? total+p_idx : p_idx;
+			}
+		});
+	};
+
+	// default options
+	$.fn.slides.option = {
+		container: 'slides_container', // string, Class name for slides container. Default is "slides_container"
+		next: 'next', // string, Class name for next button
+		prev: 'prev', // string, Class name for previous button
+		fadeSpeed: 350, // number, Set the speed of the fading animation in milliseconds
+		slideSpeed: 350, // number, Set the speed of the sliding animation in milliseconds
+		start: 1, // number, Set the speed of the sliding animation in milliseconds
+		play_delay:0,	// number, delay Autoplay slideshow interval in milliseconds
+		play: 0, // number, Autoplay slideshow, a positive number will set to true and be the time between slide animation in milliseconds
+		pause: 0, // number, Pause slideshow on click of next/prev or pagination. A positive number will set to true and be the time of pause in milliseconds
+		hoverPause: false, // boolean, Set to true and hovering over slideshow will pause it
+		bigTarget: false, // boolean, Set to true and the whole slide will link to next slide on click
+		//--[drm]
+		animate_direction: 'next',
+		autochange_direction: true,
+		disp_num: 1,
+		cb_next:null,
+		cb_prev:null
+	};
+})(jQuery);

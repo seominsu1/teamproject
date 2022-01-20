@@ -1,0 +1,69 @@
+/*---
+*     drm_disp_elem_110717.js
+*
+*     최종수정일 :
+*              2014-03-12
+*                -. p_fn_cb(p_idx) 추가 - 출력수행시 callback 처리
+*                -. 이전 drm_disp_elem_110717.js, disp_elem_110717.js 을 통합
+*                -. p_n_grp_cnt parameter 버전 deprecated
+*              2011-07-26
+*                -. p_n_start값 null일시 전체random 선정기능 추가
+*                -. p_n_grp_cnt설정시 2개 그룹별 random출력 기능 추가 -> deprecated
+*
+*     작성일 : 2011-07-17
+*
+*     jquery selector p_jq_sel_src의 elements를 p_jq_sel_tar에 출력
+*
+*     p_jq_sel_src : source jquery selector
+*     p_jq_sel_tar : target jquery selector
+*     p_n_start    : 출력시작 element index (0 base), null일시 random 선택
+*     p_n_disp_cnt : 출력 element 갯수 (p_n_start + p_n_disp_cnt가 주어진 index초과시 첫element부터 순환선정)
+*     p_is_shake : element의 shake수행 여부
+*     p_n_timer_msec : > 0 값이 주어진경우 window.setInterval 적용
+*
+*     ex) fn_disp_elem_min(('#source li'), ('#target ul'), 3, 5, false, 0);   - 4번 element부터 5개를 순서대로 출력
+*     ex) fn_disp_elem_min(('#source li'), ('#target ul'), null, 5, true, 0); - 전체 elements중에 5개를 random 출력
+*     ex) fn_disp_elem_min(('#source li'), ('#target ul'), 0, 5, true, 0);    - 1 - 5번 element를 random 순서로 출력
+*     ex) fn_disp_elem_min(('#source li'), ('#target ul'), 0, 5, true, 2000); - 1 - 5번 element를 random 순서로 출력 후 2초마다 start를 증가하며 출력
+*
+---*/
+	//-- ex) fn_disp_elem_min(('#weekRest_data li'), ('#weekRest ul'), 0, 10, false, -1);
+	//-- 공통함수 - minimized
+	function fn_disp_elem_min(p_jq_sel_src, p_jq_sel_tar, p_n_start, p_n_disp_cnt, p_is_shake, p_n_timer_msec, p_fn_cb) {
+		var fn_array_shake = (p_is_shake ? (function(p_arr) { for (var i = (p_arr.length - 1); i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var o_tmp = p_arr[j]; p_arr[j] = p_arr[i]; p_arr[i] = o_tmp; } return p_arr; }) : (function(p_arr) { return p_arr; }));
+		var arr = fn_array_shake($.makeArray($(p_jq_sel_src).clone()));
+		p_n_start = (arr[p_n_start %= arr.length] ? p_n_start : Math.floor(Math.random() * arr.length));
+		p_n_disp_cnt = (arr[p_n_disp_cnt - 1] ? p_n_disp_cnt : ((p_n_disp_cnt <= 0) ? 0 : arr.length));
+		$((((p_n_start + p_n_disp_cnt) > arr.length) ? arr.concat(arr) : arr).splice(p_n_start, p_n_disp_cnt)).appendTo($(p_jq_sel_tar).empty());
+		//-- $((arr.concat(arr)).splice((arr[(p_n_start %= arr.length)] ? p_n_start : 0), (arr[p_n_disp_cnt - 1] ? p_n_disp_cnt : ((p_n_disp_cnt <= 0) ? 0 : arr.length)))).appendTo($(p_jq_sel_tar).empty());
+		if (typeof(p_fn_cb) == 'function') { p_fn_cb(p_n_start); }
+		if (p_n_timer_msec > 0) { window.setInterval((function() { fn_disp_elem_min(p_jq_sel_src, p_jq_sel_tar, ++p_n_start, p_n_disp_cnt, false, 0, p_fn_cb);}), p_n_timer_msec); }
+	}
+	//-- 공통함수 - normal
+	function fn_disp_elem_normal(p_jq_sel_src, p_jq_sel_tar, p_n_start, p_n_disp_cnt, p_is_shake, p_n_timer_msec, p_fn_cb) {
+		var fn_array_shake = (function(p_arr) {
+			var i, j, o_tmp;
+			for (i = (p_arr.length - 1); i > 0; i--) {
+				j = Math.floor(Math.random() * (i + 1));
+				o_tmp = p_arr[j]; p_arr[j] = p_arr[i]; p_arr[i] = o_tmp;
+			}
+			return p_arr;
+		});
+		var jq_src = $(p_jq_sel_src).clone();
+		var jq_tar = $(p_jq_sel_tar).empty();
+		var arr = $.makeArray(jq_src);
+		if (p_is_shake) { arr = fn_array_shake(arr); }
+		p_n_start %= arr.length;
+		p_n_start = (arr[p_n_start] ? p_n_start : Math.floor(Math.random() * arr.length));
+		p_n_disp_cnt = (arr[p_n_disp_cnt - 1] ? p_n_disp_cnt : ((p_n_disp_cnt <= 0) ? 0 : arr.length));
+		if ((p_n_start + p_n_disp_cnt) > arr.length) {
+			arr = arr.concat(arr);
+		}
+		arr = arr.splice(p_n_start, p_n_disp_cnt);
+		$(arr).appendTo(jq_tar);
+		if (typeof(p_fn_cb) == 'function') { p_fn_cb(p_n_start); }
+		if (p_n_timer_msec > 0) {
+			var fn_timer = (function() { fn_disp_elem_normal(p_jq_sel_src, p_jq_sel_tar, ++p_n_start, p_n_disp_cnt, false, 0, p_fn_cb);});
+			window.setInterval(fn_timer, p_n_timer_msec);
+		}
+	}
