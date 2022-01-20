@@ -1,0 +1,2 @@
+//-- [20140529]-IsNumber deprecated
+function IsNumber(p_val) { return /^[\d]+$/.test(p_val); }

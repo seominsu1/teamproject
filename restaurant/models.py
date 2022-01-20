@@ -11,4 +11,6 @@ class restaurant(models.Model) :
     pic_url = models.CharField(max_length=200)  #음식점 사진 주소
     longitude = models.FloatField() #음식점 경도
     latitude = models.FloatField()  #음식점 위도
-
+    latitude = models.FloatField()  # 음식점 위도
+    large_cate=models.CharField(max_length=200) #음식점 대분류
+    small_cate=models.CharField(max_length=200) #음식점 소분류

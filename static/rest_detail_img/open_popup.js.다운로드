@@ -1,0 +1,184 @@
+//ÄíÆù
+function coupon_popup(vACode, vCpId, vParam_Except) {
+	var h = 600;
+	var w = 660;
+	var scr = 'yes';
+	var rs = 'no';
+//	var ntop = (screen.height- h) / 2;	2010.07.16 ÄÁÅÙÃ÷ ±èÀ±Áø ¿äÃ»
+	var ntop	= 0;
+//	var nleft = (screen.width - w) / 2;	2012.02.15 ÄÁÅÙÃ÷ÆÀ ¿äÃ»
+	var nleft	= 100;
+	var strWndName = 'coupon_popup';
+	vParam_Except = ((typeof(vParam_Except) == 'undefined') ? '' : ((vParam_Except.length > 0) ? ('&except=' + vParam_Except) : ''));
+	var strURL = '/restaurant/coupon/coupon_view.asp?acode=' + vACode + '&couponid=' + vCpId + vParam_Except;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(strURL, strWndName, strParam);
+	wnd.focus();
+}
+function coupon_popup2(vACode, vCpId, vParam_Except) {
+	var h = 600;
+	var w = 660;
+	var scr = 'yes';
+	var rs = 'no';
+//	var ntop = (screen.height- h) / 2;	2010.07.16 ÄÁÅÙÃ÷ ±èÀ±Áø ¿äÃ»
+	var ntop	= 0;
+//	var nleft = (screen.width - w) / 2;	2012.02.15 ÄÁÅÙÃ÷ÆÀ ¿äÃ»
+	var nleft	= 100;
+	var strWndName = 'coupon_popup';
+	vParam_Except = ((typeof(vParam_Except) == 'undefined') ? '' : ((vParam_Except.length > 0) ? ('&except=' + vParam_Except) : ''));
+	var strURL = '/restaurant/coupon/nh_coupon_view.asp?acode=' + vACode + '&couponid=' + vCpId + vParam_Except;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(strURL, strWndName, strParam);
+	wnd.focus();
+}
+//G¸¶ÄÏ»óÇ°Link
+function gmarket_popup(vGoodsCode) {
+	var strWndName = 'gmarket_popup';
+	var strURL = 'http://www.gmarket.co.kr/challenge/neo_goods/goods.asp?goodscode=' + vGoodsCode;
+	//-- strURL = 'http://gen.gmarket.co.kr/challenge/neo_goods/html_goods/goods_' + vGoodsCode + '.asp?goodscode=' + vGoodsCode;
+	if (vGoodsCode.length > 0) {
+		var wnd = window.open(strURL, strWndName);
+		wnd.focus();
+	}
+}
+//À½½ÄÁ¡ »çÁø
+function photo_view_popup(vACode, vDefPic, vParam_Except) {
+	var h = 780;
+	var w = 780;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 2;
+	var nleft = (screen.width - w) / 2;
+	var wndnm = 'rimg_view_popup';
+	vParam_Except = ((typeof(vParam_Except) == 'undefined') ? '' : ((vParam_Except.length > 0) ? ('&except=' + vParam_Except) : ''));
+	var url = '/restaurant/onepage/common/photo_view.asp?acode=' + vACode + '&defpic=' + encodeURIComponent(vDefPic) + vParam_Except;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//À½½ÄÁ¡ µ¿¿µ»ó
+function movie_view_popup(vACode, vType, vParam_Except) {
+	var h = 500;
+	var w = 780;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 2;
+	var nleft = (screen.width - w) / 2;
+	var wndnm = 'rimg_view_popup';
+	vParam_Except = ((typeof(vParam_Except) == 'undefined') ? '' : ((vParam_Except.length > 0) ? ('&except=' + vParam_Except) : ''));
+	var url = '/restaurant/onepage/common/movie_view.asp?acode=' + vACode + '&type=' + vType + vParam_Except;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//ÃßÃµ¸ÞÀÏ º¸³»±â
+function recommMail_popup(acode, aname) {
+	var h = 500;
+	var w = 500;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 3;
+	var nleft = (screen.width - w) / 3;
+	var wndnm = 'recommMail_popup';
+	var url = '/restaurant/onepage/common/send_recomm_mail_popup.asp?acode=' + acode + '&aname=' + aname;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//»çÀå´Ô²² º¸³»±â
+function topresMail_popup(acode, aname) {
+	var h = 800;
+	var w = 500;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 3;
+	var nleft = (screen.width - w) / 3;
+	var wndnm = 'topresMail_popup';
+	var url = '/restaurant/onepage/common/send_topres_mail_popup.asp?acode=' + acode + '&aname=' + aname;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//¸ð¹ÙÀÏ·Î ÀúÀå
+function mobileWrite_popup(acode) {
+	var h = 800;
+	var w = 500;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 3;
+	var nleft = (screen.width - w) / 3;
+	var wndnm = 'topresMail_popup';
+	var url = '/restaurant/onepage/common/mobile_write_popup.asp?acode=' + acode
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//¿À·ù½Å°í
+function errorWrite_popup(currentPage) {
+	var h = 755;
+	var w = 535;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 3;
+	var nleft = (screen.width - w) / 3;
+	var wndnm = 'errorReport_popup';
+	var url = '/restaurant/onepage/common/send_error_report_popup.asp?ErrorPageURL=' + currentPage;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//ºí·¯±×
+function onepage_blogpopup(vAcode) {
+	var h = 750;
+	var w = 657;
+	var scr = 'yes';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 2;
+	var nleft = (screen.width - w) / 2;
+	var wndnm = 'blog_popup';
+	var url = '/Restaurant/Onepage/Blog/webver.asp?acode=' + vAcode;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.window.focus();
+}
+//Áöµµ
+function map_view_popup(vACode, vX, vY, vName) {
+	var h = 500;
+	var w = 610;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 2;
+	var nleft = (screen.width - w) / 2;
+	var wndnm = 'map_view_popup';
+
+	vX = parseInt(vX, 10);
+	vY = parseInt(vY, 10);
+	vX = ((vX > 0) ? vX : 0);
+	vY = ((vY > 0) ? vY : 0);
+	if ((vX <= 0) || (vY <= 0)) {
+		return;
+	}
+
+	vName = (((vName||'').length > 0) ? ('&title=' + vName) : '');
+	vACode = ((((vACode||'').length == 7) ? ('&acode=' + vACode) : ''));
+	//var url = '/map/popup/popup_mapview.asp?acode=' + vACode + vX + vY + vName;
+	var url = '/map/app/onepage_map_v201201.asp?x=' + vX + '&y=' + vY + vName + vACode;
+
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=yes,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
+//ÁöÇÏÃ¶°Ë»ö
+function subway_popup() {
+	var w = 800;
+	var h = 600;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 2;
+	var nleft = (screen.width - w) / 2;
+	var wndnm = 'subway_popup';
+	var url = '/restaurant/search/subway_search.asp';
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
