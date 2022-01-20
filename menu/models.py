@@ -8,3 +8,4 @@ class Menu(models.Model):
     img_url=models.CharField(max_length=200)     #이미지
     ingredient=models.CharField(max_length=200) #재료
     restaurant=models.ForeignKey(restaurant,on_delete=models.CASCADE)
+

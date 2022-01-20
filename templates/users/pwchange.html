@@ -1,0 +1,130 @@
+{% extends 'usersbase.html' %}
+{% block contect %}
+
+<section data-baseweb="block" id="signup__wrapper" class="fw bm bd bp hd em en dk ba eo ep eq er dg es bb">
+    <div data-baseweb="block" class="et eu ev bm bd bp el dk al ew">
+        <div data-baseweb="block" class="qu et eu ev an he el af hf hg hh hi">
+        </div>
+        <div data-baseweb="block" class="bp ex ey eo ep ez eq er f0 dg es f1 f2 ba bb g9">
+            <div data-baseweb="block" class="container-inner l2 cs ba eo d5 f4 d6 eq f6 f7 f8 dg fa fb fc bh do bc">
+                <div data-baseweb="block" class="cx fd fe ff fg fh fi fj fk fl fm fn fo fp fq">
+                    <div data-baseweb="block" class="hk hm l3 lq bp g9 cx hl">
+                        <div class="nz">
+                            <div class="bp">
+                                <div class="o0 o1 o2">
+                                    <div class="bm hs">
+                                        <h1 class="gd o3 ch o4 o5 o6 du o7 o8 o9 dy oa hv l2 hx hy bp">
+                                            회원 정보 변경
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="hp hq hr">
+                                    <div class="l2 hx cf fr fs e5 l9 i9 la ib ic id ie if ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz j0 j1 j2 j3 j4 j5 j6 j7 j8 j9 ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz k0 k1 k2 k3 k4 k5 k6 k7 k8 k9 ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz l0 l1">
+                                        <p class="cmln__paragraph">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div method="Post" data-baseweb="block" class="hk hm l3 ob bp g9 cx hl">
+                        <form method="Post" novalidate="" class="al cs gc og oh oi">
+                            {% csrf_token %}
+                            <div class="bm hs">
+                                <h2 class="oj ok cf ol ch om hv hw hx hy bp">
+                                    New Password
+                                </h2>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp on">
+                                <div class="bd">
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp on">
+                                <div data-baseweb="select" aria-haspopup="true" aria-expanded="false" class="cf fr fs e5 dn bd bp">
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp b7">
+                                <div class="bd">
+                                </div>
+                            </div>
+                            <div class="bf po nk">
+                                <div class="pp pq">
+                                    <div data-baseweb="form-control-container" class="bp on">
+                                        <div class="bd">
+                                            <div data-baseweb="input" class="dn bm al bp oo op oq or os ot ou fu ov c9 ow e8 e9 e6 e7 cf fr fs e5 ox oy oz p0 ee p1 p2">
+                                                <div data-baseweb="base-input" class="bm bp p3 c9 ow cf fr fs e5 cr ee">
+                                                    <div class="dn cs bx bz by c0 c1 c3 c2 c4 be bp p4 ex p5 hy cn co p6 p7 cf fr fs e5 cr p8 p9" data-e2e-id="msf.input.accountEmail" style="font-size:1.8em">
+                                                        {{ user.username }}
+                                                        <span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pp pq">
+                                    <div data-baseweb="form-control-container" class="bp on">
+                                        <div class="bd">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp on">
+                                <div class="bd">
+                                    <div data-baseweb="input" class="dn bm al bp oo op oq or os ot ou fu ov c9 ow e8 e9 e6 e7 cf fr fs e5 ox oy oz p0 ee p1 p2">
+                                        <div data-baseweb="base-input" class="bm bp p3 c9 ow cf fr fs e5 cr ee">
+                                            <input inputmode="text" name="old_password" placeholder="Old password" type="Password" data-e2e-id="msf.input.accountEmail" spellcheck="" class="dn cs bx bz by c0 c1 c3 c2 c4 be bp p4 ex p5 hy cn co p6 p7 cf fr fs e5 cr p8 p9" value="">
+                                            <span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp on">
+                                <div class="bd">
+                                    <div data-baseweb="input" class="dn bm al bp oo op oq or os ot ou fu ov c9 ow e8 e9 e6 e7 cf fr fs e5 ox oy oz p0 ee p1 p2">
+                                        <div data-baseweb="base-input" class="bm bp p3 c9 ow cf fr fs e5 cr ee">
+                                            <input inputmode="text" name="new_password1" placeholder="New password" type="Password" data-e2e-id="msf.input.accountEmail" spellcheck="" class="dn cs bx bz by c0 c1 c3 c2 c4 be bp p4 ex p5 hy cn co p6 p7 cf fr fs e5 cr p8 p9" value="">
+                                            <span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp on">
+                                <div class="bd">
+                                    <div data-baseweb="input" class="dn bm al bp oo op oq or os ot ou fu ov c9 ow e8 e9 e6 e7 cf fr fs e5 ox oy oz p0 ee p1 p2">
+                                        <div data-baseweb="base-input" class="bm bp p3 c9 ow cf fr fs e5 cr ee">
+                                            <input inputmode="text" name="new_password2" placeholder="New password confirmation" type="Password" data-e2e-id="msf.input.accountEmail" spellcheck="" class="dn cs bx bz by c0 c1 c3 c2 c4 be bp p4 ex p5 hy cn co p6 p7 cf fr fs e5 cr p8 p9" value="">
+                                            <span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp on">
+                                <div data-baseweb="phone-input-next" class="bm">
+                                    <div data-baseweb="select" aria-haspopup="true" aria-expanded="false" class="cf fr fs e5 dn bd gb lx pr b8">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-baseweb="form-control-container" class="bp b7">
+                                <div data-baseweb="select" aria-haspopup="true" aria-expanded="false" class="cf fr fs e5 dn bd bp">
+                                </div>
+                            </div>
+                            <div class="cf nv fs lu q4 q5 hw hx cf fr fs e5 i8 i9 ia ib ic id ie if ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz j0 j1 j2 j3 j4 j5 j6 j7 j8 j9 ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz k0 k1 k2 k3 k4 k5 k6 k7 k8 k9 ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz l0 l1">
+                                기존 비밀번호는 사용이 불가능하며, 새로운 비밀번호를 사용해 주시기 바랍니다.
+                            </div>
+                            <button id="submitButton" type="submit" data-baseweb="button" aria-label="Submit Form" data-e2e-id="msf.submit-button" class="bu bv bo bw bx by bz c0 c1 c2 c3 c4 be c5 c6 c7 c8 c9 ca cb cc h6 q6 b8 b6 bj b7 cf fr ch lu e6 e7 e8 e9 q7 q8 q9 qa gc fw h7 h8 bp">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
