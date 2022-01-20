@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app01 import views
+from restaurant import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test', views.home),
-    path('map', views.rest_map),
-    path('staff/restInput', views.rest_input),
-
+    path('main', views.main_page),
 ]

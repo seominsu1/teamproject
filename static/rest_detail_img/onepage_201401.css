@@ -1,0 +1,1236 @@
+@import url(/common/style/common2011/basic.css);
+@charset "euc-kr";
+
+/******* 원페이지 *******/
+html {/*overflow-y:scroll; height:100%;*/}
+body	{height:100%; margin:0; padding:0; font-family:Dotum, "돋움"; font-size:12px; color:#4b4b4b;
+
+scrollbar-face-color:#ffffff;
+scrollbar-arrow-color:#9ba7be;
+scrollbar-track-color:#eeeeee;
+scrollbar-highlight-color:#ffffff;
+scrollbar-shadow-color:#eeeeee;
+scrollbar-darkshadow-color:#dedede;
+scrollbar-3dlight-color:#eeeeee;
+
+}
+
+img		{border:0; -ms-interpolation-mode:bicubic; }
+a			{text-decoration:none; color:#4b4b4b; blr:expression(this.onFocus=this.blur());}
+a:hover	{text-decoration:underline;}
+ul, ol, li	{margin:0; padding:0; list-style:none;}
+div, li, dl, dt, dd	{margin:0; padding:0;}
+h1, h2, h3, h4, h5	{margin:0; padding:0;}
+input, textarea, select	{font-family:돋움; font-size:12px; color:#858585; margin:0; padding:0;}
+form, p, fieldset	{margin:0; padding:0;}
+table, tr, th, td	{margin:0; padding:0; border-collapse:collapse;}
+input {margin:0; padding:0;}
+form, fieldset {padding:0px; margin:0px; border:0px;}
+legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0px;}
+
+.none {display:none;}
+.hide {display:none;}
+.pointer {cursor:pointer}
+
+/* H-Margin */
+.hSpace10	{clear:both; height:10px;}
+.hSpace20	{clear:both; height:20px;}
+.hSpace30	{clear:both; height:30px;}
+.hSpace40	{clear:both; height:40px;}
+.hSpace50	{clear:both; height:50px;}
+.hSpace60	{clear:both; height:60px;}
+.hSpace70	{clear:both; height:70px;}
+
+.WrapTop	{position:fixed; _position:absolute; top:0px; left:0px; z-index:10000;  clear:both; width:100%; height:171px; text-align:left; margin:0 auto; background:url(/image/restaurant/onepage/bg_navi_171.png) repeat-x;}
+.WrapMain	{position:relative; clear:both; width:980px; text-align:left; margin:0 auto; z-index:1; }
+.WrapFooter	{clear:both; width:980px; text-align:center; margin:0 auto;}
+
+/* _C버젼용 */
+.WrapTop_c	{clear:both; width:100%; height:141px; text-align:left; margin:0 auto;  background:url(/image/restaurant/onepage/bg_navi_141.png) repeat-x;}
+.WrapTop_c .container	{width:980px; height:143px; margin:0 auto; }
+.WrapMain_c				{position:relative; clear:both; width:980px; text-align:left; margin:0 auto; z-index:1;}
+
+/********** Top 영역 **********/
+.WrapTop  {}
+.WrapTop .container	{position:relative; width:980px; height:143px; margin:0 auto;}
+
+.container .header  {clear:both; padding:8px 0 0 0; height:43px;}
+.container .header .logo		{float:left; padding:2px 0 0;}
+.container .header .logo a {}
+.container .header .login 	{float:right;}
+.container .header .login a	{}
+.container .header .login span	{float:left;}
+.container .header .login ul 				{float:left; padding:4px 0px 0 4px;}
+.container .header .login ul	li		{float:left; padding:0 0 0 12px;}
+.container .header .login ul	li a 	{font:normal 11px 'Dotum'; letter-spacing:0px; color:#d4d6df; text-decoration:none;}
+
+.container .store				{clear:both; width:980px;  overflow:hidden; white-space:nowrap;}
+.container .store .storeName	{float:left; display:inline-block; margin:9px 10px 0 0; font:normal 45px 'Dotum'; line-height:100%; letter-spacing:-4px; color:#ffffff;}
+.container .store .ranking		{height:21px; font:normal 12px 'Dotum'; line-height:100%;  color:#d4d6df;}
+.container .store .ranking .tit {width:75px; height:21px; display:inline-block; float:left;}
+.container .store .ranking .weeklyRanking	{display:inline-block; height:16px; float:left; padding:5px 5px 0 10px; background:#6b6d79; }
+.container .store .ranking .nowRanking		{display:inline-block; height:16px; float:left; padding:5px 10px 0 10px; background:#6b6d79;}
+.container .store .ranking .weeklyRanking strong, .container .store .ranking .nowRanking strong {letter-spacing:-1px;}
+
+.container .navi {position:relative; float:right; margin:4px 0 0 0; display:inline;}
+.container .navi li { float:left; padding:0 0 0 1px; display:inline;}
+.container .navi .icMeganda	{position:absolute; top:-5px; right:181px;}
+
+
+
+
+/********** Main 영역 **********/
+.WrapMain	{position:relative; top:174px; left:0; z-index:100;}
+
+
+/***** layer 평가하기1 *****/
+/*-- [drm][20121029][close] maininfo_point.inc
+.layerPoint	{
+	position:absolute; top:40px; right:0px; width:418px; height:438px; background:#ffffff; border:1px solid #aeafb2; z-index:30;
+  -moz-box-shadow: 0px 1px 2px #ccc;
+  -webkit-box-shadow: 0px 1px 2px #ccc;
+  box-shadow: 0px 1px 2px #ccc;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=-180, Strength=3);
+}
+.layerPoint .topPoint	{clear:both; margin:18px 0 0 37px; width:345px;}
+.layerPoint .topPoint h4	{}
+.layerPoint .topPoint p		{margin:5px 0 0 0; font:normal 11px 'Dotum'; letter-spacing:0px; color:#adadad;}
+.layerPoint .tablePoint	{float:left; margin:8px 0 0 37px; width:340px; border-top:2px solid #e0e0e0;}
+.layerPoint .tablePoint .pointNavi	{float:left; padding:6px 0 3px 0; display:inline; width:340px; border-bottom:1px solid #eeeeee; font:bold 11px 'Dotum'; letter-spacing:0px; color:#585858;}
+.layerPoint .tablePoint .pointNavi .nItem	{margin:0 0 0 50px;}
+.layerPoint .tablePoint .pointNavi .nStar	{margin:0 0 0 100px;}
+.layerPoint .tablePoint .pointNavi .nPoint	{margin:0 0 0 15px;  font:normal 11px 'Dotum'; letter-spacing:0px; color:#adadad;}
+.layerPoint .tablePoint .pointList	{float:left; width:340px; padding:5px 0 3px 0; border-bottom:1px solid #eeeeee;}
+.layerPoint .tablePoint .pointList .listItem	{float:left; margin:5px 0 3px 0;}
+.layerPoint .tablePoint .pointList .listItem .itemStar		{float:left; width:124px; font:normal 12px 'Dotum'; letter-spacing:0px; color:#4b4b4b; text-align:center; }
+.layerPoint .tablePoint .pointList .listItem .makeStar		{position:relative; top:-2px; left:20px; float:left; margin:0 25px 0 0; width:90px; }
+.layerPoint .tablePoint .pointList .listItem .makeStar a img	 {float:left; margin:0 2px 0 0;}
+.layerPoint .tablePoint .pointList .listItem .pointStar	{float:left; width:35px; font:normal 12px 'Dotum'; letter-spacing:1px; color:#db6565; text-align:right;}
+.layerPoint .tablePoint .pointTotal	{position:relative; float:left; margin:2px 0 0 0; padding:6px 0 3px 0; width:340px; background:#ffede2;}
+.layerPoint .tablePoint .pointTotal .totalItem	{float:left; width:120px; font:bold 12px 'Dotum'; letter-spacing:0px; color:#db6565; text-align:center;}
+.layerPoint .tablePoint .pointTotal .totalPoint	{float:right; margin:0 35px 0 0; display:inline; font:normal 12px 'Dotum'; letter-spacing:1px; color:#908f90; text-align:right;}
+.layerPoint .tablePoint .pointTotal .totalPoint p		{float:left;  padding:0 5px 0 0; font:bold 12px 'Dotum'; letter-spacing:1px; color:#db6565; text-align:right;}
+.layerPoint .tablePoint .pointTotal .totalBtn	{position:absolute; top:3px; right:5px;}
+.layerPoint .writePoint	{float:left; width:340px; margin:17px 0 0 37px;}
+.layerPoint .writePoint dt	{float:left; width:340px; margin:0 0 2px 0;}
+.layerPoint .writePoint .nWrite	{float:left; font:bold 11px 'Dotum'; letter-spacing:0px; color:#585858;}
+.layerPoint .writePoint .nByte	 {float:right; font:normal 11px 'Dotum';}
+.layerPoint .writePoint .writeDetail	{}
+.layerPoint .writePoint .writeDetail textarea	{width:320px; height:70px; padding:10px; border:1px solid #dedede; font:normal 12px 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+.layerPoint .writePoint .btnRegist	{float:left; width:340px; margin:4px 0 0 120px; display:inline;}
+.layerPoint .bottomPoint	{clear:both; position:absolute; bottom:0; left:0; width:418px; height:61px; background: url(/image/restaurant/onepage/bg_point.gif) no-repeat; font:normal 11px 'Dotum'; letter-spacing:0px; color:#adadad;}
+.layerPoint .bottomPoint dt	{float:left; margin:19px 0 0 89px; width:300px; display:inline;}
+.layerPoint .bottomPoint dt .count	{color:#908f90;}
+.layerPoint .bottomPoint dd	{float:left; margin:3px 0 0 89px; width:300px; display:inline;}
+.layerPoint .bottomPoint dd .name	{color:#908f90;}
+.layerPoint .bottomPoint dd .average	{color:#db6565;}
+.layerPoint .btnClose	{position:absolute; bottom:-1px; right:-1px;}
+//--*/
+
+/***** mainArea01 *****/
+
+.mainArea01	{position:relative; clear:both; padding:30px 0 0 0; width:980px;}
+.mainArea01 .restMark	{position:absolute; top:-5px; right:0;}
+.mainArea01 .restMark .blogRest	{display:block; width:104px; height:138px; text-indent:-5000px;  background:url(/image/restaurant/onepage/ic_blogrest.gif) no-repeat; }
+.mainArea01 .restMark .seoulRest	{display:block; width:111px; height:139px; text-indent:-5000px;  background:url(/image/restaurant/onepage/ic_seoulrest.gif) no-repeat; }
+.mainArea01 .restMark .localRest	{display:block; width:103px; height:137px; text-indent:-5000px; background:url(/image/restaurant/onepage/ic_localrest.gif) no-repeat; }
+.mainArea01 .restMark .firstRest	{display:block; width:108px; height:138px; text-indent:-5000px;  background:url(/image/restaurant/onepage/ic_firstrest.gif) no-repeat; }
+.mainArea01 .restMark .mpRest		{display:block; width:108px; height:138px; text-indent:-5000px;  background:url(/image/restaurant/onepage/ic_mprest.gif) no-repeat; }
+.mainArea01 .restMark .uspoon		{display:block; width:108px; height:138px; text-indent:-5000px;  background:url(/image/restaurant/onepage/ic_lguplus.gif) no-repeat; }
+.mainArea01 .restMark .michelin	{display:block; width:108px; height:138px; text-indent:-5000px;  background:url(/image/restaurant/onepage/ic_michelin.gif) no-repeat; }
+
+/*.mainArea01 .snotice {width:865px; height:23px; margin-bottom:5px;}
+.mainArea01 .snotice span {float:left;}
+.mainArea01 .snotice .title {width:34px; height:23px;}
+.mainArea01 .snotice .text {width:811px; height:13px; padding:5px 10px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; word-wrap:normal;}
+.mainArea01 .snotice .text a {font-size:12px; color:#757575; }*/
+
+
+
+/**** 섬네일 - 유상가맹점 ****/
+
+.areaThumbnail	{float:left; width:500px;}
+.areaThumbnail dl {position:relative;}
+.areaThumbnail dl dt	{width:500px; height:500px; background:#f5f5f5;}
+.areaThumbnail dl dt .watermark	{float:left; position:absolute; top:15px; right:20px;}
+.areaThumbnail dl dt .menu			{float:left; position:absolute; top:470px; left:20px; height:16px; padding: 3px 0 0 0;/*width:450px;*/ background:url(/image/restaurant/onepage/bg_photo_name.png) repeat-x; font:normal 14px 'Dotum'; font-weight:bold; color:#000000; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaThumbnail dl dt .origin    {float:left; position:absolute; top:470px; right:20px; height:16px; padding: 3px 3px 0 3px;/*width:450px;*/ background:#000; opacity:0.5; filter:alpha(opacity='50'); font:normal 12px 'Dotum'; color:#fff; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaThumbnail dl dd	{float:left; width:500px; height:60px; position:relative; padding:5px 0 0 0;}
+.areaThumbnail .btnPre 	{float:left;}
+.areaThumbnail .btnNext 		{float:right;}
+.areaThumbnail .listThumbnail 	{float:left; width:460px;}
+.areaThumbnail .listThumbnail li 	{position:relative; float:left; padding:0 0 0 5px;}
+.areaThumbnail .listThumbnail li .cover	{position:absolute;  float:left; top:0; left:5px; width:100%; height:100%; background:url(/image/restaurant/onepage/cover_60_select.gif) no-repeat;}
+
+
+/**** 섬네일 - 무상가맹점 ****/
+
+.areaFreeThumbnail	{float:left; position:relative; width:500px;}
+.areaFreeThumbnail dl {float:left; width:500px;}
+.areaFreeThumbnail dl dt	{float:left; width:240px; position:relative;}
+.areaFreeThumbnail dl dt .watermark	{float:left; position:absolute; top:10px; right:10px;}
+.areaFreeThumbnail dl dt .menu		{float:left; position:absolute; top:218px; left:15px; width:220px; font:normal 12px 'Dotum'; font-weight:bold; color:#000000; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaFreeThumbnail dl dd	{float:right; width:249px; height:249px;}
+
+.areaFreeThumbnail .under10Thumbnail	{float:right;}
+.areaFreeThumbnail .under10Thumbnail .listThumbnail 	{float:left;}
+.areaFreeThumbnail .under10Thumbnail .listThumbnail li 	{position:relative; float:left; margin:0 0 10px 10px; display:inline; width:73px; height:73px; background:url(/image/restaurant/onepage/bg_pic73.gif) no-repeat;}
+.areaFreeThumbnail .under10Thumbnail .listThumbnail li .cover	{position:absolute; top:0; left:0; width:100%; height:100%; background:url(/image/restaurant/onepage/cover_73_select.gif) no-repeat;}
+.areaFreeThumbnail .under10Thumbnail .listThumbnail li img	{width:73px; height:73px;}
+
+.areaFreeThumbnail .upper10Thumbnail {float:right; width:240px; height:240px; border:1px solid #dedede; overflow:hidden; overflow-y:scroll;}
+.areaFreeThumbnail .upper10Thumbnail .listThumbnail 	{float:left; width:215px; height:240px; margin:11px 0px 11px 1px; display:inline;}
+.areaFreeThumbnail .upper10Thumbnail .listThumbnail li 	{position:relative; float:left; margin:0 0 10px 10px; display:inline; width:60px; height:60px; background:url(/image/restaurant/onepage/bg_pic60.gif) no-repeat;}
+.areaFreeThumbnail .upper10Thumbnail .listThumbnail li .cover	{position:absolute; top:0; left:0; width:100%; height:100%; background:url(/image/restaurant/onepage/cover_60_select.gif) no-repeat;}
+.areaFreeThumbnail .upper10Thumbnail .listThumbnail li img	{width:60px; height:60px;}
+/*
+.areaFreeThumbnail .upper10Thumbnail .listThumbnail .select	{width:54px; height:54px; border:3px solid #d62929;}
+.areaFreeThumbnail .upper10Thumbnail .listThumbnail .select img {width:54px; height:54px;}
+*/
+/*
+.areaFreeThumbnail .btnMore 	{float:right; position:absolute; right:0; bottom:-10px; padding:0 10px 0 0; background:url(/image/restaurant/onepage/ic_enter.gif) 85px 2px no-repeat;}
+.areaFreeThumbnail .upper10Thumbnail .btnMore a	{font:normal 11px 'Dotum'; letter-spacing:-1px; color:#6b6d70;}
+*/
+
+
+/**** 기본정보 ****/
+
+.areaBasic 	{position:relative; float:right; width:440px; margin:20px 0 0px 0; display:inline; z-index:20;}
+.areaBasic dl			{width:440px;}
+.areaBasic dl dt	{float:left; width:85px; font:normal 12px/150% 'Dotum'; letter-spacing:0px; color:#6079a8;}
+.areaBasic dl dd	{float:right; font:normal 12px/150% 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+
+.areaBasic .restName 	{position:relative; float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .restName .name	{width:355px; font:bold 14px/150% 'Dotum';}
+.areaBasic .restName .btnScrap	{position:absolute; top:-3px; right:0; float:right; width:82px; height:16px;}
+
+.areaBasic .restType	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .restType .type	{width:355px;  font:bold 14px/150% 'Dotum';}
+
+.areaBasic .restTel	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .restTel span.hel {color:#e63389;}
+.areaBasic .restTel .tel1	{float:left;  font:bold 14px/150% 'Dotum'; /*width:245px;*/}
+.areaBasic .restTel .tel1 .heltel {float:left; color:#e63389;}
+.areaBasic .restTel .tel1 .helme {float:left; margin:1px 0 0 6px; background:url(/image/restaurant/onepage/helme_slogo.png) no-repeat;  text-indent:-9999px; width:63px; height:16px;}
+.areaBasic .restTel .slash	{float:left; padding:0 8px 0 8px;}
+.areaBasic .restTel .tel2	{float:left;  font:bold 14px/150% 'Dotum';}
+
+.areaBasic .restTel .helme_com {float:left; color:#797b79; font-size:11px; margin-top:2px; *clear:both; *width:440px; *font-weight:normal; *margin-left:-84px; _clear:both; _width:440px; _font-weight:normal; _margin-left:-84px;}
+
+.areaBasic .restAdd	{position:relative; float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .restAdd .add1	{width:355px;  font:normal 14px/150% 'Dotum';}
+.areaBasic .restAdd .add1 span	{float:left; width:355px;}
+.areaBasic .restAdd .add2	{width:355px; margin:5px 0 0 85px;  font:normal 14px/150% 'Dotum';}
+.areaBasic .restAdd .add2 span	{float:left; width:355px;}
+
+.areaBasic .restHome	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .home	{width:355px;  font:normal 14px/150% 'Dotum';}
+
+.areaBasic .restTheme	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .Theme	{width:355px;  font:normal 14px/150% 'Dotum';}
+.areaBasic .Theme a	{ color:#2255ba;}
+
+/*.areaBasic .restPrice	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .price	{width:355px;  font:normal 14px/150% 'Dotum';}*/
+
+.areaBasic .restShare	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .share	{width:355px;  font:normal 14px/150% 'Dotum';}
+
+.areaBasic .restHoliday	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .holiday1	{width:355px; font:normal 14px/150% 'Dotum';}
+.areaBasic .holiday2	{width:355px; font:normal 14px/150% 'Dotum';}
+
+.areaBasic .restMood	{float:left; width:440px; margin:0 0 15px 0;}
+.areaBasic .mood	{width:355px;}
+
+.areaBasic .mood_box_wrap {width:230px; height:96px; float:left;}
+.areaBasic .mood_stit {font-size:11px; color:#919191; text-align:left; margin-left:15px;}
+.areaBasic .mood_box_wrap .mood_box {padding:10px 0px; border:1px solid #e4e4e4;}
+.areaBasic .mood_box_wrap .mood_box ul {width:230px; height:64px; background:url('/image/restaurant/onepage/bg_graph.gif') repeat-y 47px 0;}
+.areaBasic .mood_box_wrap .mood_box ul li {height:10px; padding:5px 0 5px 0; /*font-size: 0;*/ float:left;}
+.areaBasic .mood_box_wrap .mood_box ul li span.tit {width:30px; font-size:12px; letter-spacing:0; float:left; display:block; font-size:12px; letter-spacing:-1px; color:#757575; text-align:center; margin:0 5px 0 12px;}
+.areaBasic .mood_box_wrap .mood_box ul li span.tit.on {font-weight:bold; color:#d71400;}
+.areaBasic .mood_box_wrap .mood_box ul li span.graph_bar {position:relative; float:left; display:block; width:87px; padding:0 22px; margin:1px 0 0 1px; /*background:#3e4251;*/ background:#f2f2f2 url('/image/restaurant/onepage/graph_bar.png') no-repeat 50% 50%; border-top:#dbdbdb 1px solid; border-bottom:#dbdbdb 1px solid;}
+.areaBasic .mood_box_wrap .mood_box ul li span.graph_bar em.gh_bar1 { /*border-color:#8a0d00;background:#d71400;*/ background:url('/image/restaurant/onepage/graph_pin.png') no-repeat right 0px; padding:0 7px; margin-left:-7px; }
+/*.areaBasic .mood_box_wrap .mood_box ul li span.graph_bar em.gh_bar2 { background:url('/image/restaurant/onepage/graph_pin.png') no-repeat 0 0; margin-top:1px;}*/
+.areaBasic .mood_box_wrap .mood_box ul li span.graph_bar em {height:11px; display:block; /*border:1px solid #e70f4e;*/ border-left:none; border-right:0; font-style:normal; color:#757575;}
+/*
+.areaBasic .mood_box_wrap .mood_box ul li span.graph_bar em span { width:30px; position:absolute; top:-2px; right:-35px; font-size:12px; text-align:center; line-height:18px;}
+.areaBasic .mood_box_wrap .mood_box ul li span.graph_bar em span.on {font-weight:bold; color:#3e4251;}
+*/
+.areaBasic .mood_box_wrap .mood_box ul li span.tit_r { width:30px; position:absolute; margin: 0 0 0 5px; font-size:12px; text-align:center; line-height:18px;}
+.areaBasic .mood_box_wrap .mood_box ul li span.tit_r.on {font-weight:bold; color:#3e4251;}
+
+.areaBasic .restPrice {width:85px; height:70px; float:left; padding:12px 15px 20px 15px; border-top:1px solid #e4e4e4; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; background:#f5f5f5; text-align:center; font-size:12px;}
+.areaBasic .restPrice .price {width:85px; display:block; float:left; padding-top:10px; text-align:center;}
+.areaBasic .restPrice .price .block {display:block;}
+.areaBasic .restPrice strong {font-size:18px; font-family:'tahoma','dotum','돋움'; color:#6079a8;}
+.areaBasic .restPrice .price_stit {font-size:11px; color:#919191; text-align:left; float:left; letter-spacing:-1px;}
+
+/*.areaBasic .thumb_like {width:88px; height:44px; float:left; padding:25px 0; border-top:1px solid #e4e4e4; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; background:#f5f5f5; cursor:pointer;}
+.areaBasic .thumb_like span.thumb {width:28px; height:25px; overflow:hidden; display:block; margin:0 auto;}
+.areaBasic .thumb_like span.thumb img {margin-top:-25px;}
+.areaBasic .thumb_like span.people {width:88px; display:block; color:#f4686e; padding-top:5px; text-align:center; text-decoration:none;}*/
+
+.areaBasic .restGrade	{float:left; width:440px; margin:0 0 20px 0;}
+.areaBasic .restGrade .rate	{float:left; padding-right:5px;}
+.areaBasic .restGrade .rate .point	{float:left; position:relative; display:inline-block; width:60px; height:12px; margin:3px 5px 0 0; background:url('/image/restaurant/onepage/ic_star_off.png') repeat-x; }
+.areaBasic .restGrade .rate .point .star	{position:absolute; top:0px; left:0px; height:12px; background:url('/image/restaurant/onepage/ic_star_on.png') repeat-x; }
+.areaBasic .restGrade .rate .score	{float:left; font:normal 14px/150% 'Dotum';}
+.areaBasic .restGrade .rate .score .total	{ font:bold 14px/150% 'Dotum'; color:#df2c2e;}
+.areaBasic .restGrade .rate .score .line	{ color:#d5d6d8; margin:0 2px 0 2px; }
+.areaBasic .restGrade .rate .score .count { font:normal 14px/150% 'Dotum'; }
+.areaBasic .restGrade .btnPoint	{ float:left; width:82px; height:21px; margin-left: 10px; }
+
+.areaBasic .restNotice	{float:left; width:440px; margin:0 0 20px 0;}
+.areaBasic .restNotice dt	{float:left; width:440px; margin:0 0 5px 0; font-weight:bold;}
+.areaBasic .restNotice .event	{width:396px; margin:0 0 5px 0; padding:10px 10px 10px 12px; background:#eff0f3; border:1px solid #e8eaed;}
+.areaBasic .restNotice .event	img	{float:left; margin:2px 0 0 0;}
+.areaBasic .restNotice .event a			{float:left; width:298px; margin:2px 0 0 10px; display:inline; color:#003399; font-weight:bold; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaBasic .restNotice .notice		{width:438px; height:98px; border:1px solid #dedede; overflow-y:scroll;}
+.areaBasic .restNotice .notice ul	{float:left;  margin:14px 8px 14px 20px; display:inline; }
+.areaBasic .restNotice .notice ul li	{ float:left; width:350px; background:url(/image/restaurant/onepage/ic_dot.gif) 0px 6px no-repeat; padding:0px 0px 0px 10px; margin:0 0 5px 0;}
+.areaBasic .restNotice .notice ul li .noticeTitle	{float:left; width:350px; font:normal 12px/130% 'Dotum';  color:#6079a8;}
+.areaBasic .restNotice .notice ul li .noticeDetail	{float:left; width:350px; font:normal 12px/120% 'Dotum'; color:#676d76;}
+
+.areaBasic .restReservation	{float:left; position:relative; width:440px; padding:0 0 20px 0; }
+.areaBasic .restReservation dt	{float:left; width:440px; margin:0 0 5px 0;}
+.areaBasic .restReservation .reservation	{float:left; width:396px; /*height:31px;*/ border:2px solid #d4d6df; z-index:10; padding:8px 8px 8px 12px; /*overflow:hidden; white-space:nowrap;*/}
+.areaBasic .restReservation .reservation a	 {font-weight:bold; letter-spacing:-1px;}
+.areaBasic .restReservation .reservation .rclist {float:left; width:300px; margin:8px 4px 0 10px; /*border: 1px solid red;*/ }
+.areaBasic .restReservation .reservation .rclist li { list-style-type:disc;  }
+.areaBasic .restReservation .btnReservation	{float:right;}
+
+.areaBasic .bestRest	{position:relative; float:left; width:440px; height:74px; margin:0 0 20px 0; background:url(/image/restaurant/onepage/bg_bestrest02.gif) no-repeat;}
+.areaBasic .bestRest ul	{position:absolute; top:12px; left:263px; width:120px;}
+.areaBasic .bestRest ul li		{float:left; width:120px; margin:0 0 3px 0;}
+.areaBasic .bestRest ul li a	{font:normal 12px/130% 'Dotum'; letter-spacing:0px; color:#6b6d70;}
+.areaBasic .bestRest .best span 	{font:bold 12px/130% 'Dotum'; letter-spacing:0px; color:#4b4b4b; margin:0 0 0 10px;}
+.areaBasic .bestRest .best .rank1	{font:bold 12px/130% 'Dotum'; letter-spacing:0px; color:#e14646; margin:0 0 0 10px;}
+
+.funcBtn_wrap 		{ width:980px; display:block;}
+.funcBtn_wrap .funcBtn		{/*position:relative;*/ float:right; width:440px; margin:0px 0 0px 0; bottom:31px; padding:5px 0 0px 0; border-top:1px solid #d4d6df;}
+.funcBtn_wrap .funcBtn	a	{display:inline-block;}
+.funcBtn_wrap .funcBtn .btnGood	{float:left;  height:25px;}
+.funcBtn_wrap .funcBtn .btnGood dt	{width:75px; float:left;}
+.funcBtn_wrap .funcBtn .btnGood dd	{float:left;  height:19px; padding:5px 5px 0 10px; border-left:none; text-align:right;}
+.funcBtn_wrap .funcBtn .btnGood dd span	 {font-weight:bold; padding:0 4px 0 0;}
+.funcBtn_wrap .funcBtn .btnPop		{float:right;}
+.funcBtn_wrap .funcBtn .btnPop a	{margin:0 0px 0 0;}
+
+.funcBtn_wrap .funcBtnB		{position:relative; float:right; width:440px; margin:0px 0 0px 0; bottom:0px; padding:5px 0 0px 0; /*border-top:1px solid #d4d6df;*/}
+.funcBtn_wrap .funcBtnB	a	{display:inline-block;}
+.funcBtn_wrap .funcBtnB .btnGood	{float:left;  height:25px;}
+.funcBtn_wrap .funcBtnB .btnGood dt	{width:75px; float:left;}
+.funcBtn_wrap .funcBtnB .btnGood dd	{float:left;  height:19px; padding:5px 5px 0 5px; border-left:none; text-align:right;}
+.funcBtn_wrap .funcBtnB .btnGood dd span	 {font-weight:bold; padding:0 4px 0 0;}
+.funcBtn_wrap .funcBtnB .btnPop		{float:right;}
+.funcBtn_wrap .funcBtnB .btnPop a	{margin:0 7px 0 0;}
+
+
+.areaBasic .share .btnSns		{float:left;}
+.areaBasic .share .btnSns li	{float:left; position:relative; display:inline; background:url('/image/restaurant/onepage/sns_logo.png') no-repeat 0 0; cursor:pointer;}
+.areaBasic .share .btnSns li .ly	{display:block; text-indent:-5000px;}
+
+.areaBasic .share .btnSns .twitter {width:43px; height:27px; background-position:0 0px;}
+.areaBasic .share .btnSns li.twitter:hover  { background-position:0 bottom;}
+.areaBasic .share .btnSns .twitter .ly	{position:absolute; top:-25px; left:0px; width:90px; height:24px; background:url('/image/restaurant/onepage/thumb_balloon.png') no-repeat 0 0;}
+
+.areaBasic .share .btnSns .facebook {width:38px; height:27px; background-position:-43px 0px;}
+.areaBasic .share .btnSns li.facebook:hover  { background-position:-43px bottom;}
+.areaBasic .share .btnSns .facebook .ly	{position:absolute; top:-25px; left:0px; width:104px; height:24px; background:url('/image/restaurant/onepage/thumb_balloon.png') no-repeat -90px 0;}
+
+.areaBasic .share .btnSns .sms {width:37px; height:27px; background-position:-81px 0px;}
+.areaBasic .share .btnSns li.sms:hover  { background-position:-81px bottom;}
+.areaBasic .share .btnSns .sms .ly	{position:absolute; top:-25px; left:0px; width:71px; height:24px; background:url('/image/restaurant/onepage/thumb_balloon.png') no-repeat -195px 0;}
+.areaBasic .share .btnSns .blog {width:41px; height:27px; background-position:-118px 0px;}
+.areaBasic .share .btnSns li.blog:hover  { background-position:-118px bottom;}
+.areaBasic .share .btnSns .blog .ly	{position:absolute; top:-25px; left:0px; width:81px; height:24px; background:url('/image/restaurant/onepage/thumb_balloon.png') no-repeat -267px 0;}
+.areaBasic .share .lySMS			{position:absolute; top:-230px; right:0px; *z-index:10;}
+
+/**** 할인혜택 - 유상가맹점 ****/
+.areaBenefit			{position:relative; clear:both; float:left; width:980px;  margin:25px 0 0 0; background:#d1d6db; border-bottom:1px solid #d1d6db; z-index:10;}
+.areaBenefit .bgBenefit	{float:left; width:976px; padding:0 0 30px 0; margin:1px 1px 1px 1px; display:inline; background:#f5f5f5; border:1px solid #fafafa;}
+
+
+/** 할인혜택; 왼쪽영역 **/
+.areaBenefit .listBenefit		{float:left; width:400px; margin:30px 0 0 39px; display:inline;}
+.areaBenefit .listBenefit h4	{float:left; margin:0 0 14px 0;}
+
+.areaBenefit .listBenefit .benefitScroll	{float:left; width:398px;height:143px; background:#ffffff; border:1px solid #dedede; overflow:hidden; overflow-y:scroll;}
+.areaBenefit .listBenefit .benefitScroll ul	{margin:14px 8px 14px 0px;}
+.areaBenefit .listBenefit .benefitScroll ul li	{margin:0 0 3px 0; padding:9px 0px 5px 20px; width:362px; font:normal 12px/100% 'Dotum'; letter-spacing:0px; color:#908f90; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaBenefit .listBenefit .benefitScroll ul li a {text-decoration:none;}
+.areaBenefit .listBenefit .benefitScroll ul li a:hover	{}
+.areaBenefit .listBenefit .benefitScroll .none2	{}
+.areaBenefit .listBenefit .benefitScroll .none2 a	{font:normal 12px/100% 'Dotum'; color:#908f90;}
+.areaBenefit .listBenefit .benefitScroll .none2 a .coupon	{margin:0 10px 0 0; font:bold 12px/100% 'Dotum';}
+.areaBenefit .listBenefit .benefitScroll .none2 a .premium	{margin:0 10px 0 0; font:bold 12px/100% 'Dotum';}
+.areaBenefit .listBenefit .benefitScroll .none2 a .online	{margin:0 10px 0 0; font:bold 12px/100% 'Dotum';}
+.areaBenefit .listBenefit .benefitScroll .select	{background:#f2f2f2;}
+.areaBenefit .listBenefit .benefitScroll .select a	{width:300px; font:bold 14px/100% 'Dotum'; color:#4b4b4b; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaBenefit .listBenefit .benefitScroll .select a .coupon	{margin:0 10px 0 0;  font:bold 14px/100% 'Dotum'; color:#db6565; letter-spacing:-1px;}
+.areaBenefit .listBenefit .benefitScroll .select a .premium	{margin:0 10px 0 0; font:bold 14px/100% 'Dotum'; color:#6079a8; letter-spacing:-1px;}
+.areaBenefit .listBenefit .benefitScroll .select a .gpcard	{margin:0 10px 0 0; font:bold 14px/100% 'Dotum'; color:#ab0807; letter-spacing:-1px;}
+.areaBenefit .listBenefit .benefitScroll .select a .online	{margin:0 10px 0 0; font:bold 14px/100% 'Dotum'; color:#6079a8; letter-spacing:-1px;}
+
+.areaBenefit .listBenefit .benefitCaution	{float:left; margin:16px 0 0 0; font:normal 11px/130% 'Dotum'; letter-spacing:0px;}
+.areaBenefit .listBenefit .benefitCaution .topCaution	{float:left; width:400px; height:18px; margin:0 0 8px 0;}
+.areaBenefit .listBenefit .benefitCaution .topCaution h5	{float:left; }
+.areaBenefit .listBenefit .benefitCaution .topCaution .more	{float:right; position:relative; width:110px;}
+.areaBenefit .listBenefit .benefitCaution .topCaution .more .ic	{position:absolute; top:-5px; right:74px;/*float:left;*/}
+.areaBenefit .listBenefit .benefitCaution .topCaution .more a	{float:right; margin:4px 0 0 0;}
+.areaBenefit .listBenefit .benefitCaution .topCaution .more a:hover	{}
+.areaBenefit .listBenefit .benefitCaution .topCaution .more span {font:normal 11px/120% 'Dotum'; color:#db6565; letter-spacing:-1px;}
+
+.areaBenefit .listBenefit .benefitCaution .listCaution {float:left; width:400px;}
+.areaBenefit .listBenefit .benefitCaution .listCaution li	{/*position:relative;*/ float:left; width:380px; background:url(/image/restaurant/onepage/ic_dot.gif) 0px 5px no-repeat; padding:0 0 0 12px; margin:0 0 5px 8px; display:inline;}
+/*.areaBenefit .listBenefit .benefitCaution .listCaution .ic	{position:absolute; top:-9px; left:77px; float:left;}*/
+.areaBenefit .listBenefit .benefitCaution .listCaution .icoupon	{margin:0 0 0 0; color:#db6565;}
+.areaBenefit .listBenefit .benefitCaution .listCaution .smsCpn	{color:#27a807;}
+.areaBenefit .listBenefit .benefitCaution .listCaution .bg	{position:relative; top:0; left:0; background:#676d76; color:#ffffff; padding:2px 6px 0px 6px;}
+
+
+/** 할인혜택; 오른쪽영역 **/
+
+.areaBenefit .listView	{position:relative; /*position:absolute; top:52px; left:456px;*/ float:right; width:490px; height:260px; margin:52px 15px 0 0; display:inline; background:url(/image/restaurant/onepage/bg_iphone.jpg) no-repeat;}
+.areaBenefit .listView .viewCoupon	{position:absolute; top:0; left:0; float:left; width:310px; height:205px; margin:19px 0 0 88px; display:inline; background:url(/image/restaurant/onepage/bg_iphone_coupon.gif) no-repeat;}
+.areaBenefit .listView .viewCoupon h5	{float:left; width:250px; margin:66px 0 0 31px; display:inline; font:bold 14px/110% 'Dotum'; color:#4b4b4b; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.areaBenefit .listView .viewCoupon h5	div {margin-top:2px;}
+.areaBenefit .listView .viewCoupon .condition	{clear:both; float:left; width:250px; margin:10px 0 0 31px; display:inline; font:normal 11px/130% 'Dotum'; color:#4b4b4b;}
+.areaBenefit .listView .viewCoupon .condition li	{float:left; width:250px; margin:0 0 2px 0; display:inline;}
+.areaBenefit .listView .viewCoupon .condition li dt	{float:left; font:normal 11px/120% 'Dotum'; color:#adadad;}
+.areaBenefit .listView .viewCoupon .condition li dd	{float:right; width:190px;}
+.areaBenefit .listView .viewCoupon .btnIphone {position:absolute; top:166px; left:30px; float:left; margin-right:5px;}
+.areaBenefit .listView .viewCoupon .btnIphone a	{display:inline-block;}
+.areaBenefit .listView .viewCoupon .lySMS	{position:absolute; top:-18px; right:15px;*z-index:200;}
+.areaBenefit .listView .viewPremium	{position:absolute; top:0; float:left; width:310px; height:205px; margin:19px 0 0 88px; display:inline; background:url(/image/restaurant/onepage/bg_iphone_premium.gif) no-repeat;}
+.areaBenefit .listView .viewPremium h5	{float:left; width:250px; margin:66px 0 0 31px; display:inline; font:bold 14px/110% 'Dotum'; color:#4b4b4b; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaBenefit .listView .viewPremium .btnIphone {position:absolute; top:166px; left:60px; float:left;}
+.areaBenefit .listView .viewgpcard	{position:absolute; top:0; float:left; width:310px; height:205px; margin:19px 0 0 88px; display:inline; background:url(/image/restaurant/onepage/gpcard_bg_iphone.gif) no-repeat;}
+.areaBenefit .listView .viewgpcard h5	{float:left; width:250px; margin:66px 0 0 31px; display:inline; font:bold 14px/110% 'Dotum'; color:#4b4b4b; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.areaBenefit .listView .viewgpcard .btnIphone {position:absolute; top:166px; left:60px; float:left;}
+.areaBenefit .listView .viewOnline	{position:absolute; top:0; float:left; width:310px; height:205px; margin:19px 0 0 88px; display:inline; background:url(/image/restaurant/onepage/bg_iphone_coupon02.gif) no-repeat;}
+.areaBenefit .listView .viewOnline h5	{float:left; width:250px; margin:66px 0 0 31px; display:inline; font:bold 14px/110% 'Dotum'; color:#4b4b4b; }
+.areaBenefit .listView .viewOnline .condition	{clear:both; float:left; width:250px; margin:10px 0 0 31px; display:inline; font:normal 11px/130% 'Dotum'; color:#4b4b4b;}
+.areaBenefit .listView .viewOnline .condition li	{float:left; width:250px; margin:0 0 2px 0; display:inline;}
+.areaBenefit .listView .viewOnline .condition li dt	{float:left; font:normal 11px/120% 'Dotum'; color:#adadad;}
+.areaBenefit .listView .viewOnline .condition li dd	{float:right; width:190px;}
+.areaBenefit .listView .viewOnline .btnIphone {position:absolute; top:166px; left:60px; float:left;}
+
+/* 할인혜택; 오른쪽영역_ 문자쿠폰 레이어_20130522 */
+.areaBenefit .helme_layer {position:absolute; float:left; left:493px; top:260px; width:448px; height:92px; background:url(/image/restaurant/onepage/helme_layer.png) left top no-repeat; z-index:1;}
+.areaBenefit .helme_layer .helme_close {float:right; margin-right:24px; margin-top:33px;}
+.areaBenefit .helme_layer .helme_btn {float:right; margin-right:-16px; margin-top:55px;}
+
+
+/**** 할인혜택 - 무상가맹점 ****/
+
+.areaFreeBenefit 	{clear:both; float:left; width:980px; margin:25px 0 0 0; padding:0 0 1px 0; background:#d1d6db;}
+.areaFreeBenefit .bgBenefit {float:left; width:976px; position:relative; padding:0 0 30px 0; margin:1px 1px 0 1px; display:inline; background:#f5f5f5; border:1px solid #fafafa;}
+
+.areaFreeBenefit .listBenefit	{float:left; margin:30px 0 0 39px; display:inline;}
+.areaFreeBenefit .listBenefit h4	{float:left; margin:0 0 14px 0; width:900px;}
+.areaFreeBenefit .listBenefit .listView	{float:left; /*width:920px;*/}
+.areaFreeBenefit .listBenefit .listView	li	{float:left; margin:0 20px 0px 0; padding:0 0 15px 0; width:210px; height:120px;}
+.areaFreeBenefit .listBenefit .listView .premium	{float:left; position:relative; width:210px; height:120px; background:url(/image/restaurant/onepage/bg_benefit_premium.gif) no-repeat;}
+.areaFreeBenefit .listBenefit .listView .premium dl dt	{width:180px; margin:45px 0 0 15px; text-align:center;}
+.areaFreeBenefit .listBenefit .listView .premium dl dd	{position:absolute; left:45px; bottom:28px;}
+.areaFreeBenefit .listBenefit .listView .gpcard	{float:left; position:relative; width:210px; height:120px; background:url(/image/restaurant/onepage/gpcard_bg_benefit.gif) no-repeat;}
+.areaFreeBenefit .listBenefit .listView .gpcard dl dt	{width:180px; margin:45px 0 0 15px; text-align:center;}
+.areaFreeBenefit .listBenefit .listView .gpcard dl dd	{position:absolute; left:45px; bottom:28px;}
+.areaFreeBenefit .listBenefit .listView .coupon	{float:left; position:relative; width:210px; height:120px; background:url(/image/restaurant/onepage/bg_benefit_coupon.gif) no-repeat;}
+.areaFreeBenefit .listBenefit .listView .coupon dl dt	{width:180px; margin:45px 0 0 15px; text-align:center;}
+.areaFreeBenefit .listBenefit .listView .coupon dl dd	{position:absolute; left:45px; bottom:28px;}
+.areaFreeBenefit .listBenefit .listView .none	{float:left; width:210px; height:120px; background:url(/image/restaurant/onepage/bg_benefit_none.gif) no-repeat;}
+
+.areaFreeBenefit .benefitCaution	{float:left; margin:0px 0 0 39px; display:inline; width:900px; font:normal 11px/120% 'Dotum'; letter-spacing:0px;}
+.areaFreeBenefit .benefitCaution h5	{float:left;}
+.areaFreeBenefit .benefitCaution .listCaution {float:left; margin:4px 0 0 0;}
+.areaFreeBenefit .benefitCaution .listCaution li	{position:relative; float:left; width:380px; background:url(/image/restaurant/onepage/ic_bar.gif) 0px 5px no-repeat; padding:0 0 0 12px; margin:0 0 5px 8px; display:inline;}
+.areaFreeBenefit .benefitCaution .listCaution .bg	{position:relative; top:0; left:0; background:#676d76; color:#ffffff; padding:2px 6px 0px 6px;}
+
+
+/* 레이어 : sms보내기*/
+.lySMS{ width:280px; height:360px; background:url('/image/restaurant/onepage/bg_ly_sms_360.gif') no-repeat; z-index:100; *position:relative; position:absolute; top:380px; left:90px; }
+.lySMS h4		{float:left; margin:14px 0 10px 17px; display:inline-block;}
+.lySMS .btnClose	{float:right; width:32px; height:32px; cursor:pointer; border:none; text-indent:-5000px; background:url(/image/restaurant/onepage/btn_sms_close.gif) no-repeat; margin:12px 13px 0 0; }
+.lySMS .mobileNum	{clear:both; float:left; width:240px; padding:10px 10px 0 15px; /*background-color:#fff; *border-left:3px solid #494d65; *border-right:3px solid #494d65;*/}
+.lySMS .mobileNum dt	{width:100%;}
+.lySMS .mobileNum dd	{width:100%; font-size:13px;}
+.lySMS .mobileNum dd select	{float:left; display:inline-block; font-size:14px;}
+.lySMS .mobileNum dd .num1, .lySMS .mobileNum dd .num2{float:left; width:70px; height:17px; padding:2px 0 0 0; font-size:14px; text-align:center; background:#eee; border:1px solid #d4d6df;}
+.lySMS .mobileNum dd .hyphen	{float:left; display:inline-block; width:6px; height:20px; padding:0 5px 0 5px; background:url(/image/restaurant/onepage/ic_hyphen.gif) 5px 9px no-repeat;}
+/* 개인정보제공동의 */
+.lySMS .mobileagree	{clear:both; float:left; width:250px; padding:10px 10px 0 15px; font-size:12px;}
+.lySMS .mobileagree dt{width:100%;}
+.lySMS .mobileagree dd	{width:100%; line-height:1.25; color:#999;}
+.lySMS .mobileagree dd span{display:block; font-size:11px; color:#6079a8; margin-top:5px;}
+.lySMS .chek{clear:both; float:left; width:100%; padding:10px 10px 0 15px; margin-bottom:15px;}
+.lySMS .chek .chkbox{width:14px; height:14px; vertical-align:middle;}
+.lySMS .btn		{clear:both; width:100%; /*padding:50px 0 0 0;*/ text-align:center;}
+
+.lySMS .btnRecognize{display:block; width:90px; height:30px; cursor:pointer; border:none; text-indent:-5000px; background:url(/image/restaurant/onepage/btn_sms_recognize.gif) no-repeat; margin:0 auto;}
+.areaBenefit .listView .viewCoupon .lySMS .btnRecognize	{width:110px; background:url(/image/restaurant/onepage/btn_sms_send.gif) no-repeat;}
+
+.areaBenefit .bgBenefit .lySMS {width:280px; height:242px; background:url(/image/restaurant/onepage/bg_ly_sms.gif) no-repeat; z-index:100; *position:relative; position:absolute; top:380px; left:630px; margin-top:65px; }
+
+
+/* 문자쿠폰 사용설명 */
+.cpnUseWay	{clear:both; margin:20px 0 0 0;}
+.cpnWay		{position:relative; float:left; width:920px; padding:25px 30px 25px 30px; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; background:url(/image/restaurant/onepage/bg_cpnWay.gif) repeat-y;}
+.cpnWay h3	{width:920px; height:30px;}
+.cpnWay .app	{width:920px; margin:0 0 30px 0;}
+.cpnWay .sms	{width:920px;}
+.cpnWay .btnClose	{position:absolute; top:10px; right:10px; width:33px; height:33px; cursor:pointer; border:none; background:url(/image/restaurant/onepage/ly_btn_close02.png) no-repeat;}
+.cpnWay .btnClose .hide	{display:none;}
+
+/***** mainArea02 *****/
+
+.mainArea02	{clear:both; width:980px;}
+
+
+/** 텝1; 상세정보 **/
+
+.tabInfo	{clear:both; position:relative; float:left; width:980px; padding:70px 0 0px 0; z-index:5; }
+.tabInfo h3	{padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0; z-index:5;}
+
+.tabInfo .infoTable .tableBottom .infoArticle	{position:relative; float:left; width:815px; /* *z-index:-1; _z-index:-1;*/}
+.tabInfo .infoTable .tableBottom .infoArticle .article	{font:normal 12px/180% 'Dotum'; letter-spacing:0px; color:#4b4b4b; }
+.tabInfo .infoTable .tableBottom .infoArticle .btnFold	{position:absolute; right:0; bottom:0; width:64px;}
+
+.tabInfo .infoTable	{clear:both; float:left; position:relative; width:980px; font:normal 12px/120% 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+
+.lySt { width:270px; position:absolute; left:150px; top:65px; background:#fff; border:#494d65 2px solid; z-index:100;}
+.lySt .tit {background:#494d65; padding:10px; color:#fff; font-size:12px; font-weight:bold;}
+.lySt .txt {background:#fff; padding:10px; color:#4b4b4b; font-size:12px;}
+.lySt .btnClose	{float:right; width:32px; height:32px; cursor:pointer; border:none; text-indent:-5000px; background:url(/image/restaurant/onepage/btn_sms_close.gif) no-repeat; margin:0px 0px 0 0; }
+
+.tabInfo .infoTable .tableTopA	{float:left; width:980px; border-top:1px solid #c0c0c0;}
+.tabInfo .infoTable .tableTopA li	{float:left; width:490px; height:71px; border-bottom:1px solid #e2e2e2; }
+.tabInfo .infoTable .tableTopA li dl 	{float:left;}
+.tabInfo .infoTable .tableTopA li dl dt {float:left; text-align:center; font-weight:bold; width:145px; background:#f8f8f8; color:#6079a8;}
+.tabInfo .infoTable .tableTopA li dl dt.tit1	{ height:41px; padding-top:30px; }
+.tabInfo .infoTable .tableTopA li dl dt.tit2	{ height:48px; padding-top:23px; }
+.tabInfo .infoTable .tableTopA li dl dd {float:left; width:305px; text-align:left; line-height:16px;}
+.tabInfo .infoTable .tableTopA li dl dd.txt1	{ padding:29px 0 11px 20px; }
+.tabInfo .infoTable .tableTopA li dl dd.txt2	{ padding:21px 0 11px 20px; }
+.tabInfo .infoTable .tableTopA li dl dd.txt3	{ padding:14px 0 11px 20px; }
+.tabInfo .infoTable .tableTopA li dl dd span {display:inline-block; float:left; text-align:center;}
+.tabInfo .infoTable .tableTopA li dl .time_more {width:74px; height:18px; display:inline-block; position:relative; top:-5px; background:url('/image/restaurant/onepage/moreBtns.png') no-repeat 0 0; font-size:0px; margin:0px 0 0 5px; text-indent:-100000px;}
+.tabInfo .infoTable .tableTopA li dl dd .booking_more {width:62px; height:18px; /*float:left;*/ display:inline-block; background:url('/image/restaurant/onepage/moreBtns.png') no-repeat 0 -22px; font-size:0px; margin:-1px 0 0 0;  position:relative; font-size:0px; z-index:999; /*text-indent:-100000px;*/ vertical-align:top; color:#fff; }
+
+
+.tabInfo .infoTable .tableLR	{float:left; width:980px; }
+.tabInfo .infoTable .tableLR li	{float:left; width:980px; /*height:40px;*/ border-bottom:1px solid #e2e2e2; display:table; }
+.tabInfo .infoTable .tableLR li dl 	{float:left; /*width:490px;*/  background:#f8f8f8; display:table-row;}
+.tabInfo .infoTable .tableLR li dl dt	{float:left; padding:18px 0 15px 0; text-align:center; font-weight:bold; width:145px; /*display:table-cell;*/}
+/*.tabInfo .infoTable .tableLR li dl dt .txt {vertical-align:middle;}
+.tabInfo .infoTable .tableLR li dl dt .va {display:inline-block; overflow:hidden; vertical-align:middle; width:145px; height:100%;} /* 높이 고정을 위한 빈 태그 */
+.tabInfo .infoTable .tableLR li dl dd .va {float:left; display:inline-block; overflow:hidden; vertical-align:middle; width:305px; height:14px; background:#fff;}
+.tabInfo .infoTable .tableLR li dl dd	{float:left; padding:18px 20px 15px 20px; width:305px; height:100%; text-align:left; background:#fff;/*display:table-cell;*/}
+.tabInfo .infoTable .tableLR li dl dd.helme {float:left; padding:0 20px 0 20px; width:305px; text-align:left;}
+.tabInfo .infoTable .tableLR li dl dd.helme span.hel_ic {display:inline-block; float:left; width:79px; height:40px; margin-right:10px; padding-top:4px;}
+.tabInfo .infoTable .tableLR li dl dd.helme span.hel_tel { display:inline-block; float:left; line-height:47px; position:relative; top:3px;}
+.tabInfo .infoTable .tableLR li dl dd.helme .hel_more {width:74px; height:18px; display:inline-block; float:left; background:url('/image/restaurant/onepage/moreBtns.png') no-repeat 0 0; font-size:0px; margin:16px 0 0 10px; text-indent:-100000px;}
+
+.tabInfo .infoTable .tableRight	{float:right; width:490px; }
+.tabInfo .infoTable .tableRight li	{float:left; width:490px; /*height:40px;*/ border-bottom:1px solid #e2e2e2; }
+.tabInfo .infoTable .tableRight li dl dt	{float:left; padding:14px 0 11px 0; text-align:center; font-weight:bold; width:145px; background:#f8f8f8;}
+.tabInfo .infoTable .tableRight li dl dd	{float:left; padding:14px 0 11px 20px; width:305px; text-align:left;}
+
+
+.tabInfo .infoTable .tableBottom {float:left; width:980px;}
+.tabInfo .infoTable .tableBottom li	{float:left; width:980px; border-bottom:1px solid #e2e2e2; }
+.tabInfo .infoTable .tableBottom li dl 	{float:left; background:#f8f8f8;}
+.tabInfo .infoTable .tableBottom li dl dt {float:left; text-align:center; font-weight:bold; width:145px; padding-top:15px;}
+.tabInfo .infoTable .tableBottom li dl dd {float:left; display:block; width:815px; padding:14px 0 11px 20px; background:#fff; text-align:left; line-height:25px;}
+
+
+
+
+.tabInfo .infoEvent	{float:left; width:941px; border:2px solid #dedede; padding:20px 15px 20px 20px;}
+.tabInfo .infoEvent .eventBnr	 {float:left;}
+.tabInfo .infoEvent .eventList	 {float:right; width:620px;}
+.tabInfo .infoEvent .eventList	 li		{float:left; height:20px; width:600px; padding:10px 10px 0 10px; border-bottom:1px solid #eeeeee;}
+.tabInfo .infoEvent .eventList	 li	a	{float:left; width:335px; font-weight:bold; padding:0 0 0 10px; background:url(/image/restaurant/onepage/ic_arrow.gif) 0 2px  no-repeat; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.tabInfo .infoEvent .eventList	 li .period	{float:right; width:205px; padding:0 0 0 35px; background:url(/image/restaurant/onepage/ic_period.gif) no-repeat;}
+.tabInfo .infoEvent .paging		{float:right; width:620px; height:16px; text-align:center; margin:10px 0 0 0;}
+.tabInfo .infoEvent .paging img	{vertical-align:middle; margin:0 0 2px 0;}
+.tabInfo .infoEvent .paging a		{display:inline-block; vertical-align:middle; color:#adadad; font-weight:bold;}
+.tabInfo .infoEvent .paging a:hover	{text-decoration:none;}
+.tabInfo .infoEvent .paging .num		{padding:2px 10px 0 0;}
+.tabInfo .infoEvent .paging .nowPg	{display:inline-block; vertical-align:middle; padding:2px 10px 0 0; font-weight:bold;}
+.tabInfo .infoEvent .paging .btnFirst	{padding:0 3px 0 0;}
+.tabInfo .infoEvent .paging .btnPre		{padding:0 10px 0 0;}
+.tabInfo .infoEvent .paging .btnNext	{padding:0 0 0 5px;}
+.tabInfo .infoEvent .paging .btnFinal	{padding:0 0 0 3px;}
+
+.tabInfo .helme_bnr{position:relative; float:left; width:980px; background:url(/image/restaurant/onepage/helme_banner.png) 0 0  no-repeat; width:980px; height:169px; padding:16px 24px;}
+.tabInfo .helme_bnr .h_tit{position:absolute;  width:690px; height:57px; color:#000;}
+.tabInfo .helme_bnr .h_tit .htxt{float:left; font-size:26px; letter-spacing:-6px; font-weight:bold; margin-top:15px;}
+.tabInfo .helme_bnr .h_tit .htxt span{font-size:36px; letter-spacing:-8px;}
+.tabInfo .helme_bnr .h_tit .hlogo{float:left; margin-left:5px;}
+.tabInfo .helme_bnr .h_stit{position:absolute; top:118px; width:680px; height:57px; color:#000; margin-left:3px;}
+.tabInfo .helme_bnr .h_stit .htxt{float:left; font-size:16px; letter-spacing:-3px;}
+.tabInfo .helme_bnr .h_stit .htxt span{font-size:18px; font-weight:bold; letter-spacing:-4px;}
+.tabInfo .helme_bnr .h_stit .hlogo{float:left; margin:-5px 0 0 10px;}
+
+/**해주세요배너 **/
+.helmeBnr {width:978px; height:65px; border:#ebe4d8 1px solid; background:#f8f4e9; text-align:center;}
+.helmeBnr .center { height:65px; display:inline-block;}
+.helmeBnr .hour {width:50px; height:65px; display:inline-block; float:left; background:url('/image/restaurant/onepage/helme_img.png') no-repeat 0 0; text-indent:-100000px;}
+.helmeBnr .rest_txt { display:inline-block; float:left; font-size:18px; font-weight:bold; letter-spacing:-1px; line-height:67px; margin:0 10px;}
+.helmeBnr .red {color:#bf0000;}
+.helmeBnr .tel {width:301px; height:65px; display:inline-block; float:left; background:url('/image/restaurant/onepage/helme_img.png') no-repeat -50px 0; text-indent:-100000px;}
+
+/** 20150116_GP카드배너 **/
+.gpcardbnr {position:relative;float:left;display:inline-block;text-align:left;width:980px;height:140px;background:url('/image/restaurant/onepage/gpcard_btn_bnr.png') no-repeat 0 0;margin:70px 0 20px 0;}
+.gpcardbnr .gpcard {position:relative;float:left;display:inline-block;top:30px;left:155px;width:765px;height:50px;font-size:26px;letter-spacing:-1px;font-weight:bold;color:#fff;overflow:hidden; white-space:nowrap; text-overflow:ellipsis;text-decoration:none;}
+.gpcardbnr .gp_title {position:relative;float:left;display:inline-block;top:10px;}
+.gpcardbnr .red {color:#ed0e0e;font-size:37px;}
+
+
+/** 텝2; 메뉴 **/
+
+.tabMenu	{clear:both; float:left; /*position:relative;*/ width:980px; padding:100px 0 0 0;}
+.tabMenu h3 	{padding:0 0 9px 0; float:left; width:980px; border-bottom:2px solid #626262; margin:0 0 25px 0;}
+
+.tabMenu .menuGood	{/*position:relative;*/ float:left; width:980px; height:291px;}
+
+.tabMenu .goodRest	{/*position:absolute; top:0; left:0;*/float:left; width:594px;  height:291px; border:1px solid #dedede;}
+.tabMenu .goodRest h4	{float:left; margin:25px 0 15px 29px; display:inline; width:550px; font:bold 14px "Dotum"; color:#1f1f20; letter-spacing:-1px;}
+.tabMenu .goodRest ul	{float:left; display:inline ;margin:0 0 0 29px; height:210px;}
+.tabMenu .goodRest ul li	{float:left; width:170px; margin:0 13px 0 0;}
+.tabMenu .goodRest ul li dl dt	{float:left; margin:0 0 10px 0; width:170px; height:170px; background:url(/image/restaurant/onepage/bg_pic170.gif) no-repeat;)}
+.tabMenu .goodRest ul li dl dt	img	{width:170px; height:170px; }
+.tabMenu .goodRest ul li dl dd	{float:left; font:normal 12px/130% 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+
+.tabMenu .goodMember	{position:relative; /*position:absolute; top:0; right:0;*/ float:right; width:383px; height:291px; border:1px solid #dedede; border-left:none;}
+.tabMenu .goodMember h4	{float:left; margin:25px 0 15px 29px; display:inline; width:325px; font:bold 14px "Dotum"; color:#1f1f20; letter-spacing:-1px;}
+.tabMenu .goodMember .memberYes	 {float:left;}
+.tabMenu .goodMember .memberYes .naviMember				 {float:left; margin:0 0 0 29px; display:inline; width:325px; height:33px; background:url(/image/restaurant/onepage/bg_board_navi.gif) repeat-x;}
+.tabMenu .goodMember .memberYes .naviMember .rank		 {float:left; margin:11px 0 0 0; width:63px;}
+.tabMenu .goodMember .memberYes .naviMember .rank img {margin:0 auto;}
+.tabMenu .goodMember .memberYes .naviMember .menu	  {float:left; margin:11px 0 0 0; width:182px;}
+.tabMenu .goodMember .memberYes .naviMember .menu img{margin:0 auto;}
+.tabMenu .goodMember .memberYes .naviMember .good		  {float:left; margin:11px 0 0 0; width:80px;}
+.tabMenu .goodMember .memberYes .naviMember .good img {margin:0 auto;}
+.tabMenu .goodMember .memberYes .listMember					{float:left; margin:0 0 0 29px; display:inline;}
+.tabMenu .goodMember .memberYes .listMember li					{position:relative; float:left; height:48px; width:325px; border-bottom:1px solid #eeeeee;}
+.tabMenu .goodMember .memberYes .listMember li dl dt			{float:left; margin:17px 0 0 0; width:63px;}
+.tabMenu .goodMember .memberYes .listMember li dl dt img	{margin:0 auto;}
+.tabMenu .goodMember .memberYes .listMember li dl .menu	{float:left; width:165px; margin:11px 0 0 17px; display:inline; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.tabMenu .goodMember .memberYes .listMember li dl .nomenu{float:left; width:155px; margin:11px 0 0 17px; display:inline; font:normal 12px/120% 'Dotum'; color:#adadad;}
+.tabMenu .goodMember .memberYes .listMember li dl .price	{float:left; width:165px; margin:2px 0 0 17px; display:inline;}
+.tabMenu .goodMember .memberYes .listMember li dl .good	{position:absolute; top:18px; right:0; float:left; width:80px; font:normal 12px/120% 'Dotum'; color:#db6565; text-align:center;}
+.tabMenu .goodMember .memberNo			{position:absolute; top:50px; left:0; float:left; width:383px;}
+.tabMenu .goodMember .memberNo dl		{}
+.tabMenu .goodMember .memberNo dl dt	{float:left; width:116px; height:125px; margin:0 0 0 135px; display:inline;}
+.tabMenu .goodMember .memberNo dl dd	{float:left; width:383px; font:normal 12px/130% 'Dotum'; color:#4b4b4b; text-align:center;}
+.tabMenu .goodMember p	{position:absolute; top:253px; right:30px; /*float:left; margin:18px 0 0 29px;*/ width:325px; color:#adadad; text-align:right; display:inline;}
+.tabMenu .goodMember p span	{color:#db6565;}
+
+/* 메뉴판 */
+.listmenupan {width:980px; clear:both; position:relative; top:-24px; background:url('/image/restaurant/onepage/bookbg.gif') no-repeat 0 0; padding-top:24px; z-index:5;}
+
+.listmenupan .wrap {width:978px; float:left; position:relative; height:auto; border:#d4d6df 1px solid; background:url('/image/restaurant/onepage/menubookbg.png') repeat-y 233px 0; padding-top:43px; z-index:150;  }
+.listmenupan .wrap .addGood	{position:absolute; top:23px; right:10px; float:right; display:inline;  color:#888; font-size:11px;}
+.listmenupan .wrap .menu_t {width:958px; height:35px; margin:0 10px 0 10px; line-height:35px; font-size:12px; font-weight:bold; color:#6b6d70; text-align:center; border-top:#8a8a8a  1px solid; }
+.listmenupan .wrap .menu_t .t01 {margin-left:75px; float:left; padding-top:11px;}
+.listmenupan .wrap .menu_t .t02 {margin-left:370px; float:left; padding-top:11px;}
+.listmenupan .wrap .menu_t .t03 {margin-left:265px; float:left; padding-top:11px;}
+.listmenupan .wrap .menu_t .t04 {margin-left:30px; float:left; padding-top:4px;}
+.listmenupan .wrap .menu_t .t05 {margin-left:30px; float:left; padding-top:4px;}
+.listmenupan .wrap .list_wrap { width:958px; position:relative; margin:0 0 0 10px; border-top:1px solid #eeeeee; padding:0 0 10px 0; }
+.listmenupan .wrap .photoView {position:absolute; top:24px; left:45px; border:#000000 2px solid; width:200px; height:200px; z-index:100;}
+.listmenupan .wrap .photoView img {width:200px; height:200px; }
+.listmenupan .wrap .list_wrap .listL_wrap {width:250px; float:left; }
+.listmenupan .wrap .list_wrap .listL_wrap .listL { position:relative; float:left; width:250px; padding:5px 0; /*border-bottom:1px solid #eeeeee;*/ }
+.listmenupan .wrap .list_wrap .listL_wrap .listL a { text-decoration:none; color:#adadad; font-size:12px; letter-spacing:-1px; line-height:30px; margin-left:15px; }
+.listmenupan .wrap .list_wrap .listL_wrap .listL a.on {font-weight:bold; color:#6079a8; float:left;}
+.listmenupan .wrap .list_wrap .listL_wrap .listL .checked {width:19px; height:15px; float:left; position:absolute; top:12px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -185px; margin-left:5px;}
+.listmenupan .wrap .list_wrap .listR_wrap {float:right; width:700px; z-index:10;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR	{ float:right; position:relative; width:700px; border-bottom:1px solid #eeeeee; padding:10px 0;  }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu	{ float:left; width:425px; margin:0 10px 0 0px; padding:0 0 0 30px; z-index:10; }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .mTitle	{width:425px; line-height:30px; display:inline-block; float:left; letter-spacing: text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden; }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .photo {width:16px; height:13px; display:inline-block; position:relative; top:2px; .top:-2px; .margin-right:3px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -42px; cursor:pointer; }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .ic_recom1 { clear:both; position:relative; top:2px;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .ic_recom1 img { display:inline;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .ic_recom2 { clear:both; position:relative; top:2px;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .ic_recom2 img { display:inline;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .menu .mDetail	{width:425px; float:left; display:block; padding:5px 0 0 0; font:normal 11px/110% "Dotum"; color:#908f90; letter-spacing:-1px; line-height:13px;  }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .price	{float:left; position:absolute; left:473px; margin:4px 10px 0 0; width:70px; text-align:right; line-height:30px;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .pay	{float:left; position:absolute; left:546px; width:20px; text-align:center; margin-top:12px; }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .pay input	{width:13px; height:13px; vertical-align:middle;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .quantity	{float:left; position:absolute; left:565px; padding:0 0 0 10px; width:65px; margin-top:8px; }
+.listmenupan .wrap .list_wrap .listR_wrap .listR .quantity input	{float:left; padding:1px 5px 0 5px; width:25px; height:16px; border:1px solid #e0e0e0; text-align:right; font:normal 12px/140% "Dotum"; color:#4b4b4b;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .quantity .up	{float:left; margin:0 0 0 2px; display:inline; border-bottom:1px solid #e0e0e0;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .quantity .down	{float:left; margin:0 0 0 2px; display:inline;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .good	{width:30px; float:left; position:absolute; left:640px; padding:0 0 0 10px; text-align:right; color:#db6565; margin-top:10px;}
+.listmenupan .wrap .list_wrap .listR_wrap .listR .good .ic { float:left; display:inline; margin-top:-2px; }
+.listmenupan .payNotice {float:right; margin:6px 10px 10px 0px; text-align:right; width:289px; height:15px; background:url(/image/restaurant/onepage/ic_notice.gif) no-repeat; padding:4px 0 0 23px; display:inline; font:normal 11px/130% "Dotum"; color: #adadad;}
+.listmenupan .wrap .list_wrap .listR_wrap .speaker {float:right; width:670px; text-align:left; padding:7px 0 5px 30px; display:block; font:normal 11px/120% "Dotum"; color:#ee9494; border-bottom:1px solid #eeeeee;}
+.listmenupan .wrap .list_wrap .listR_wrap .speaker img {display:inline;}
+
+
+.calculator {width:934px; float:left; position:relative; border-left:#d4d6df 1px solid; border-right:#d4d6df 1px solid; border-bottom:#d4d6df 1px solid; padding:0 22px 22px 22px; z-index:10; }
+.calculator .calculatorBtn {width:107px; height:25px; position:absolute; top:22px; right:22px; background:url('/image/restaurant/onepage/calculatorBtn2.gif') no-repeat 0 0;}
+.calculator .title {width:934px; height:24px; border-bottom:#8a8a8a 2px solid; padding-top:27px; }
+.calculator .title .calculator_ic {width:15px; height:15px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat -1px -22px; float:left; margin-right:5px;}
+.calculator .title .txt { float:left; font-size:14px; color:#000; font-weight:bold;}
+.calculator .tab {width:934px; height:35px; border-bottom:#eee 1px solid; line-height:35px; font-size:12px; font-weight:bold; color:#6b6d70; text-align:center; }
+.calculator .tab .t1 {margin-left:75px;}
+.calculator .tab .t2 {margin-left:590px;}
+.calculator .tab .t3 {margin-left:35px;}
+.calculator .tab .t4 {margin-left:33px;}
+.calculator .c_default { text-align:center; padding:30px 0;}
+.calculator ul {position:relative; float:left; width:934px; border-bottom:1px solid #8a8a8a; font-size:12px; color:#908f90; }
+.calculator ul .list {height:49px; border-bottom:#eee 1px solid;}
+.calculator ul .list .mTitle {width:280px; float:left; padding-left:20px; line-height:49px; color:#4b4b4b; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden;}
+.calculator ul .list .mDetail {width:420px; float:left; padding:0 10px; line-height:49px; color:#908f90; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden;}
+.calculator ul .list .price	{float:left; margin:0 10px 0 0; width:70px; text-align:center; line-height:49px;}
+.calculator ul .list .quantity	{ float:left; margin:0 10px 0 0; width:20px; text-align:center; line-height:49px;}
+.calculator ul .list .t_price	{float:left; margin:0 10px 0 0; width:70px; text-align:center; line-height:49px;}
+.calculator .payPer {float:left; padding:13px 0 0 0; display:inline; width:932px; height:27px; background:#e5e9ea;}
+.calculator .payPer dt {float:left; margin:0 10px 0 10px; display:inline;}
+.calculator .payPer .quantity {position:relative; top:-4px; left:0; float:left; display:inline; width:63px;}
+.calculator .payPer .quantity input {float:left; padding:1px 5px 0 5px; width:25px; height:16px; border:1px solid #e0e0e0; text-align:right; font:normal 12px/140% "Dotum"; color:#4b4b4b;}
+.calculator .payPer .quantity .up	{float:left; margin:0 0 0 2px; display:inline; border-bottom:1px solid #e0e0e0;}
+.calculator .payPer .quantity .down	{float:left; margin:0 0 0 2px; display:inline;}
+.calculator .payPer .result {float:left;}
+.calculator .payPer .result span {font-weight: bold;}
+.calculator .payPer .t_price {color:#d52828; font-weight:bold; float:right; margin-right:40px; text-align:center; }
+
+
+
+
+
+.tabMenu .listMenu	{clear:both; }
+.tabMenu .listMenu .topList	{float:left; width:980px;}
+.tabMenu .listMenu .CntrlList	{position:relative; float:left; width:140px; height:23px;}
+.tabMenu .listMenu .CntrlList a img {display:inline-block;}
+.tabMenu .listMenu .topList .btnPay	{float:right; margin:0 178px 0 0; display:inline;}
+.tabMenu .listMenu .topList .tex	{float:right; margin:6px 10px 0 0; font:normal 11px "Dotum"; color:#4b4b4b; text-align:right;}
+
+.tabMenu .listMenu .menuNavi	{position:relative; float:left; margin:8px 0 0 0; display:inline; width:980px; height:33px; background:url(/image/restaurant/onepage/bg_board_navi.gif) repeat-x;}
+.tabMenu .listMenu .menuNavi .index	{float:left; margin:11px 0 0 0; width:105px;}
+.tabMenu .listMenu .menuNavi .index img	{margin:0 auto;}
+.tabMenu .listMenu .menuNavi .menu	{float:left; margin:11px 0 0 0; width:500px;}
+.tabMenu .listMenu .menuNavi .menu	img	{margin:0 auto;}
+.tabMenu .listMenu .menuNavi .price	{float:left; margin:11px 0 0 0; width:110px;}
+.tabMenu .listMenu .menuNavi .price img	{margin:0 auto;}
+.tabMenu .listMenu .menuNavi .pay	{float:left; margin:11px 0 0 0; width:70px;}
+.tabMenu .listMenu .menuNavi .pay img	{margin:0 auto;}
+.tabMenu .listMenu .menuNavi .quantity	{float:left; margin:11px 0 0 0; width:100px;}
+.tabMenu .listMenu .menuNavi .quantity	img	{margin:0 auto;}
+.tabMenu .listMenu .menuNavi .good	{float:left; margin:11px 0 0 0; width:80px;}
+.tabMenu .listMenu .menuNavi .good img	{margin:0 auto;}
+.tabMenu .listMenu .menuNavi .addGood	{position:absolute; top:-56px; right:0px; float:right; display:inline;}
+
+.tabMenu .listMenu .menuList	{float:left;}
+.tabMenu .listMenu .menuList .group	{float:left; width:980px; margin:15px 0 0 0;}
+.tabMenu .listMenu .menuList .group .groupName	{float:left; width:980px; /*height:48px;*/ padding:0 0 5px 0; /border-bottom:1px solid #ffeeee;}
+.tabMenu .listMenu .menuList .group .groupName .btnGroup	{float:left; margin:0px 8px 0 0;}
+.tabMenu .listMenu .menuList .group .groupName dt	{float:left; width:950px; margin:1px 0 0 0; font:bold 14px "Dotum"; color:#db6565; }
+.tabMenu .listMenu .menuList .group .groupName dd	{ float:left; width:950px; margin:5px 0 0 25px; display:inline; font:normal 11px/120% "Dotum"; color:#ee9494;}
+.tabMenu .listMenu .menuList .group .groupName dd	img	{float:left; margin:0 4px 0 0;}
+/*
+.tabMenu .listMenu .menuList .group .line {float:left; margin:0 0 6px 0; _margin:0 0 -6px 0; width:980px; height:1px; background:url(/image/restaurant/onepage/bg_line_pink.gif) no-repeat; }
+*/
+
+
+.tabMenu .listMenu .menuList .list	{position:relative; float:left; width:980px; margin:10px 0 0 0; border-bottom:1px solid #eeeeee; padding:0 0 10px 0;}
+.tabMenu .listMenu .menuList .list dt	{position:relative; float:left; margin:0 0 0 21px; width:84px; /*height:50px;*/ display:inline; /*background:url(/image/restaurant/onepage/bg_pic50.gif) right no-repeat;*/}
+.tabMenu .listMenu .menuList .list dt span	{float:left;}
+.tabMenu .listMenu .menuList .list dt img	{float:right; /*margin:0 0 0 10px; display:inline;*/ width:50px; height:50px; /* background:url(/image/restaurant/onepage/bg_pic50.gif) no-repeat;*/}
+.tabMenu .listMenu .menuList .list dd	{}
+.tabMenu .listMenu .menuList .list .menu	{position:relative; float:left; width:460px; margin:0 20px 0 0px; padding:0 0 0 20px;}
+.tabMenu .listMenu .menuList .list .menu .mTitle	{width:460px; display:block;}
+.tabMenu .listMenu .menuList .list .menu .mDetail	{width:460px; display:block; padding:3px 0 0 0; font:normal 11px/110% "Dotum"; color:#908f90;}
+.tabMenu .listMenu .menuList .list .price	{float:left; margin:0 30px 0 0; width:80px; text-align:right;}
+.tabMenu .listMenu .menuList .list .pay	{float:left; width:70px; text-align:center;}
+.tabMenu .listMenu .menuList .list .pay input	{width:13px; height:13px; vertical-align:middle;}
+.tabMenu .listMenu .menuList .list .quantity	{position:relative; top:-4px; left:0; float:left; padding:0 0 0 22px; width:75px; }
+.tabMenu .listMenu .menuList .list .quantity input	{float:left; padding:1px 5px 0 5px; width:25px; height:16px; border:1px solid #e0e0e0; text-align:right; font:normal 12px/140% "Dotum"; color:#4b4b4b;}
+.tabMenu .listMenu .menuList .list .quantity .up	{float:left; margin:0 0 0 2px; display:inline; border-bottom:1px solid #e0e0e0;}
+.tabMenu .listMenu .menuList .list .quantity .down	{float:left; margin:0 0 0 2px; display:inline;}
+/*
+.tabMenu .listMenu .menuList .list .good	{float:left; width:45px; text-align:right; margin:0 0 0 22px; color:#db6565;}
+.tabMenu .listMenu .menuList .list .good .ic {position:relative; top:-2px; left:0px; float:left; display:inline; }
+*/
+.tabMenu .listMenu .menuList .list .good	{position:absolute; top:0; right:40px; width:45px; text-align:right; color:#db6565;}
+.tabMenu .listMenu .menuList .list .good .ic {position:relative; top:-2px; left:0px; float:left; display:inline; }
+
+
+
+/** 텝3; 리뷰 **/
+.tabReview	{/*position:relative;*/ clear:both; width:980px; padding:70px 0 0 0; z-index:1;}
+.tabReview h3	{float:left; width:980px; padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0;}
+.tabReview h3	 img	{float:left;}
+.tabReview h3	 .btnPortal	{float:right; width:px; height:22px;}
+.tabReview h3	 .btnPortal span	{float:left; font:normal 11px "Dotum"; color:#4b4b4b; margin:6px 8px 0 0;}
+.tabReview h3	 .btnPortal a img	{display:inline-block;}
+
+/* layer 평가하기2 */
+.tabReview .reviewWrap	{float:left; position:relative;}
+.tabReview .layerPoint				{position:absolute; top:-15px; right:0px; width:418px; height:538px; background:#ffffff; border:1px solid #aeafb2; z-index:30; -moz-box-shadow: 0px 1px 2px #ccc; -webkit-box-shadow: 0px 1px 2px #ccc; box-shadow: 0px 1px 2px #ccc; filter: progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=-180, Strength=3);}
+.tabReview .layerPoint .topPoint	{clear:both; margin:18px 0 0 37px; width:345px;}
+.tabReview .layerPoint .topPoint h4	{ float:left;}
+.tabReview .layerPoint .topPoint p		{padding:5px 0 0 0; font:normal 11px 'Dotum'; letter-spacing:0px; color:#adadad; clear:both;}
+.tabReview .layerPoint .topPoint .pointer {float:right; cursor:pointer; letter-spacing:-1px; color:#888; font-size:11px; text-align:right;}
+.tabReview .layerPoint .tablePoint	{float:left; margin:8px 0 0 37px; width:340px; border-top:2px solid #e0e0e0;}
+.tabReview .layerPoint .tablePoint .pointNavi	{float:left; padding:6px 0 3px 0; display:inline; width:340px; border-bottom:1px solid #eeeeee; font:bold 11px 'Dotum'; letter-spacing:0px; color:#585858;}
+.tabReview .layerPoint .tablePoint .pointNavi .nItem	{margin:0 0 0 50px;}
+.tabReview .layerPoint .tablePoint .pointNavi .nStar	{margin:0 0 0 100px;}
+.tabReview .layerPoint .tablePoint .pointNavi .nPoint	{margin:0 0 0 15px;  font:normal 11px 'Dotum'; letter-spacing:0px; color:#adadad;}
+.tabReview .layerPoint .tablePoint .pointList	{float:left; width:340px; padding:5px 0 3px 0; border-bottom:1px solid #eeeeee;}
+.tabReview .layerPoint .tablePoint .pointList .listItem	{float:left; margin:5px 0 3px 0;}
+.tabReview .layerPoint .tablePoint .pointList .listItem .itemStar		{float:left; width:124px; font:normal 12px 'Dotum'; letter-spacing:0px; color:#4b4b4b; text-align:center; }
+.tabReview .layerPoint .tablePoint .pointList .listItem .makeStar		{position:relative; top:-2px; left:20px; float:left; margin:0 25px 0 0; width:90px; }
+.tabReview .layerPoint .tablePoint .pointList .listItem .makeStar a img	 {float:left; margin:0 2px 0 0;}
+.tabReview .layerPoint .tablePoint .pointList .listItem .pointStar	{float:left; width:35px; font:normal 12px 'Dotum'; letter-spacing:1px; color:#db6565; text-align:right;}
+.tabReview .layerPoint .tablePoint .pointTotal	{position:relative; float:left; margin:2px 0 0 0; padding:6px 0 3px 0; width:340px; background:#ffede2;}
+.tabReview .layerPoint .tablePoint .pointTotal .totalItem	{float:left; width:120px; font:bold 12px 'Dotum'; letter-spacing:0px; color:#db6565; text-align:center;}
+.tabReview .layerPoint .tablePoint .pointTotal .totalPoint	{float:right; margin:0 35px 0 0; display:inline; font:normal 12px 'Dotum'; letter-spacing:1px; color:#908f90; text-align:right;}
+.tabReview .layerPoint .tablePoint .pointTotal .totalPoint p		{float:left;  padding:0 5px 0 0; font:bold 12px 'Dotum'; letter-spacing:1px; color:#db6565; text-align:right;}
+.tabReview .layerPoint .tablePoint .pointTotal .totalBtn	{position:absolute; top:3px; right:5px;}
+.tabReview .layerPoint .writePoint	{float:left; width:340px; margin:17px 0 0 37px;}
+.tabReview .layerPoint .writePoint dt	{float:left; width:340px; margin:0 0 2px 0;}
+.tabReview .layerPoint .writePoint .nWrite	{float:left; font:bold 11px 'Dotum'; letter-spacing:0px; color:#585858;}
+.tabReview .layerPoint .writePoint .nByte	 {float:right; font:normal 11px 'Dotum';}
+.tabReview .layerPoint .writePoint .writeDetail	{}
+.tabReview .layerPoint .writePoint .writeDetail textarea	{width:320px; height:70px; padding:10px; border:1px solid #dedede; font:normal 12px 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+.tabReview .layerPoint .writePoint .btnRegist	{float:left; width:340px; margin:4px 0 0 120px; display:inline;}
+.tabReview .layerPoint .bottomPoint	{clear:both; position:absolute; bottom:0; left:0; width:418px; height:61px; background: url(/image/restaurant/onepage/bg_point.gif) no-repeat; font:normal 11px 'Dotum'; letter-spacing:0px; color:#adadad;}
+.tabReview .layerPoint .bottomPoint dt	{float:left; margin:19px 0 0 89px; width:300px; display:inline;}
+.tabReview .layerPoint .bottomPoint dt .count	{color:#908f90;}
+.tabReview .layerPoint .bottomPoint dd	{float:left; margin:3px 0 0 89px; width:300px; display:inline;}
+.tabReview .layerPoint .bottomPoint dd .name	{color:#908f90;}
+.tabReview .layerPoint .bottomPoint dd .average	{color:#db6565;}
+.tabReview .layerPoint .btnClose	{position:absolute; bottom:-1px; right:-1px;}
+
+/* 여름이벤트 평가하기 */
+.tabReview .layerPoint .summer_eve {clear:both; width:340px; margin:0 auto; padding-top:10px; font-size:12px; color:#888; letter-spacing:-1px;}
+.tabReview .layerPoint .summer_eve a { display:block; color:#fff; width:150px; font-weight:bold; padding:3px 5px; background:#578bec; text-align:center; font-size:11px; text-decoration:none; float:right; margin-top:10px;}
+
+
+
+.tabReview .meganda	{position:relative; float:left; margin:0 0 40px 0; width:980px; height:207px;}
+.tabReview .meganda dt	{position:absolute; top:0; left:0; float:left; border:1px solid #d4d6df; width:423px; height:205px;}
+.tabReview .meganda dd	{position:absolute; top:0; right:0; float:left; border:1px solid #d4d6df; width:554px; height:205px; border-left:none;}
+.tabReview .meganda .cover	{position:absolute; top:0; right:0;}
+
+.tabReview .memberReview	{float:left; width:980px; margin:0 0 40px 0; position:relative;}
+.tabReview .memberReview .top	{position:relative; float:left; width:980px; margin:0 0 8px 0; }
+.tabReview .memberReview .top h4	{float:left; width:890px; margin:0 0 15px 0;}
+.tabReview .memberReview .top h4 img {display:inline-block;}
+.tabReview .memberReview .top h4 select {width:70px; height:20px; display:inline-block; padding:2px; position:relative; top:-2px; margin-left:3px; border:1px solid #e0e0e0;}
+.tabReview .memberReview .top .btnPoint	{position:absolute; top:-5px; right:0;}
+
+.tabReview .memberReview .review	{float:left; width:980px; border-bottom:1px solid #e0e0e0; z-index:1;}
+.tabReview .memberReview .review li	{float:left; width:938px; position:relative; padding:20px 20px 18px 20px; border:1px solid #e0e0e0; border-bottom:none; z-index:1;}
+.tabReview .memberReview .review li dl dt	 {position:relative; float:left; display:block; }
+.tabReview .memberReview .review li dl dt img	{position:absolute; top:-3px; left:0;}
+.tabReview .memberReview .review li dl dt span	 { margin:0 15px 0 18px; float:left; font:normal 11px "Dotum";}
+.tabReview .memberReview .review li dl .date	 {float:left; margin-right:10px;}
+.tabReview .memberReview .review li dl .vote {float:left; margin-top:-6px;}
+.tabReview .memberReview .review li dl .vote .like {width:21px; height:21px; display:inline-block; float:left; background:url('/image/restaurant/onepage/re_like.gif') no-repeat 0 0; text-indent:-100000px; margin-right:5px;}
+.tabReview .memberReview .review li dl .vote .dislike {width:21px; height:21px; display:inline-block; float:left; background:url('/image/restaurant/onepage/re_like.gif') no-repeat right 0; text-indent:-100000px;}
+.tabReview .memberReview .review li dl .vote .like.on, .tabReview .memberReview .review li dl .vote .like:hover {background-position: 0 bottom;}
+.tabReview .memberReview .review li dl .vote .dislike.on, .tabReview .memberReview .review li dl .vote .dislike:hover {background-position: right bottom;}
+
+.tabReview .memberReview .review li.re_badge_area dl { margin-left:35px;}
+.tabReview .memberReview .review li .re_badge { position:absolute; top:15px; left:15px;}
+
+.tabReview .memberReview .review li.reply .ico_re {width:18px; /*height:56px;*/ overflow:hidden; float:left;}
+.tabReview .memberReview .review li.reply dl {width:920px; float:left;}
+.tabReview .memberReview .review li.reply dl dt strong	 {margin:0 15px 0 20px; float:left; font:bold 11px "Dotum";}
+.tabReview .memberReview .review li.reply dl .content	{float:left; width:825px; margin:7px 0 0 0; font:normal 12px/130% 'Dotum'; letter-spacing:0px;}
+.tabReview .memberReview .review li.reply dl .rate a {font-size:11px; color:#888; margin:0 0 0 2px;}
+.tabReview .memberReview .review li.reply dl .reply_fold img { vertical-align:top; display:inline-block;}
+.tabReview .memberReview .review li.reply dl .reply_fold .foldBtn_on {width:15px; height:15px; position:absolute; top:20px; right:20px; background:url('/image/restaurant/onepage/btn_re.gif') no-repeat 0 bottom; text-indent:-100000px;}
+.tabReview .memberReview .review li.reply dl .reply_fold .foldBtn_off {width:15px; height:15px; position:absolute; top:20px; right:20px; background:url('/image/restaurant/onepage/btn_re.gif') no-repeat 0 0; text-indent:-100000px;}
+
+.tabReview .memberReview .review li dl .rate	{float:right; margin-top:10px;}
+.tabReview .memberReview .review li dl .rate .point	{float:left; position:relative; display:inline-block; width:60px; height:12px; margin:3px 5px 0 0; background:url('/image/restaurant/onepage/ic_star_off.png') repeat-x; z-index:1;}
+.tabReview .memberReview .review li dl .rate .point .star	{position:absolute; top:0px; left:0px; height:12px; background:url('/image/restaurant/onepage/ic_star_on.png') repeat-x; z-index:1; }
+.tabReview .memberReview .review li dl .rate .score	{float:left; margin:2px 0 0 7px; display:inline; font:bold 12px/150% 'Dotum'; letter-spacing:0px; color:#db6565;}
+.tabReview .memberReview .review li dl .content	{float:left; width:825px; margin:5px 0 0 0; font:normal 12px/130% 'Dotum'; letter-spacing:0px;}
+.tabReview .memberReview .review li dl .reply_btn {font-size:11px; color:#b17a7c; position:absolute; bottom:10px; right:20px;}
+.tabReview .memberReview .review li dl dt .input_wrap { overflow:hidden; position:absolute; top:0px; left:160px;}
+.tabReview .memberReview .review li dl dt input { margin-left:15px; margin-right:3px; vertical-align:bottom; margin-top:-5px;}
+.tabReview .memberReview .review li dl dt label {color:#888; font-size:11px;}
+.tabReview .memberReview .review li dl dd .cont_text {display:inline-block; float:left; width:855px; height:53px; overflow:hidden; line-height:14px; resize:none; margin-top:5px; border:solid 1px #999; border-right-color:#D7D7D7; border-bottom-color:#D7D7D7; color:#000; font-size:12px;}
+.tabReview .memberReview .review li dl dd .re_btn {display:inline-block; float:left; width:75px; height:55px; background:url('/image/restaurant/onepage/btn_reply.gif') no-repeat 0 0; margin:5px 0 0 6px; text-indent:-100000px; border:0px; cursor:pointer;}
+
+.tabReview .memberReview .paging{float:left; display:inline-block; width:980px; padding:6px 0; text-align:center; color:#d7d7d7; margin:10px 0 0 0;}
+.tabReview .memberReview .paging img{vertical-align:middle; margin:0 0 2px 0;}
+.tabReview .memberReview .paging a{display:inline-block; vertical-align:middle; color:#777777; font-weight:bold; background:url('/IMAGE/QNA/img_pgNum_div.gif') no-repeat right 50%; border:1px solid #ffffff; padding:4px 9px 2px 6px; margin-left:-4px;}
+.tabReview .memberReview .paging a.last{background:none;}
+.tabReview .memberReview .paging a:hover{color:#eb2a2e; border:1px solid #eb2a2e; background:none; text-decoration:none;}
+.tabReview .memberReview .paging .pgClick{display:inline-block; vertical-align:middle; font-weight:bold; padding:4px 8px 2px 6px; color:#eb2a2e; border:1px solid #eb2a2e; margin-left:-4px;}
+.tabReview .memberReview .paging a.imgBtn{display:inline-block; border:none; background:none; padding:0 3px; margin-left:-4px;}
+.tabReview .memberReview .paging a.imgBtn:hover{border:none;}
+.tabReview .memberReview .paging span.imgBtn{display:inline-block; vertical-align:middle; padding:0 3px; margin-left:-4px;}
+
+.tabReview .portalReview	{float:left; width:980px;  margin:0 0 50px 0;}
+.tabReview .portalReview .top	{float:left; margin:0 0 8px 0; width:980px;}
+.tabReview .portalReview .top h4	{float:left; width:890px; margin:0 0 15px 0;}
+.tabReview .portalReview .btnPortal	a {float:left; margin:0 10px 0 0;}
+
+
+.tabReview .goodReview	{float:left; width:980px;}
+.tabReview .goodReview .top	{float:left; margin:0 0 8px 0; width:980px;}
+.tabReview .goodReview .top h4	{float:left; width:890px; margin:0 0 15px 0;}
+.tabReview .goodReview .top .btnWrite	{position:relative; top:16px; right:0; float:right;}
+.tabReview .goodReview .top .topSub	{position:relative; float:left; width:980px;}
+.tabReview .goodReview .top .topSub .warning	{float:left; font:normal 11px "Dotum"; color:#adadad;}
+.tabReview .goodReview .top .topSub .count	{position:absolute; top:0; right:80px; float:right; font:normal 11px "Dotum"; color:#4b4b4b; text-align:right;}
+.tabReview .goodReview .top .topSub .count .number	{margin:0 2px 0 5px; font:bold 11px "Dotum"; color:#e47f7f;}
+.tabReview .goodReview .top .topSub .priority	{position:absolute; top:-4px; right:0; float:right;}
+.tabReview .goodReview .top .topSub select	{font:normal 11px "Dotum"; color:#4b4b4b; width:71px; /*border:1px solid #d9d9d9;*/}
+
+.tabReview .goodReview .boardNavi	{float:left; width:980px; height:33px; background:url(/image/restaurant/onepage/bg_board_navi.gif) repeat-x;}
+.tabReview .goodReview .boardNavi .title	{float:left; margin:11px 0 0 0; width:550px;}
+.tabReview .goodReview .boardNavi .title img	{margin:0 auto;}
+.tabReview .goodReview .boardNavi .writer	{float:left; margin:11px 0 0 0; width:160px;}
+.tabReview .goodReview .boardNavi .writer img	{margin:0 auto;}
+.tabReview .goodReview .boardNavi .date	{float:left; margin:11px 0 0 0; width:110px;}
+.tabReview .goodReview .boardNavi .date	img	{margin:0 auto;}
+.tabReview .goodReview .boardNavi .count	{float:left; margin:11px 0 0 0; width:80px;}
+.tabReview .goodReview .boardNavi .count img	{margin:0 auto;}
+.tabReview .goodReview .boardNavi .good	{float:left; margin:11px 0 0 0; width:80px;}
+.tabReview .goodReview .boardNavi .good img	{margin:0 auto;}
+
+.tabReview .goodReview .boardNotice	{position:relative; top:-1px; left:0; float:left; width:980px; border-bottom:1px solid #f5adad;}
+.tabReview .goodReview .boardNotice li	{float:left; width:980px; height:40px; border-top:1px solid #eeeeee;}
+.tabReview .goodReview .boardNotice li dl dt	{float:left; /*margin:11px 8px 0 12px;*/ display:inline;}
+.tabReview .goodReview .boardNotice li dl dd	{float:left; margin:15px 0 0 10px; }
+.tabReview .goodReview .boardNotice li dl dd a {font-size:12px; font-weight:bold; color:#db6565;}
+.tabReview .goodReview .boardNotice li dl dd .subject	{margin:0 0px 0 0; font:bold 12px "Dotum"; color:#db6565;}
+
+.tabReview .goodReview .count { padding:10px 0 10px 10px; float:left; display:block; font:normal 11px "Dotum"; color:#4b4b4b; text-align:right;}
+.tabReview .goodReview .count .number {margin:0 2px 0 5px; font:bold 11px "Dotum"; color:#e47f7f;}
+
+.tabReview .goodReview .boardList	{float:left; width:980px;}
+.tabReview .goodReview .boardList li	{float:left; width:980px; padding:13px 0 13px 0; border-bottom:1px solid #eeeeee; }
+.tabReview .goodReview .boardList li dl { float:left; width:980px; position:relative;}
+.tabReview .goodReview .boardList li dl dt	{float:left; margin:0 15px 0 10px; display:inline; position:relative;}
+.tabReview .goodReview .boardList li dl dt a img	{width:120px; height:90px;}
+.tabReview .goodReview .boardList li dl dt .plus { position:absolute; right:0px; bottom:0px; width:23px; height:14px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -60px; cursor:pointer;}
+.tabReview .goodReview .boardList li dl dt .plus .img_more { width:13px; height:14px; text-align:left; letter-spacing:-1px; float:right; font-size:11px; color:#888;  line-height:16px; margin-left:3px;}
+.tabReview .goodReview .boardList li dl dd.thum {position:absolute; top:-9px; left:102px; padding:6px 0px 6px 6px; background:#f2f2f2;}
+.tabReview .goodReview .boardList li dl dd.thum p {float:left; padding:0px 3px 0px 0px;}
+.tabReview .goodReview .boardList li dl dd.thum p img {width:90px; height:90px;}
+.tabReview .goodReview .boardList .title	{float:left; width:600px; margin:5px 0 0 0;}
+.tabReview .goodReview .boardList .title .mainTitle .type			{float:left; margin:0px 3px 0 5px; display:inline; font:normal 12px "Dotum"; color:#adadad;}
+.tabReview .goodReview .boardList .title .mainTitle .attention	{float:left; margin:0 0 0 5px; display:inline;}
+.tabReview .goodReview .boardList .title .mainTitle .best			{float:left; margin:0 0 0 5px; display:inline;}
+.tabReview .goodReview .boardList .title .mainTitle						{float:left; width:600px; margin:3px 0 0 0; display:block;}
+.tabReview .goodReview .boardList .title .mainTitle .subject	{float:left; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.tabReview .goodReview .boardList .title .mainTitle .subject a	{font:bold 12px "Dotum"; color:#6b6d70;}
+.tabReview .goodReview .boardList .title .subTxt a { color:#6b6d70; font-size:12px; float:left; display:block; margin-top:5px;}
+.tabReview .goodReview .boardList .title .reply		{margin:15px 0 0 0px; float:left; font:normal 12px "Dotum"; color:#adadad;}
+.tabReview .goodReview .boardList .title .reply_num		{margin:0 0 0 0px; font:normal 12px "Dotum"; color:#db6565; background:url(/image/restaurant/onepage/ic_reply.gif) no-repeat; padding:0 0 0 18px;}
+.tabReview .goodReview .boardList .title strong {margin:0 5px 0 8px; color:#4b4b4b;}
+.tabReview .goodReview .boardList .writer {float:right; margin:5px 0 0 10px; width:206px; font-size:11px; color:#adadad; text-align:right;}
+.tabReview .goodReview .boardList .writer img	{display:inline;}
+.tabReview .goodReview .boardList .writer span	{position:relative; top:-3px; padding:0 4px; color:#6b6d70;}
+.tabReview .goodReview .boardList .date	{position:absolute; right:0px; bottom:0px; font-size:11px; color:#6b6d70; width:110px; text-align:right;}
+
+.tabReview .goodReview  .boardList .f_reply {width:980px; padding:23px 0 40px 0; text-align:center;}
+.tabReview .goodReview  .boardList .f_reply a { font-size:12px; color:#adadad; }
+.tabReview .goodReview  .boardList .f_reply a img {display:inline;}
+
+.portalReview .boardList	{float:left; width:980px;}
+.portalReview .boardList li	{float:left; width:980px; padding:13px 0 13px 0; border-bottom:1px solid #eeeeee; }
+.portalReview .boardList li dl { float:left; width:980px; position:relative;}
+.portalReview .boardList li dl dt	{float:left; margin:0 15px 0 10px; display:inline; position:relative;}
+.portalReview .boardList li dl dt .portal_best_ico {position:absolute; left:0px; top:0px;}
+.portalReview .boardList li dl dt a img	{width:120px; height:90px;}
+.portalReview .boardList .title	{float:left; width:600px; margin:5px 0 0 0;}
+.portalReview .boardList .title .mainTitle .naver_ic	{ width:38px; height:14px; float:left; margin:0 5px 0 0; display:inline; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -125px;}
+.portalReview .boardList .title .mainTitle						{float:left; width:820px; margin:3px 0 0 0; display:block;}
+.portalReview .boardList .title .mainTitle .subject	{float:left; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.portalReview .boardList .title .mainTitle .subject a	{font:bold 12px "Dotum"; color:#6b6d70;}
+.portalReview .boardList .title .subTxt a { width:600px; color:#6b6d70; font-size:12px; float:left; display:block; margin-top:5px; }
+.portalReview .boardList .title .reply		{margin:15px 0 0 0px; float:left; }
+.portalReview .boardList .title .reply a {font:normal 12px "Dotum"; color:#adadad;}
+.portalReview .boardList .title strong {margin:0 5px 0 8px; color:#4b4b4b;}
+.portalReview .boardList .writer {float:right; margin:5px 0 0 10px; width:206px; font-size:11px; color:#adadad; text-align:right; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden;}
+.portalReview .boardList .date {position:absolute; right:0px; top:0px; width:110px; font-size:11px; color:#6b6d70; text-align:right;}
+
+.tabReview .goodReview .paging{float:left; display:inline-block; width:980px; padding:6px 0; text-align:center; color:#d7d7d7; margin:10px 0 0 0;}
+.tabReview .goodReview .paging img{vertical-align:middle; margin:0 0 2px 0;}
+.tabReview .goodReview .paging a{display:inline-block; vertical-align:middle; color:#777777; font-weight:bold; background:url('/IMAGE/QNA/img_pgNum_div.gif') no-repeat right 50%; border:1px solid #ffffff; padding:4px 9px 2px 6px; margin-left:-4px;}
+.tabReview .goodReview .paging a.last{background:none;}
+.tabReview .goodReview .paging a:hover{color:#eb2a2e; border:1px solid #eb2a2e; background:none; text-decoration:none;}
+.tabReview .goodReview .paging .pgClick{display:inline-block; vertical-align:middle; font-weight:bold; padding:4px 8px 2px 6px; color:#eb2a2e; border:1px solid #eb2a2e; margin-left:-4px;}
+.tabReview .goodReview .paging a.imgBtn{display:inline-block; border:none; background:none; padding:0 3px; margin-left:-4px;}
+.tabReview .goodReview .paging a.imgBtn:hover{border:none;}
+.tabReview .goodReview .paging span.imgBtn{display:inline-block; vertical-align:middle; padding:0 3px; margin-left:-4px;}
+
+
+/** 텝4; 찾아가는길 **/
+
+.tabMap	{clear:both; float:left; width:980px; padding:70px 0 0 0; position:; z-index:10;}
+.tabMap2	{clear:both; float:left; width:980px;position:relative; z-index:50;}
+.tabMap2	.lySMS			{position:absolute; top:150px; left:680px; *z-index:50; z-index:50;}
+.tabMap h3	{width:980px; padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0;}
+
+.tabMap .mapSec	{float:left; width:978px; position:relative; border:1px solid #dedede; margin-bottom:15px; z-index:10;}
+.tabMap .mapSec .mapMenupan .departure_tit {font-weight:bold; margin:20px 25px 0 25px; }
+.tabMap .mapSec .mapGoogle	{position:relative; float:left; border-right:1px solid #dedede; width:618px; height:350px; z-index:100;}
+.tabMap .mapSec .mapGoogle .btnExpand	{position:absolute; top:0; left:0; margin:12px 0 0 37px;}
+.tabMap .mapSec .mapMenupan	{float:right; /*border:1px solid #dedede; border-left:none; height:187px;*/ width:359px; z-index:10; }
+.tabMap .mapSec .mapMenupan .map	{float:left; margin:36px 0 0 97px; display:inline; width:337px;}
+.tabMap .mapSec .mapMenupan .map img	{width:250px; height:200px;}
+.tabMap .mapSec .mapMenupan .address	{float:left; margin:20px 25px 18px 25px; display:inline; display:block; }
+.tabMap .mapSec .mapMenupan .address ul li	{float:left; margin:0px 0 0 0; }
+.tabMap .mapSec .mapMenupan .address ul li	dt	{float:left; width:70px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapSec .mapMenupan .address ul li	dd	{float:left; width:239px;}
+.tabMap .mapSec .mapMenupan .traffic	{float:left; margin:0 25px; display:inline; display:block;}
+.tabMap .mapSec .mapMenupan .traffic ul li	{float:left; margin:0px 0 18px 0;}
+.tabMap .mapSec .mapMenupan .traffic ul li .bus	dt	{float:left; width:70px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapSec .mapMenupan .traffic ul li .bus	dd	{float:left; width:239px; }
+.tabMap .mapSec .mapMenupan .traffic ul li .mycar	dt	{float:left; width:70px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapSec .mapMenupan .traffic ul li .mycar dd	{float:left; width:239px;}
+.tabMap .mapSec .noticeMap	{float:left; position:absolute; right:0px; bottom:0px; margin:0px 0 0 0px; height:16px; background:#000 url(/image/restaurant/onepage/bullet_map.png) no-repeat 3px 3px; padding:3px 3px 0px 17px; display:inline; font:normal 11px/140% "Dotum"; color:#fff; z-index:150; letter-spacing:-1px; opacity:0.3; filter:alpha(opacity="35");}
+.tabMap .mapSec .btnPrint	{margin:7px 0 0 0; float:right; position:absolute; top:-65px; right:0px;}
+.tabMap .mapSec .btnPhone	{margin:7px 0 0 0; float:right; position:absolute; top:-65px; right:86px; z-index:10;}
+.tabMap .mapSec .btnZoom	{margin:7px 0 0 0; float:left; position:absolute; top:0px; left:538px; z-index:150;}
+
+.tabMap .mapPay	{float:left; width:980px;}
+.tabMap .mapPay .mapGoogle	{position:relative;  float:left; border:1px solid #dedede; width:543px; height:428px;}
+.tabMap .mapPay .mapGoogle .btnExpand	{position:absolute; top:0; left:0; margin:12px 0 0 37px;}
+.tabMap .mapPay .mapMenupan	{float:right; border:1px solid #dedede; border-left:none; width:434px; height:428px;}
+.tabMap .mapPay .mapMenupan .map	{float:left; margin:36px 0 0 97px; display:inline; width:337px;}
+.tabMap .mapPay .mapMenupan .map img	{width:250px; height:200px;}
+.tabMap .mapPay .mapMenupan .address	{float:left; margin:35px 0 10px 60px; display:inline; width:314px;}
+.tabMap .mapPay .mapMenupan .traffic	{float:left; margin:0 0 0 60px; display:inline; width:314px;}
+.tabMap .mapPay .mapMenupan .traffic ul li	{float:left; margin:10px 0 0 0; width:314px;}
+.tabMap .mapPay .mapMenupan .traffic ul li .bus dt	{float:left; width:70px; height:30px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapPay .mapMenupan .traffic ul li .bus dd	{float:left; width:244px;}
+.tabMap .mapPay .mapMenupan .traffic ul li .mycar dt	{float:left; width:70px; height:30px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapPay .mapMenupan .traffic ul li .mycar dd	{float:left; width:244px;}
+.tabMap .mapPay .noticeMap	{float:left; margin:3px 0 0 0; height:15px; background:url(/image/restaurant/onepage/ic_notice.gif) no-repeat; padding:4px 0 0 25px; display:inline; font:normal 11px/140% "Dotum"; color:#4b4b4b;}
+.tabMap .mapPay .btnPrint	{margin:7px 0 0 0; float:right; width:250px; height:34px;}
+
+.tabMap .mapFree	{float:left; width:980px;}
+.tabMap .mapFree .mapYes .mapGoogle	{position:relative; float:left; border:1px solid #dedede; width:543px; height:428px;}
+.tabMap .mapFree .mapYes .mapGoogle .btnExpand	{position:absolute; top:0; left:0; margin:12px 0 0 37px;}
+.tabMap .mapFree .mapYes .mapMenupan	{float:right; border:1px solid #dedede; border-left:none; width:434px; height:428px;}
+.tabMap .mapFree .mapYes .mapMenupan .map	{float:left; margin:36px 0 0 97px; display:inline; width:337px;}
+.tabMap .mapFree .mapYes .mapMenupan .map img	{width:250px; height:200px;}
+.tabMap .mapFree .mapYes .mapMenupan .address	{float:left; margin:35px 0 10px 60px; display:inline; width:314px;}
+.tabMap .mapFree .mapYes .mapMenupan .traffic	{float:left; margin:0 0 0 60px; display:inline; width:314px;}
+.tabMap .mapFree .mapYes .mapMenupan .traffic ul li	{float:left; margin:10px 0 0 0; width:314px;}
+.tabMap .mapFree .mapYes .mapMenupan .traffic ul li .bus	dt	{float:left; width:70px; height:30px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapFree .mapYes .mapMenupan .traffic ul li .bus	dd	{float:left; width:244px;}
+.tabMap .mapFree .mapYes .mapMenupan .traffic ul li .mycar	dt	{float:left; width:70px; height:30px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapFree .mapYes .mapMenupan .traffic ul li .mycar dd	{float:left; width:244px;}
+.tabMap .mapFree .mapYes .noticeMap	{float:left; margin:9px 0 0 0; height:15px; background:url(/image/restaurant/onepage/ic_notice.gif) no-repeat; padding:4px 0 0 25px; display:inline; font:normal 11px/140% "Dotum"; color:#4b4b4b;}
+
+
+.tabMap .mapFree .mapNo .mapMenupan	{float:left; padding:35px 40px 30px 40px; border:1px solid #dedede; width:898px;}
+.tabMap .mapFree .mapNo .mapMenupan .address	{margin:0 0 10px 0;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic	{float:left; width:900px;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li	{float:left; margin:10px 0 0 0;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li .bus	{float:left; width:900px;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li .bus	dt	{float:left; width:70px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li .bus	dd	{float:left;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li .mycar	{float:left; width:900px;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li .mycar	dt	{float:left; width:70px; font:normal 12px "Dotum"; color:#6079a8;}
+.tabMap .mapFree .mapNo .mapMenupan .traffic ul li .mycar dd	{float:left;}
+.tabMap .mapFree .mapNo .noticeMap	{float:left; margin:9px 0 0 0; height:15px; background:url(/image/restaurant/onepage/ic_notice.gif) no-repeat; padding:4px 0 0 25px; display:inline; font:normal 11px/140% "Dotum"; color:#4b4b4b;}
+
+
+.map_poi {position:absolute; top:30px; left:100px; padding:10px; border:#1f1f20 1px solid; background:#fff; z-index:200; }
+.map_poi .spot_arrow { width:42px; height:36px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -143px; position:absolute; left:50%; bottom:-36px; z-index:200; }
+.map_poi p.img, .map_poi p.img img {width:110px; height:110px; float:left;}
+.map_poi dl {width:208px; float:left; margin-left:15px; }
+.map_poi dl dt {width:208px; height:22px; border-bottom:#000000 2px solid; padding-top:12px; margin-bottom:9px; font-size:16px; color:#6b6d70; letter-spacing:-1px; text-align:left; font-weight:bold;}
+.map_poi dl dd { font-size:12px; color:#6b6d70; margin-bottom:5px; text-align:left;}
+.map_poi dl dd.point {float:left; margin-top:5px;}
+.map_poi dl dd.point .star img {float:left; margin:1px 1px 0 0;}
+.map_poi dl dd.point .score {float:left; margin:0 0 0 7px; display:inline; font:bold 12px/150% 'Dotum'; letter-spacing:0px; color:#db6565;}
+.map_poi .close {width:11px; height:11px; position:absolute; top:10px; right:10px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -109px; z-index:250;}
+.map_poi .couponBtn {width:46px; height:15px; position:absolute; right:29px; bottom:15px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -79px; padding:5px; color:#6b6d70; text-align:center; text-decoration:none;}
+.map_poi .couponBtn .red {color:#ef4b53; font-weight:bold;}
+
+/** 텝5; 업주관리 **/
+
+.tabOwner	{float:left;  width:980px; padding:70px 0 0 0;}
+.tabOwner h3	{padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0;}
+
+.tabOwner .domainTop	{float:left; margin:0 0 15px 0; width:980px;}
+.tabOwner .domainTop dt	{margin:0 0 15px 0;}
+.tabOwner .domainTop dd {font:normal 12px/140% "Dotum"; color:#4b4b4b;}
+
+.tabOwner .domainSearch	{ float:left; width:390px;}
+.tabOwner .domainSearch dt		 {float:left; width:242px;}
+.tabOwner .domainSearch dt input {padding:4px 5px 0 5px; width:230px; height:15px; border:1px solid #e0e0e0; text-align:left; font:normal 12px "Dotum"; color:#4b4b4b;}
+.tabOwner .domainSearch dd						{float:left; margin:1px 0 0 0;}
+.tabOwner .domainSearch .btnSearch a img	{float:left; width:44px; height:21px;}
+.tabOwner .domainSearch .btnSet					{padding:0 0 0 5px;}
+.tabOwner .domainSearch .btnSet	 a img		{float:left; width:82px; height:21px;}
+.tabOwner .noticeSearch	{ float:left; margin:2px 0 0 0px; padding:4px 0 0 21px; width:300px; height:15px; display:inline; background:url(/image/restaurant/onepage/ic_notice.gif) no-repeat; font:normal 11px "Dotum"; color:#db6565;}
+
+
+
+/** 주변맛집 **/
+/*.nearRest	{clear:both; float:left; width:980px; padding:70px 0 0 0;}
+.nearRest h3	{width:980px; margin:0 0 8px 0;}
+.nearRest .list	{width:956px; height:150px; padding:18px 0 0 22px; border:1px solid #e0e0e0;}
+.nearRest .list li	{float:left; width:138px; margin:0 20px 0 0;}
+.nearRest .list li .thm	img {width:138px; height:98px; margin:0 0 11px 0;}
+.nearRest .list li .restName	{width:138px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.nearRest .list li .typeInfo	{width:138px;}
+.nearRest .list li .typeInfo .ico_type	{float:left; display:inline-block; width:14px; height:14px;}
+.nearRest .list li .typeInfo .info	{display:inline-block; font-size:11px; color:#adadad; padding:2px 0 0 5px;}*/
+
+.nearRest {position:relative; clear:both; float:left; width:980px; padding:70px 0 0 0;}
+.nearRest .more {height:9px; padding-right:7px; position:absolute; top:75px; right:5px; background:url('/image/restaurant/onepage/more_ico.png') no-repeat right 3px; text-align:right;}
+.nearRest .more a {font-size: 11px; color: #a1abb4; letter-spacing: -1px;}
+.nearRest h3	{width:980px; margin:0 0 8px 0;}
+.nearRest .bestLst {width:980px; height:180px; clear:both;}
+.nearRest .bestLst li {float:left; width:180px; height:180px; margin-right:20px;}
+.nearRest .bestLst li img {width:180px; height:180px; display:block;}
+.nearRest .bestLst li.rnd{margin-right:0; float:right;}
+
+.nearRest .bestLst li .bestIfo_off{float:left; padding:12px; background:url(/IMAGE/Restaurant/teste_rest/bg_bestLst.png) 0 0 repeat; position:absolute; bottom:0; width:156px; letter-spacing:-2px;}
+.nearRest .bestLst li .bestIfo_off a {font-size:14px; font-weight:bold; color:#fff; width:156px; overflow:hidden; white-space:nowrap; display:block; text-overflow:ellipsis; word-wrap:normal;}
+
+.nearRest .bestLst li .bestIfo_on {float:left; padding:12px; background:url(/IMAGE/Restaurant/teste_rest/bg_bestLst.png) 0 0 repeat; position:absolute; bottom:0; width:156px; color:#fff;}
+.nearRest .bestLst li .bestIfo_on p a {font-size:14px; font-weight:bold; color:#fff; width:156px; overflow:hidden; white-space:nowrap; display:block; text-overflow:ellipsis; word-wrap:normal; letter-spacing:-2px;}
+.nearRest .bestLst li .bestIfo_on .adr {margin:4px 0; font-size:11px;}
+.nearRest .bestLst li .bestIfo_on .cpn {font-size:11px;}
+.nearRest .bestLst li .bestIfo_on .cpn .cpc a{float:left; width:48px; height:17px; /*background:url(/IMAGE/Restaurant/teste_rest/bestIfo_cpn.gif) 0 -30px repeat;*/ margin:-3px 2px 0 0;}
+.nearRest .bestLst li .bestIfo_on .cpn .cpc {float:left; padding:1px 2px; *padding:2px 2px 0 2px; _padding:2px 2px 0 2px; background-color:#d42626; border:1px solid #be0000; /*margin:-3px 2px 0 0;*/ color:#fff; font-size:11px; -webkit-border-radius:2px;}
+.nearRest .bestLst li .bestIfo_on .cpn .cptxt {float:left; margin:2px 0 0 3px; *margin:3px 0 0 3px; _margin:3px 0 0 3px;}
+
+
+
+/***** mainArea03 *****/
+.mainArea03	{clear:both; width:980px; }
+
+.mainArea03 .visitor{display:inline-block; width:100%; border-bottom:1px solid #767676; padding-bottom:10px; text-align:right;}
+.mainArea03 .visitor dt{display:inline;}
+.mainArea03 .visitor dd{display:inline; padding-left:5px;}
+/*.mainArea03 .visitor dd .pc	{margin:0 0 0 3px; padding:0 0 0 15px; background:url(/image/restaurant/onepage/ic_pc.gif) no-repeat;}
+.mainArea03 .visitor dd .phone	{margin:0 2px 0 3px; padding:0 0 0 12px ; background:url(/image/restaurant/onepage/ic_phone.gif) no-repeat;}*/
+
+.mainArea03 .footer{display:inline-block; width:100%; margin-top:10px; font-size:11px; color:#999; letter-spacing:-1px; text-align:center;}
+.mainArea03 .footer span{padding:0 3px; color:#aaa;}
+.mainArea03 .footer .copyinfo{padding:10px 0; letter-spacing:0px; }
+.mainArea03 .footer .copyinfo li{display:inline; padding:0 5px; line-height:1.5 }
+
+
+
+
+
+
+/***** bnrWing *****/
+
+.bnrWing		{position:absolute; top:20px; right:-120px; width:104px; font:normal 11px 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+.bnrWing_evt	{width:104px; height:280px; font:normal 11px 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+
+.bnrWing_rest	{width:104px; font:normal 11px 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
+.bnrWing_rest h4	{float:left; width:104px; height:50px;}
+.bnrWing_rest .listWing	{float:left; width:104px; background:url(/image/restaurant/onepage/bg_nearby_body.gif) repeat-y;}
+.bnrWing_rest .listWing li	{float:left; margin:0 1px 0 6px; padding:8px 9px 5px 8px; display:inline; border-top:1px solid #eeeeee;}
+.bnrWing_rest .listWing .list	{float:left;}
+.bnrWing_rest .listWing .list dt	{float:left; margin:0 0 6px 0; width:80px;}
+.bnrWing_rest .listWing .list dt a img	{width:80px; height:60px;}
+.bnrWing_rest .listWing .list .name	{float:left; margin:0 0 2px 0; width:80px; color:#6079a8; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.bnrWing_rest .listWing .list .name a	{color:#6079a8; letter-spacing:-1px; }
+.bnrWing_rest .listWing .list .address	{float:left; width:80px; color:#908f90; letter-spacing:-1px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.bnrWing_rest .listWing .list .tel	{float:left; width:80px; color:#908f90;}
+.bnrWing_rest .bgBottom	{float:left;}
+
+.storeQr		{width:100px; height:175px; margin:0 0 0 0; background:url(/image/restaurant/onepage/bg_storeQr.gif) no-repeat;}
+.storeQr h4		{width:100px; height:40px; margin:0 0 10px 0;}
+.storeQr .qrImg	{width:86px; height:86px; margin:0 0 0 6px;}
+
+.first	{margin:0 0 15px 0; clear:both; display:block;}
+.first .repoter	{margin:0 0 5px 0;}
+.first .rptRest	{width:100px; margin:0 0 15px 0; border-top:1px solid #dedede; border-bottom:1px solid #dedede; background:url(/image/restaurant/onepage/reporter/bg_rptRest.gif) repeat-y;}
+.first .rptRest	h4	{clear:both; font-weight:normal; font-size:11px; letter-spacing:-1px; padding:8px 0 6px 0; border-bottom:1px solid #dedede; text-align:center;}
+.first .rptRest	h4 .nick span {text-decoration:underline;}
+.first .rptRest	h4 .title	{margin:2px auto;}
+.first .rptRest .list		{clear:both;padding:8px 8px 0 8px;}
+.first .rptRest .list li	{clear:both; width:84px; height:130px; }
+.first .rptRest .list .thm		{float:left; margin:0 0 6px 0;}
+.first .rptRest .list .thm img	{width:84px; height:60px;}
+.first .rptRest .list .name		{float:left; margin:0 0 0 0; width:84px; color:#6079a8; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.first .rptRest .list .name a	{color:#6079a8; letter-spacing:-1px; }
+.first .rptRest .list .address	{float:left; width:84px; color:#908f90; letter-spacing:-1px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.first .rptRest .list .star		{float:left; width:60px; height:12px; margin-bottom:2px; background:url(/image/restaurant/onepage/ic_star_off.png) repeat-x;}
+.first .rptRest .list .star span	{display:block; height:12px; background:url(/image/restaurant/onepage/ic_star_on.png) repeat-x}
+.first .rptRest .list .point		{float:left; width:84px;}
+.first .rptRest .list .point span	{font-weight:bold; color:#db6565; margin-right:5px;}
+.first .rptRest .more	{clear:both; width:84px; height:14px; text-align:right; padding:0 8px 8px 8px;}
+.first .rptRest .more a {float:right;}
+
+.wing_first {width:100px; height:202px; margin:0 0 5px 0; clear:both; display:block; background:url('/image/restaurant/onepage/reporter/bg_rptRest.gif') repeat-y; border-bottom:#dedede 1px solid;}
+.wing_first .f_repoter	{width:100px; height:45px; margin:0 0 5px 0; background:url('/image/restaurant/onepage/w_pho_img.png') no-repeat 0 0;  position:relative; vertical-align:top; }
+.wing_first .repoter_ic {width:44px; height:44px; background:url('/image/restaurant/onepage/w_pho_img.png') no-repeat 0 -70px; position:absolute; top:-10px; right:-8px;}
+.wing_first h4 {width:100px; height:45px;}
+.wing_first h4 .tit { width:46px; height:15px; float:left; background:url('/image/restaurant/onepage/w_pho_img.png') no-repeat 0 -50px; margin:8px 0 0 8px;}
+.wing_first h4 .id { width:66px; float:left; font-size:11px; font-weight:normal; text-align:left; color:#fff; margin:1px 0 8px 8px; letter-spacing:-1px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden;}
+.wing_first dl {width:100px; float:left;}
+.wing_first dl dt {width:84px; height:72px; margin:8px; display:block;}
+.wing_first dl dt img {width:84px; height:72px;}
+.wing_first dl dd {width:84px; height:62px; padding:0px 8px 0 8px; overflow:hidden; font-size:11px; letter-spacing:-1px; color:#6c6d71; display:block;}
+
+
+/*********오른쪽 윙배너*********/
+
+/*Google 번역기*/
+.transTo				{width:107px; margin:0 auto; }
+.transTo .titleGoogle	{margin-top:20px;}
+.transTo ul				{}
+.transTo ul img			{float:left;}
+.transTo .transTxt		{float:left;}
+
+
+/* 매장 정보수정요청 버튼 */
+.errorBtn	{ position:absolute; top:78px; right:0px; display:block; z-index:5;}
+.errorBtn a { font-size:11px; color:#6079a8; letter-spacing:-1px;}
+
+
+/* 한줄평가 로그인 레이어 201309 */
+.memberLogin {width:270px; height:192px; position:absolute; top:20px; right:0px; border:#400003 1px solid; background:#fff; z-index:999;}
+.memberLogin .tit { background:#d2323b; padding:20px 0 0 17px; text-align:left; height:38px; display:block; font-size:18px; color:#fff; letter-spacing:-1px; line-height:100%; font-weight:bold;}
+.memberLogin .btnClose { position:absolute; top:12px; right:12px; width:32px; height:32px; cursor:pointer; border:none; text-indent:-5000px; background:#9f0008 url('/image/restaurant/onepage/ico_ly_close.png') 7px 7px no-repeat; -wibkit-background-size: 32px 32px;}
+
+.memberLogin .btn { float:left; display:block; width:270px; height:42px; padding:15px 0 0 0; text-align:center;}
+.memberLogin .btn .btn1 {float:left; width:94px; height:34px; border:1px solid #de3131; -webkit-border-radius:2px; cursor:pointer; margin:0 5px 0 30px; }
+.memberLogin .btn .btn2 {float:left; width:94px; height:34px; border:1px solid #3d4669; -webkit-border-radius:2px; cursor:pointer; margin:0 5px; }
+.memberLogin .btn .btn1 .btnRecognize1 { float:left; width:94px; height:34px; padding:3px 0 0 0; color:#ffffff; cursor:pointer; border-top:1px solid #fa9191; border-left:1px solid #fb8186; border-right:1px solid #fb7a82; border-bottom:1px solid #fc6875; -webkit-border-radius:2px;
+ background-color:#fa5f67; background-image:-webkit-gradient(linear,0 0,0 100%,from(#f97475),to(#fb4354));}
+.memberLogin .btn .btn2 .btnRecognize2 { float:left; width:94px; height:34px; padding:3px 0 0 0; color:#ffffff; cursor:pointer; border-top:1px solid #6d7086; border-left:1px solid #6d7086; border-right:1px solid #4e5367; border-bottom:1px solid #4e5367; -webkit-border-radius:2px;
+ background-color:#4c5168; background-image:-webkit-gradient(linear,0 0,0 100%,from(#5c6078),to(#3b4057));}
+
+.memberLogin .txt {float:left; display:block; width:250px; font-size:11px; color:#444; padding:10px 7px 10px 13px; letter-spacing:-1px; }
+.memberLogin .txt .red {color:#FF0000;}
+
+
+/* 찾아가는 길 로드뷰 추가 201404 */
+.departure_wrap {width:309px; height:148px; float:right; margin:0 25px; padding-top:17px; z-index:10;}
+.departure_wrap .departure_tit {font-weight:bold; margin-bottom:15px; }
+.departure_wrap .departure, .departure_wrap .arrival { display:block; float:left; width:309px; margin-bottom:5px;}
+.departure_wrap .departure dt, .departure_wrap .arrival dt { float:left; width:70px; font:normal 12px "Dotum"; color:#6079a8; line-height:30px;}
+.departure_wrap .departure dd, .departure_wrap .arrival dd {float:left; width:239px; position:relative;}
+.departure_wrap .departure dd .input_departure {width:227px; height:28px; border:1px solid #888; padding:0 5px; line-height:28px; text-align:left; color:#4b4b4b;}
+.departure_wrap .departure dd .input_departure::-ms-clear { display: none; }	/*-- for clear button of a text input control --*/
+.departure_wrap .departure dd .goBtn {width:28px; height:28px; display:block; position:absolute; right:0px; top:0px;}
+.departure_wrap .departure dd .goBtn input { width:28px; height:28px; background:url('/image/restaurant/onepage/search_ico.png') no-repeat 50% 50%; border:0px; cursor:pointer; }
+.departure_wrap .arrival dd input {width:227px; height:28px; border:1px solid #d7d7d7; padding:0 5px; line-height:28px; text-align:left; background:#f3f3f3; color:#999;}
+.departure_wrap .map_txt {margin-top:7px; float:left; display:block; padding-bottom:12px; border-bottom:1px solid #dedede;}
+
+.roadview_wrap {width:980px; position:relative; min-height:300px; float:left;}
+.roadview_wrap .daumRoadview980 {width:980px; height:300px; float:left; position:relative;}
+.roadview_wrap .daumRoadview980 .btnZoom	{margin:7px 0 0 0; float:left; position:absolute; bottom:20px; right:20px; z-index:150;}
+.roadview_wrap .daumRoadview980 .noticeMap {float:left; position:absolute; left:0px; bottom:0px; margin:0px 0 0 0px; height:16px; background:#000 url('/image/restaurant/onepage/bullet_map.png') no-repeat 3px 3px; padding:3px 3px 0px 17px; display:inline; font:normal 11px/140% "Dotum"; color:#fff; z-index:150; letter-spacing:-1px; opacity:0.3; filter:alpha(opacity="35");}
