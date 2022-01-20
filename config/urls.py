@@ -20,7 +20,5 @@ from app01 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test', views.home),
-    path('map', views.rest_map),
-    path('staff/restInput', views.rest_input),
-
+    path('main', views.main_page)
 ]

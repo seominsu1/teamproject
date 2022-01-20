@@ -5,6 +5,10 @@ from restaurant.forms import ResinputForm
 def home(request):
     return render(request,'test.html')
 
+#메인화면
+def main_page(request):
+    return render(request, 'main.html')
+
 #음식점 위치 (테스트버전)
 def rest_map(request):
     return render(request,'restaurant_map.html')
