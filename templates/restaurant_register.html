@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>음식점 추가하는 사이트 (Staff only) </h1>
+
+<form action="/staff/restInput" method="post">
+    {% csrf_token %}
+
+<!--    내일 할 것-->
+<!--        <div>-->
+<!--            <h3>음식점 이름 입력</h3>-->
+<!--            <input id="name" name="name" type="text" data-sb-validations="required">-->
+<!--            <label for="name">Restaurant Name</label><br><br>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--            <h3>음식점 주소 입력</h3>-->
+<!--            <input id="address" name="address" type="text" data-sb-validations="required">-->
+<!--            <label for="address">Restaurant Address</label><br><br>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>음식점 전화번호 입력</h3>-->
+<!--            <input id="phonenum" name="phonenum" type="text" data-sb-validations="required">-->
+<!--            <label for="phonenum">Restaurant Phone number</label><br><br>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>음식점 영업시간 입력</h3>-->
+<!--            <input id="time" name="time" type="text" data-sb-validations="required">-->
+<!--            <label for="time">Available Time</label><br><br>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>음식점 사진 url 입력</h3>-->
+<!--            <input id="pic_url" name="pic_url" type="text" data-sb-validations="required">-->
+<!--            <label for="pic_url">Available Time</label><br><br>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>음식점 위도 입력(30~)</h3>-->
+<!--            <input id="longitude" name="longitude" type="number" step="0.00000001" data-sb-validations="required">-->
+<!--            <label for="longitude">Longitude</label><br><br>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h3>음식점 경도 입력(127~)</h3>-->
+<!--            <input id="latitude" name="latitude" type="number" step="0.00000001" data-sb-validations="required">-->
+<!--            <label for="latitude">Latitude</label><br><br>-->
+<!--        </div>-->
+    {{resinputForm}}
+        <button id="submitButton" type="submit">등록</button>
+
+</form>
+
+</body>
+</html>
