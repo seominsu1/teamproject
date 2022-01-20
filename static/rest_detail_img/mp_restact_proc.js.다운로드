@@ -1,0 +1,66 @@
+	/*
+		-- 최종작성일 : 2013-12-31 #01
+		-- 최초작성일 : 2013-10-20
+	*/
+	//-- public {
+		function fn_mp_restact_ov(p_acode, p_mseq)  { fn_mp_restact_core('ov', p_acode, p_mseq); }  // onepage pv
+		function fn_mp_restact_cv(p_cpid, p_mseq)   { fn_mp_restact_core('cv', p_cpid, p_mseq); }   // coupon pv
+		function fn_mp_restact_cu(p_cpid, p_mseq)   { fn_mp_restact_core('cu', p_cpid, p_mseq); }   // coupon use
+		function fn_mp_restact_cp(p_cpid, p_mseq)   { fn_mp_restact_core('cp', p_cpid, p_mseq); }   // coupon print
+	//-- public }
+
+	//-- private {
+		function fn_getcookie_asp_ss_str() {
+			var s_key = 'ASPSESSIONID';
+			var decode = ('raw'=='raw') ? function (s) { return s; } : decodeURIComponent;
+			var result = new RegExp('(?:^|; )(' + encodeURIComponent(s_key) + '[A-Z]*)' + '=([^;]*)').exec(document.cookie);
+			return ((result[1]||'').substring(s_key.length) + '=' + (result[2]||''));
+		}
+		function get_restact_domain() {
+			var s_cur_hostname = document.location.hostname;
+			var b_is_mp = /\.menupan\.com$/.test(s_cur_hostname);
+			var b_is_mp_dev = (b_is_mp && (/^dev/.test(s_cur_hostname)));
+			var a_restact_domain  = ['www.menupan.com', 'dev.menupan.com'];
+			return (b_is_mp ? (b_is_mp_dev ? a_restact_domain[1] : a_restact_domain[0]) : '');
+		}
+		function get_restact_url() { return '/script/counter/mp_restact_proc.asp'; }
+		function get_restact_atyle_list() { return ';ov;cv;cu;cp;'; }
+		function fn_mp_restact_core(p_atype, p_akey, p_mseq, p_agub, p_fn_cb) {
+			if ($(document).data(p_atype + '_called') == 'y') { (fn_alert_err('[err]' + (p_atype + '_called'))); return; }
+			$(document).data((p_atype + '_called'), 'y');
+
+			p_atype = (p_atype||''); p_akey = (p_akey||''); p_mseq = (p_mseq||''); p_agub = (p_agub||'');
+			var s_atype_list = get_restact_atyle_list();
+			if (s_atype_list.indexOf(';' + p_atype + ';') == -1) { (fn_alert_err('[err]p_atype')); return; }
+			if (p_akey.length <= 0) { (fn_alert_err('[err]p_akey')); return; }
+			var s_restact_domain = get_restact_domain();
+			if (s_restact_domain.length <= 0) { (fn_alert_err('[err]s_restact_domain')); (fn_alert_err('[err]s_restact_domain')); return; }
+
+			var s_mpapp_svn = (((typeof(g_get_mpapp_info) == 'function') ? g_get_mpapp_info() : {})['svn']||'');
+			var s_asp_ss = fn_getcookie_asp_ss_str();
+			var s_proc_url = (('https:' == document.location.protocol ? 'https://' : 'http://') + s_restact_domain + get_restact_url());
+			$.ajax({
+				url : s_proc_url, dataType : 'jsonp', jsonp : 'mp_cb',
+				data : { 'atype': p_atype, 'akey': p_akey, 'mseq': p_mseq, 'agub': p_agub, 'mpapp_svn': s_mpapp_svn, 'aspss': s_asp_ss },
+				success: function(data, textStatus, XMLHttpRequest) {
+					if (typeof(p_fn_cb) == 'function') { p_fn_cb(data, textStatus, XMLHttpRequest); }
+					(fn_alert(data));
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					if (typeof(p_fn_cb) == 'function') { p_fn_cb('[err]', textStatus, XMLHttpRequest); }
+					(fn_alert_err('[err:ajax][status:' + textStatus + '][error:' + errorThrown + ']'));
+				}
+			});
+		}
+	//-- private }
+	// helper {
+		function obj2str(o) { var s = '{\n';  for (var p in o) s += ('"' + p + '" : "' + o[p] + '"\n'); return (s + '}'); }
+		function fn_alert(p_val) {
+			p_val = (('object' == typeof(p_val)) ? obj2str(p_val) : p_val);
+			if ($('#id_dv_dbg').length == 1) { $('#id_dv_dbg,#id_dv_dbg_err').html(''); $('#id_dv_dbg').html(p_val); }
+		}
+		function fn_alert_err(p_val) {
+			p_val = (('object' == typeof(p_val)) ? obj2str(p_val) : p_val);
+			if ($('#id_dv_dbg_err').length == 1) { $('#id_dv_dbg,#id_dv_dbg_err').html(''); $('#id_dv_dbg_err').html(p_val); }
+		}
+	// helper }

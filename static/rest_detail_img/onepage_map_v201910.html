@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)http://www.menupan.com/map/app/onepage_map_v201910.asp?x=293481&y=563866 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+		
+		<!-- <link type="text/css" rel="stylesheet" href="/map/css/map_etc.css" />-->
+    <style type="text/css">
+      body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+      #id_map_canvas { position:absolute; left: 0; right: 0; bottom: 0; top: 0px; }
+    </style>		
+		<script type="text/javascript" src="./jquery-latest.min.js.다운로드"></script>
+		<script type="text/javascript" src="./sdk.js.다운로드"></script><script charset="UTF-8" src="./kakao.js.다운로드"></script>
+		<script type="text/javascript">
+		<!--
+		var g_data = { 'lat': '37.6709747072186', 'lng': '126.790321175431', 'level': '3', 'title': '' };
+
+		//-- for daum map {
+		function init_map_daum() {
+			var o_latlng = new daum.maps.LatLng(g_data['lat'], g_data['lng']);
+			var s_map_icon_base = location.protocol + '//' + location.host + '/map/image/incmap/';
+			//-- create map {
+			var o_map_opt = {
+				center: o_latlng,	//-- (NN)
+				level: g_data['level'],	//-- (default: 3)
+				//-- mapTypeId: daum.maps.MapTypeId.ROADMAP,		//-- ROADMAP, SKYVIEW, HYBRID / ROADVIEW / OVERLAY TERRAIN TRAFFIC BICYCLE BICYCLE_HYBRID
+				draggable: false,	//-- (default: true)
+				scrollwheel: false,	//-- (default: true)
+				disableDoubleClick: true,	//-- (default: false)
+				//-- projectionId: daum.maps.ProjectionId.WCONG,	//-- NONE, WCONG (default:daum.maps.ProjectionId.WCONG)
+				//-- keyboardShortcuts: false, //-- (default: false)
+				//-- speed:0,
+				dummy:undefined
+			}
+			var o_map = new daum.maps.Map($('#id_map_canvas')[0], o_map_opt);
+			o_map.addControl((new daum.maps.ZoomControl()), daum.maps.ControlPosition.BOTTOMRIGHT);
+			//-- create map }
+
+			//-- create marker {
+			var o_icon_opt = {
+				alt: '맛집위치',
+				coords: '10,0, 17,0, 26,9, 26,20, 13,33, 0,17, 0,10',
+				offset: new daum.maps.Point(13, 33),
+				shape: 'poly',
+				//-- spriteOrigin: new daum.maps.Point(0, 0),	//-- 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
+				//-- spriteSize:	new daum.maps.Point(13, 33),	//-- 스프라이트 이미지의 전체 크기
+				dummy: undefined
+			};
+			var o_marker_opt = {
+				map: o_map,
+				position: o_latlng,
+				image: (new daum.maps.MarkerImage((s_map_icon_base + 'ico_poi_stats.png'), (new daum.maps.Size(28, 35)), o_icon_opt)),
+				title: g_data['title'],
+				//-- draggable: false,
+				//-- clickable: false,
+				//-- zIndex: 0,
+				//-- opacity: 0,	//-- 마커 투명도 (0-1)
+				//-- altitude: 0,	//-- 로드뷰에 올라있는 마커의 높이값(m단위)
+				//-- range: 0,		//-- 로드뷰 상에서 마커의 가시반경(m 단위), 두 지점 사이의 거리가 지정한 값보다 멀어지면 마커는 로드뷰에서 보이지 않게 된다
+				dummy: undefined
+			};
+			var o_map_marker = new daum.maps.Marker(o_marker_opt);
+			//-- create marker }
+		}
+		//-- for daum map }
+		$(document).ready(function() {
+			init_map_daum();
+		});
+		//-->
+		</script>
+		
+	</head>
+	<body marginwidth="0" marginheight="0">
+		<div id="id_map_canvas" style="overflow: hidden; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_tile.png&quot;);"><!--map--><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; touch-action: none;"><div style="position: absolute;"><div style="position: absolute; z-index: 0;"></div><div style="position: absolute; z-index: 1; left: 0px; top: 0px;"><img src="./824.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -248px; top: 156px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./825.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 8px; top: 156px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./826.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: 156px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./827.png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: 156px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./824(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -248px; top: -100px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./825(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 8px; top: -100px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./826(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: -100px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./827(1).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: -100px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./824(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: -248px; top: -356px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./825(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 8px; top: -356px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./826(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 264px; top: -356px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"><img src="./827(2).png" alt="" draggable="false" style="position: absolute; user-select: none; -webkit-user-drag: none; min-width: 0px; min-height: 0px; max-width: none; max-height: none; left: 520px; top: -356px; opacity: 1; transition-property: opacity; transition-duration: 0.2s; transition-timing-function: ease; width: 256px; height: 256px;"></div><div style="position: absolute; z-index: 1;"></div><div style="width: 618px; height: 350px; position: absolute; z-index: 1;"></div><div style="position: absolute; z-index: 1;"><svg version="1.1" style="stroke: none; stroke-dashoffset: 0.5; stroke-linejoin: round; fill: none; transform: translateZ(0px); position: absolute; width: 3090px; height: 1750px; left: -1236px; top: -700px;" viewBox="0 0 3090 1750"><defs></defs></svg></div><div style="position: absolute; z-index: 1; width: 100%; height: 0px; transform: translateZ(0px);"><div style="position: absolute; margin: -33px 0px 0px -13px; z-index: 0; left: 309px; top: 175px;"><img draggable="false" src="./ico_poi_stats.png" alt="맛집위치" title="" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; clip: rect(0px, 28px, 35px, 0px); top: 0px; left: 0px; width: 28px; height: 35px;"><img src="./transparent.gif" alt="" draggable="false" usemap="#daum.maps.Marker.Area:1" style="min-width: 0px; min-height: 0px; max-width: 99999px; max-height: none; border: 0px; display: block; position: absolute; user-select: none; -webkit-user-drag: none; width: 28px; height: 35px;"><map id="daum.maps.Marker.Area:1" name="daum.maps.Marker.Area:1"><area href="javascript:void(0)" alt="" shape="poly" coords="10,0, 17,0, 26,9, 26,20, 13,33, 0,17, 0,10" title="" style="-webkit-tap-highlight-color: transparent;"></map></div></div></div></div><div style="position: absolute; cursor: default; z-index: 1; margin: 0px 6px; height: 19px; line-height: 14px; left: 0px; bottom: 0px; color: rgb(0, 0, 0);"><div style="color: rgb(0, 0, 0); text-align: center; font-size: 10px; float: left;"><div style="float: left; margin: 2px 3px 0px 4px; height: 6px; transition: width 0.1s ease 0s; border-top: none rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 2px solid rgb(0, 0, 0); border-image: initial; width: 46px;"></div><div style="float: left; margin: 0px 4px 0px 0px; font-family: AppleSDGothicNeo-Regular, 돋움, dotum, sans-serif; font-weight: bold; color: rgb(0, 0, 0);">50m</div></div><div style="margin: 0px 4px; float: left;"><a target="_blank" href="http://map.kakao.com/" title="Kakao 지도로 보시려면 클릭하세요." style="float: left; width: 32px; height: 10px;"><img src="./m_bi_b.png" alt="Kakao 지도로 이동" style="float: left; width: 32px; height: 10px; border: none;"></a><div style="font: 11px / 11px Arial, Tahoma, Dotum, sans-serif; float: left;"></div></div></div><div style="cursor: auto; position: absolute; z-index: 2; left: 0px; top: 0px;"><div style="width: 32px; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px; position: absolute; left: 583px; top: 141px;"><button draggable="false" title="확대" type="button" style="float: left; cursor: pointer; width: 32px; height: 32px; user-select: none; -webkit-user-drag: none; border-top: none; border-right: none; border-bottom: 1px solid rgb(226, 226, 226); border-left: none; border-image: initial; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px 0px / 116px 264px no-repeat rgb(255, 255, 255); border-radius: 3px 3px 0px 0px;"></button><div style="float: left; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/bg_zoom_control.png&quot;) repeat; padding: 7px 0px; transition: height 0s ease 0s, margin 0.1s ease 0s;"><div style="cursor: pointer; position: relative; background-size: 116px 264px; transition: height 0.1s ease 0s; margin: 2px 0px; display: block; width: 32px; height: 104px;"><div style="position: absolute; width: 4px; height: 100%; background-color: rgb(51, 150, 255); left: 50%; margin: 0px 0px 0px -2px;"><div style="width: 4px; height: 2px; margin-bottom: -2px; bottom: 0px; position: absolute; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -50px -127px / 116px 264px;"></div><div style="width: 4px; height: 2px; margin-top: -2px; top: 0px; position: absolute; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -100px / 116px 264px;"></div></div><div style="position: absolute; background-color: rgb(204, 204, 204); transition: height 0.1s ease 0s; left: 50%; margin: 0px 0px 0px -2px; width: 4px; height: 16px;"></div><div style="cursor: row-resize; position: absolute; width: 20px; height: 10px; margin: -4px 0px 0px -10px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -80px / 116px 264px; left: 50%; transition: top 0.1s ease 0s; top: 16px;"></div></div></div><button draggable="false" title="축소" type="button" style="float: left; cursor: pointer; width: 32px; height: 32px; user-select: none; -webkit-user-drag: none; border-top: 1px solid rgb(226, 226, 226); border-right: none; border-bottom: none; border-left: none; border-image: initial; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) -40px -32px / 116px 264px no-repeat rgb(255, 255, 255); border-radius: 0px 0px 3px 3px; margin: 0px;"></button><div style="display: none; position: absolute; margin: 41px 0px 0px -30px; background-size: 116px 264px; width: 30px; height: 104px;"><div style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -80px / 116px 264px; left: 0px; top: 8px;"></div><div style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -100px / 116px 264px; left: 0px; top: 32px;"></div><div style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -120px / 116px 264px; left: 0px; top: 64px;"></div><div style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -140px / 116px 264px; left: 0px; top: 80px;"></div><div style="position: absolute; width: 29px; height: 15px; margin: -6px 0px 0px; background: url(&quot;http://t1.daumcdn.net/mapjsapi/images/control.png&quot;) 0px -160px / 116px 264px; left: 0px; top: 96px;"></div></div></div></div></div>
+	
+
+</body></html>

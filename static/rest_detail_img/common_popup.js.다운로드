@@ -1,0 +1,14 @@
+//·Î±×ÀÎ
+function login_popup(returnPage) {
+	var h = 570;
+	var w = 470;
+	var scr = 'no';
+	var rs = 'no';
+	var ntop = (screen.height- h) / 2;
+	var nleft = (screen.width - w) / 2;
+	var wndnm = 'login_popup';
+	var url = '/login_popup.asp?returnpage='+returnPage;
+	var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
+	var wnd = window.open(url, wndnm, strParam);
+	wnd.focus();
+}
