@@ -1,9 +1,10 @@
 from django.db.models import Q
 from django.shortcuts import render, redirect
 from review.models import Review
-from review.forms import reviewForm
+import review.forms
 
 def register(request):
+
     if request.method == "GET":
         reviewForm = reviewForm()
         return render(request, 'review/revw_register.html', {'reviewForm': reviewForm})
