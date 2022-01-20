@@ -5,7 +5,7 @@ from restaurant.models import restaurant
 class ResinputForm(forms.ModelForm):
     class Meta:
         model=restaurant
-        fields=('name','address','phonenum','time','pic_url','longitude','latitude')
+        fields=('name','address','phonenum','time','pic_url','longitude','latitude','large_cate','small_cate')
 
 
 

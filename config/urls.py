@@ -23,6 +23,9 @@ import menu.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test', restaurant.views.home),
-
+    path('map', restaurant.views.rest_map),
+    path('staff/restInput', restaurant.views.rest_input),
+    path('rest_detail/<bid>', restaurant.views.rest_detail),
+    path('testtest', restaurant.views.testtest),
     path('main', app01.views.main_page),
 ]
