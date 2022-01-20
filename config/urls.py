@@ -21,10 +21,14 @@ from app01 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test', views.home),
+    path('test', users.views.home),
+    path('usersbase', users.views.base),
 
-    path('users/signup', users.views.signup),
+    path('users/signup', users.views.signup), # 가입
 
-    path('users/login', users.views.userlogin),
-    path('users/logout', users.views.userlogout),
+    path('users/login', users.views.userlogin), # 로그인
+    path('users/logout', users.views.userlogout), # 로그아웃
+
+    path('users/pwchange', users.views.userpwchange), # 비밀번호 변경
+    path('users/delete', users.views.userdelete), # 회원탈퇴
 ]
