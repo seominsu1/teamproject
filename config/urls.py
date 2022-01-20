@@ -16,19 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-import users.views
-from app01 import views
+
+import app01.views
+import restaurant.views
+import menu.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test', users.views.home),
-    path('usersbase', users.views.base),
+    path('test', restaurant.views.home),
 
-    path('users/signup', users.views.signup), # 가입
+    path('main', app01.views.main_page),
 
-    path('users/login', users.views.userlogin), # 로그인
-    path('users/logout', users.views.userlogout), # 로그아웃
 
-    path('users/pwchange', users.views.userpwchange), # 비밀번호 변경
-    path('users/delete', users.views.userdelete), # 회원탈퇴
-]

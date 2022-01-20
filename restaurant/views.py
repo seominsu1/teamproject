@@ -6,10 +6,6 @@ from django.db.models import Q
 def home(request):
     return render(request,'test.html')
 
-#메인화면
-def main_page(request):
-    return render(request, 'main.html')
-
 #음식점 위치 (테스트버전)
 def rest_map(request):
     return render(request,'restaurant_map.html')
@@ -45,3 +41,6 @@ def rest_detail(request,bid):
     # 기존에 생성되어있는 댓글 목록 보여져야 됨 (음식점id 외래키로 하는 review 모두 출력)
     else:
         return render(request,'test.html')
+
+def testtest(request):
+    return render(request,'testtest.html')
