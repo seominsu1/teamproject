@@ -1,8 +1,9 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0059)http://www.menupan.com/restaurant/onepage.asp?acode=H492109 -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 {% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Restaurant Details</title>
 
 <meta name="subject" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
@@ -70,7 +71,7 @@
 	<!-- areaThumbnail - AType : Start -->
 	<div class="areaThumbnail">
 		<dl>
-			<dt><img id="rest_bigimg" width=500 height=500 src="{% static '/rest_detail_img/10(1).jpg' %}"><span id="rest_menuname" class="menu">메뉴이름</span>
+			<dt><img id="rest_bigimg" width=500 height=550 src={{rest_info.pic_url.value}}><span id="rest_menuname" class="menu"></span>
 
 			</dt>
 
@@ -244,20 +245,17 @@
 
 		<dl class="restTel">
 			<dt>전화번호</dt>
-			<dd class="tel1">(031) 903-1592</dd>
+			<dd class="tel1">{{rest_info.phonenum.value}}</dd>
 
 		</dl>
 		<dl class="restAdd">
 			<dt>주소</dt>
-			<dd class="add1"><a href="http://www.menupan.com/map/restmap/map_search.asp?acode=H492109" target="_blank">경기 고양시 일산동구 풍동 573-9</a></dd>
-
-			<dd class="add2">[새주소] <a href="http://www.menupan.com/map/restmap/map_search.asp?acode=H492109" target="_blank">경기 고양시 일산동구 애니골길43번길 17-1</a></dd>
-
+			<dd class="add1">{{rest_info.address.value}}</a></dd>
 		</dl>
 
 		<dl class="restHome">
-			<dt>홈페이지</dt>
-			<dd class="home"><a href="http://xn--hz2b3pq2g8xlfja0q774a.kr/" target="_blank">http://목우촌웰빙마을.kr/</a></dd>
+			<dt>영업시간</dt>
+			<dd class="home">{{rest_info.time.value}}</dd>
 		</dl>
 
 		<dl class="restGrade">
@@ -266,13 +264,26 @@
 				<p class="point"><span class="star" style="width:70.7692307692308%"></span><!-- ☆☆☆☆☆ //--></p>
 				<p class="score"><span class="total">3.5</span><span class="line">|</span><span class="count">78명 참여</span></p>
 			</dd>
-			<dd class="btnPoint">
-
-				<a href="javascript:;" onclick="fn_Openmember();"><img src="{% static '/rest_detail_img/btn_point.gif' %}" alt="평가하기"></a>
-
-			</dd>
 		</dl>
 
+		<dl class="restMap">
+
+			<dt class="loc">
+
+			<div id="map" style="width:430px;height:300px;"></div>
+			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6705e088381883f2fca8b417fc628bb"></script>
+			<script>
+				var container = document.getElementById('map');
+				var options = {
+					center: new kakao.maps.LatLng({{rest_info.latitude.value}}, {{rest_info.longitude.value}}),
+					level: 2
+				};
+
+				var map = new kakao.maps.Map(container, options);
+			</script>
+
+			</dt>
+		</dl>
 		<!-- layer : sms : Start -->
 		<div class="lySMS" id="id_ly_sms" style="display:none;">
 			<h4><img src="{% static '/rest_detail_img/title_sms.gif' %}" alt="추천 SMS 보내기"></h4>
@@ -341,14 +352,12 @@
 			<dl class="btnGood">
 				<dt>
 
-					<a href="javascript:;" onclick="fn_recommend();"><img src="{% static '/rest_detail_img/btn_good.gif' %}" alt="좋아요"></a>
+					<a href="javascript:;" onclick="fn_recommend();"><img src="{% static 'rest_detail_img/btn_good.gif' %}" alt="좋아요"></a>
 
 				</dt>
 				<dd><span>92</span>명이 좋아합니다.</dd>
 			</dl>
-			<div class="btnPop">
-				<a href="javascript:;" onclick="fn_myscrap();"><img src="{% static '/rest_detail_img/btn_scrapM.gif' %}" alt="스크랩"></a>
-			</div>
+
 		</div>
 	</div><!-- .funcBtn_wrap -->
 	</div>

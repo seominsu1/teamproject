@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect
 from restaurant.forms import ResinputForm
+from menu.forms import MenuinputForm
 from restaurant.models import restaurant
 from django.db.models import Q
+
 # Create your views here.
 def home(request):
     return render(request,'test.html')
@@ -44,3 +46,19 @@ def rest_detail(request,bid):
 
 def testtest(request):
     return render(request,'testtest.html')
+
+def rest_menu_input(request,bid):
+    rest = restaurant.objects.get(Q(id=bid))
+    rest_info = ResinputForm(instance=rest)
+    if request.method=='GET':
+        menuinputForm=MenuinputForm()
+        return render(request,'menu_register.html',{'menuinputForm':menuinputForm, 'rest_info':rest_info})
+    elif request.method=='POST':
+        menuinputForm=MenuinputForm(request.POST)
+
+        if menuinputForm.is_valid():
+            print('유효함')
+            menuinput=menuinputForm.save(commit=False)
+            menuinput.restaurant_id=bid
+            menuinput.save()
+            return redirect('/staff/menuInput/'+str(bid))
