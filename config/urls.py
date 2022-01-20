@@ -20,5 +20,9 @@ from restaurant import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test', views.home),
-    path('main', views.main_page),
+    path('map', views.rest_map),
+    path('staff/restInput', views.rest_input),
+    path('staff/menuInput/<bid>', views.rest_menu_input),
+    path('rest_detail/<bid>', views.rest_detail),
+    path('testtest', views.testtest),
 ]
