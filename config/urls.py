@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
 import app01.views
 import restaurant.views
 import menu.views
@@ -25,4 +26,5 @@ urlpatterns = [
     path('test', restaurant.views.home),
 
     path('main', app01.views.main_page),
-]
+
+
