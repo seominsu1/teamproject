@@ -1,30 +1,43 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0059)http://www.menupan.com/restaurant/onepage.asp?acode=H492109 -->
 {% load static %}
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Restaurant Details</title>
+    <title>Restaurant Details</title>
 
-<meta name="subject" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
-<meta name="description" content="경기 고양시 일산동구 풍동 위치. 꽃등심,삼겹살,사시미,육회,차돌박이,육회 메뉴 및 가격정보 제공. 한식,한우고기전문점. 메뉴판닷컴, 전국맛집TOP1000 추천맛집.">
-<meta name="keywords" content="가족외식, 어른과 함께라면, 술 마시는 친구와 함께, 구이, 한우전문점, 소주, 고기 보양식">
-<!-- for facebook { -->
-<meta property="og:title" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
-<meta property="og:description" content="경기 고양시 일산동구 풍동 위치. 꽃등심,삼겹살,사시미,육회,차돌박이,육회 메뉴 및 가격정보 제공. 한식,한우고기전문점. 메뉴판닷컴, 전국맛집TOP1000 추천맛집.">
-<meta property="og:url" content="http://www.menupan.com/restaurant/onepage.asp?acode=H492109">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="메뉴판닷컴,전국맛집TOP1000 추천맛집">
-<!-- for facebook } -->
+    <!--Bootstrap code-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/menu_list/css/styles.css" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="{% static '/rest_detail_img/onepage_201401.css' %}"><script async="" src="{% static '/rest_detail_img/analytics.js.다운로드' %}"></script><script language="javascript" src="{% static '/rest_detail_img/jquery-latest.min.js.다운로드' %}"></script>
-	<script language="javascript" src="{% static '/rest_detail_img/jquery.drm_slides-1.1.js.다운로드' %}"></script>
-	<script language="javascript" src="{% static '/rest_detail_img/drm_disp_elem_110717.js.다운로드' %}"></script>
-	<script language="javascript" src="{% static '/rest_detail_img/common_popup.js.다운로드' %}"></script>
-	<script language="javascript" src="{% static '/rest_detail_img/open_popup.js.다운로드' %}"></script>
-	<script language="javascript" src="{% static '/rest_detail_img/number.js.다운로드' %}"></script>
-	<script type="text/javascript" src="{% static '/rest_detail_img/mp_restact_proc.js.다운로드' %}"></script>
-	<script language="javascript">
+    <!--티몬 별 평점 code-->
+    <link rel="stylesheet" type="text/css"
+          href="https://img1.tmon.kr/fe/release/service/static/review/p/css/myreview.css?v=1642190059388">
+
+    <meta name="subject" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
+    <meta name="description"
+          content="경기 고양시 일산동구 풍동 위치. 꽃등심,삼겹살,사시미,육회,차돌박이,육회 메뉴 및 가격정보 제공. 한식,한우고기전문점. 메뉴판닷컴, 전국맛집TOP1000 추천맛집.">
+    <meta name="keywords" content="가족외식, 어른과 함께라면, 술 마시는 친구와 함께, 구이, 한우전문점, 소주, 고기 보양식">
+    <!-- for facebook { -->
+    <meta property="og:title" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
+    <meta property="og:description"
+          content="경기 고양시 일산동구 풍동 위치. 꽃등심,삼겹살,사시미,육회,차돌박이,육회 메뉴 및 가격정보 제공. 한식,한우고기전문점. 메뉴판닷컴, 전국맛집TOP1000 추천맛집.">
+    <meta property="og:url" content="http://www.menupan.com/restaurant/onepage.asp?acode=H492109">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="메뉴판닷컴,전국맛집TOP1000 추천맛집">
+    <!-- for facebook } -->
+
+    <link rel="stylesheet" type="text/css" href="{% static '/rest_detail_img/onepage_201401.css' %}">
+    <script async="" src="{% static '/rest_detail_img/analytics.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/jquery-latest.min.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/jquery.drm_slides-1.1.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/drm_disp_elem_110717.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/common_popup.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/open_popup.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/number.js.다운로드' %}"></script>
+    <script type="text/javascript" src="{% static '/rest_detail_img/mp_restact_proc.js.다운로드' %}"></script>
+    <script language="javascript">
 	<!--
 		var g_is_nomovetop = false;
 
@@ -55,29 +68,35 @@
 			fn_mp_restact_ov('H492109', '');		//-- counter
 		});
 	//-->
-	</script>
-<script charset="UTF-8" src="{% static '/rest_detail_img/roadview.js.다운로드' %}"></script><style></style></head>
+
+
+    </script>
+    <script charset="UTF-8" src="{% static '/rest_detail_img/roadview.js.다운로드' %}"></script>
+    <style></style>
+</head>
+
 <body>
 <center>
 
-<!-- Main 영역 -->
-<div class="WrapMain">
+    <!-- Main 영역 -->
+    <div class="WrapMain">
 
-	<div id="tab1"></div>
-	<!-- mainArea01 -->
-	<div class="mainArea01">
+        <div id="tab1"></div>
+        <!-- mainArea01 -->
+        <div class="mainArea01">
 
-		<!-- photo -->
-	<!-- areaThumbnail - AType : Start -->
-	<div class="areaThumbnail">
-		<dl>
-			<dt><img id="rest_bigimg" width=500 height=550 src={{rest_info.pic_url.value}}><span id="rest_menuname" class="menu"></span>
+            <!-- photo -->
+            <!-- areaThumbnail - AType : Start -->
+            <div class="areaThumbnail">
+                <dl>
+                    <dt><img id="rest_bigimg" width=500 height=550 src={{rest_info.pic_url.value}}><span
+                            id="rest_menuname" class="menu"></span>
 
-			</dt>
+                    </dt>
 
-		</dl>
-	</div>
-	<script language="javascript">
+                </dl>
+            </div>
+            <script language="javascript">
 	<!--
 		function fn_disp_restphoto(p_selected_idx) {
 			$('#id_restphoto_list_ul .cid_restphoto_cover').hide();
@@ -123,156 +142,69 @@
 			fn_restphoto_slides_init();
 		});
 	//-->
-	</script>
-	<!-- //areaThumbnail - AType : End -->
 
 
-		<!-- //photo -->
+            </script>
+            <!-- //areaThumbnail - AType : End -->
 
-		<!-- basic -->
-		<script language="javascript" src="{% static '/rest_detail_img/cookie.js.다운로드' %}"></script>
 
-	<script language="javascript">
-	<!--
-		function fn_openPoint(){
-			if (!check_login()) { return; }
-			$("#layerPoint_review").show();
-			fn_menu_tab_move_pos("tab3", 5);
+            <!-- //photo -->
 
-		}
-		function fn_Openmember(){
-			fn_menu_tab_move_pos("tab3", 5);
+            <!-- basic -->
+            <script language="javascript" src="{% static '/rest_detail_img/cookie.js.다운로드' %}"></script>
 
-				$(".memberLogin").show();
+            <!-- 맛집 메달 : Start -->
+            <div class="restMark">
 
-		}
-		function fn_Scrap(p_acode){
-			 var l_url ='/restaurant/onepage_201401/popup_scrap.asp?acode='+p_acode;
-			 var l_w = 100;
-			 var l_h = 100;
-			 window.open(l_url, "popup_scrap", "scrollbars=yes, width="+l_w+", height="+ l_h+", top=50, left=100");
-			 return false;
-		}
+                <span class="mpRest">메뉴판추천 로고</span>
 
-		// SNS연동
-		function fn_go_sns(p_site, p_url, p_msg, p_tag) {
-			var go_url = '';
-			if (p_site == 'facebook') { go_url = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(p_url) + '&t=' + encodeURIComponent(p_msg); }
-			else if (p_site == 'twitter') { go_url = 'http://twitter.com/home?status=' + encodeURIComponent(p_msg) + ' ' + encodeURIComponent(p_url); }
-			else if (p_site == 'me2day') { go_url = 'http://me2day.net/posts/new?new_post[body]=' + encodeURIComponent(p_msg) + ' ' + encodeURIComponent(p_url) + '&new_post[tags]=' + encodeURIComponent(p_tag); }
-			if (go_url.length > 0) {
-				var wnd_sns = window.open(go_url, p_site, '');
-				if (wnd_sns) { wnd_sns.focus(); }
-			}
-		}
+            </div>
+            <!-- //맛집 메달 : End -->
 
-		// SMS전송
-		function fn_send_sms() {
-			var a_id = ['id_rhp_1', 'id_rhp_2', 'id_rhp_3'];
-			var a_val = new Array(a_id.length);
-			for (n_ii = 0; n_ii < a_val.length; n_ii++) {
-				a_val[n_ii] = $('#' + a_id[n_ii]).val();
-				if ((a_val[n_ii].length == 0) || (IsNumber(a_val[n_ii])) == false) {
-					alert('휴대폰번호를 정확히 입력해주세요');
-					$('#' + a_id[n_ii]).focus();
-					return false;
-				}
-			}
-			if ($('#id_agree').is(':checked') == false) {
-					alert('\'개인정보수집 및 이용\'에 동의해 주세요.');
-					$('#id_agree').focus();
-					return false;
-			}
-			if (!confirm('추천문자를 발송 하시겠습니까?')) { return false; }
+            <div class="areaBasic">
+                <dl class="restName">
+                    <dt>업체명<span style="color:#ffffff;cursor:default;"
+                                 ondblclick="$(&#39;#id_basicdata_reporter&#39;).toggle();">.</span></dt>
+                    <dd class="name"> {{rest_info.name.value}} <span id="id_basicdata_reporter"
+                                                                     style="display:none"></span></dd>
+                </dl>
+                <dl class="restType">
+                    <dt>업종</dt>
+                    <dd class="type">{{rest_info.large_cate.value}} > {{rest_info.small_cate.value}}</dd>
+                </dl>
 
-			var o_param = {
-				type:'op', cbfn:'parent.fn_cb_send_sms',
-				rhp:(a_val[0] + a_val[1] + a_val[2]),
-				acode:'H492109', aname:'목우촌웰빙마을'
-			};
-			var jq_form = $('<form></form>');
-			jq_form.attr('target', 'procifrm').attr('action', '/restaurant/onepage_201401/sms_proc.asp').attr('method', 'post');
-			$('body').append(jq_form);
-			for (var s_key in o_param) { jq_form.append($('<input></input>').attr('type', 'hidden').attr('name', s_key).attr('value', o_param[s_key])); }
-			jq_form.submit();
-			jq_form.empty();
+                <dl class="restTel">
+                    <dt>전화번호</dt>
+                    <dd class="tel1">{{rest_info.phonenum.value}}</dd>
 
-		}
-		// SMS전송 callback
-		function fn_cb_send_sms(p_b_ret, p_s_msg) {
-			if (p_b_ret) {
-				$('#id_rhp_2, #id_rhp_3').val('');
-				$('#id_ly_sms').hide();
-			}
-			if (p_s_msg.length > 0) { alert(p_s_msg); }
-		}
+                </dl>
+                <dl class="restAdd">
+                    <dt>주소</dt>
+                    <dd class="add1">{{rest_info.address.value}}</dd>
+                </dl>
 
-		function fn_recommend(){
-		  //  if (!check_login()) { return; }
-		  var sform	= document.getElementById("procfrm");
-			sform.target	= "procifrm";
-			sform.action	= "/restaurant/onepage_201401/include/good_proc.asp";
-			sform.submit();
-		}
+                <dl class="restHome">
+                    <dt>영업시간</dt>
+                    <dd class="home">{{rest_info.time.value}}</dd>
+                </dl>
 
-		function fn_myscrap(){
-			if (!check_login()) { return; }
+                <dl class="restGrade">
+                    <dt>평점</dt>
+                    <dd class="rate">
+                        <p class="point"><span class="star" style="width:70.7692307692308%"></span><!-- ☆☆☆☆☆ //--></p>
+                        <p class="score"><span class="total">3.5</span><span class="line">|</span><span class="count">78명 참여</span>
+                        </p>
+                    </dd>
+                </dl>
 
-			var sform	= document.getElementById("procfrm");
-			sform.target	= "procifrm";
-			sform.action	= "/restaurant/onepage_201401/myscrap_proc.asp";
-			sform.submit();
-		}
-	//-->
-	</script>
-	<!-- 맛집 메달 : Start -->
-	<div class="restMark">
+                <dl class="restMap">
 
-			<span class="mpRest">메뉴판추천 로고</span>
+                    <dt class="loc">
 
-	</div>
-	<!-- //맛집 메달 : End -->
-
-	<div class="areaBasic">
-		<dl class="restName">
-			<dt>업체명<span style="color:#ffffff;cursor:default;" ondblclick="$(&#39;#id_basicdata_reporter&#39;).toggle();">.</span></dt>
-			<dd class="name"> {{rest_info.name.value}} <span id="id_basicdata_reporter" style="display:none"></span></dd>
-		</dl>
-		<dl class="restType">
-			<dt>업종</dt>
-			<dd class="type">{{rest_info.address.value}}</dd>
-		</dl>
-
-		<dl class="restTel">
-			<dt>전화번호</dt>
-			<dd class="tel1">{{rest_info.phonenum.value}}</dd>
-
-		</dl>
-		<dl class="restAdd">
-			<dt>주소</dt>
-			<dd class="add1">{{rest_info.address.value}}</a></dd>
-		</dl>
-
-		<dl class="restHome">
-			<dt>영업시간</dt>
-			<dd class="home">{{rest_info.time.value}}</dd>
-		</dl>
-
-		<dl class="restGrade">
-			<dt>평점</dt>
-			<dd class="rate">
-				<p class="point"><span class="star" style="width:70.7692307692308%"></span><!-- ☆☆☆☆☆ //--></p>
-				<p class="score"><span class="total">3.5</span><span class="line">|</span><span class="count">78명 참여</span></p>
-			</dd>
-		</dl>
-
-		<dl class="restMap">
-
-			<dt class="loc">
-
-			<div id="map" style="width:430px;height:300px;"></div>
-			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6705e088381883f2fca8b417fc628bb"></script>
-			<script>
+                        <div id="map" style="width:430px;height:300px;"></div>
+                        <script type="text/javascript"
+                                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6705e088381883f2fca8b417fc628bb"></script>
+                        <script>
 				var container = document.getElementById('map');
 				var options = {
 					center: new kakao.maps.LatLng({{rest_info.latitude.value}}, {{rest_info.longitude.value}}),
@@ -280,90 +212,86 @@
 				};
 
 				var map = new kakao.maps.Map(container, options);
-			</script>
-
-			</dt>
-		</dl>
-		<!-- layer : sms : Start -->
-		<div class="lySMS" id="id_ly_sms" style="display:none;">
-			<h4><img src="{% static '/rest_detail_img/title_sms.gif' %}" alt="추천 SMS 보내기"></h4>
-			<button class="btnClose" onclick="$(&#39;#id_ly_sms&#39;).hide();return false;">닫기</button>
-			<dl class="mobileNum">
-				<dt>추천하는 사람(메뉴판닷컴)</dt>
-				<dd>
-					02-2017-7700
-					<!--
-					<select id="id_shp_1"><option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option></select>
-					<span class="hyphen"></span><input type="text" id="id_shp_2" class="num1" maxlength="4" pattern="[0-9]*"><span class="hyphen"></span><input type="text" id="id_shp_3" class="num2" maxlength="4" pattern="[0-9]*">
-					//-->
-				</dd>
-			</dl>
-			<dl class="mobileNum">
-				<dt>추천받는 사람 휴대전화</dt>
-				<dd>
-					<select id="id_rhp_1">
-						<option value="010">010</option>
-						<option value="011">011</option>
-						<option value="016">016</option>
-						<option value="017">017</option>
-						<option value="018">018</option>
-						<option value="019">019</option>
-					</select>
-					<span class="hyphen"></span><input type="text" id="id_rhp_2" class="num1" maxlength="4" pattern="[0-9]*"><span class="hyphen"></span><input type="text" id="id_rhp_3" class="num2" maxlength="4" pattern="[0-9]*">
-				</dd>
-			</dl>
-			<dl class="mobileagree">
-				<dt>개인정보수집 및 이용동의</dt>
-				<dd>- 제공받는 자: ㈜메뉴판닷컴</dd>
-				<dd>- 수집 및 이용목적: 문자발송</dd>
-				<dd>- 수집항목: 연락처</dd>
-				<dd>- 보유 및 이용기간: 목적 달성 시 파기</dd>
-				<dd><span>＊입력하신 정보는 기재된 이용목적 이외의 다른 목적으로 이용되지 않습니다.</span></dd>
-			</dl>
-			<div class="chek">
-				<input type="checkbox" class="chkbox" id="id_agree">
-				<label>개인정보 수집 및 이용에 동의합니다.</label>
-			</div>
-			<p class="btn">
-				<button class="btnRecognize" onclick="javascript:fn_send_sms();return false;">추천하기</button>
-			</p>
-		</div>
-		<!-- //layer : sms : End -->
 
 
+                        </script>
 
-	</div>
+                    </dt>
+                </dl>
+                <!-- layer : sms : Start -->
+                <div class="lySMS" id="id_ly_sms" style="display:none;">
+                    <h4><img src="{% static '/rest_detail_img/title_sms.gif' %}" alt="추천 SMS 보내기"></h4>
+                    <button class="btnClose" onclick="$(&#39;#id_ly_sms&#39;).hide();return false;">닫기</button>
+                    <dl class="mobileNum">
+                        <dt>추천하는 사람(메뉴판닷컴)</dt>
+                        <dd>
+                            02-2017-7700
+                            <!--
+                            <select id="id_shp_1"><option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option></select>
+                            <span class="hyphen"></span><input type="text" id="id_shp_2" class="num1" maxlength="4" pattern="[0-9]*"><span class="hyphen"></span><input type="text" id="id_shp_3" class="num2" maxlength="4" pattern="[0-9]*">
+                            //-->
+                        </dd>
+                    </dl>
+                    <dl class="mobileNum">
+                        <dt>추천받는 사람 휴대전화</dt>
+                        <dd>
+                            <select id="id_rhp_1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <span class="hyphen"></span><input type="text" id="id_rhp_2" class="num1" maxlength="4"
+                                                               pattern="[0-9]*"><span class="hyphen"></span><input
+                                type="text" id="id_rhp_3" class="num2" maxlength="4" pattern="[0-9]*">
+                        </dd>
+                    </dl>
+                    <dl class="mobileagree">
+                        <dt>개인정보수집 및 이용동의</dt>
+                        <dd>- 제공받는 자: ㈜메뉴판닷컴</dd>
+                        <dd>- 수집 및 이용목적: 문자발송</dd>
+                        <dd>- 수집항목: 연락처</dd>
+                        <dd>- 보유 및 이용기간: 목적 달성 시 파기</dd>
+                        <dd><span>＊입력하신 정보는 기재된 이용목적 이외의 다른 목적으로 이용되지 않습니다.</span></dd>
+                    </dl>
+                    <div class="chek">
+                        <input type="checkbox" class="chkbox" id="id_agree">
+                        <label>개인정보 수집 및 이용에 동의합니다.</label>
+                    </div>
+                    <p class="btn">
+                        <button class="btnRecognize" onclick="javascript:fn_send_sms();return false;">추천하기</button>
+                    </p>
+                </div>
+                <!-- //layer : sms : End -->
 
-	<form name="procfrm" id="procfrm" method="post">
-		<input type="hidden" name="acode" value="H492109">
-		<input type="hidden" name="mid" value="">
-		<input type="hidden" name="mseq" value="">
-		<input type="hidden" name="aname" value="목우촌웰빙마을">
-		<input type="hidden" name="nomem_sessionid" value="220118_814260449.51">
-		<input type="hidden" name="proc" value="y">
-	</form>
 
-	<iframe name="procifrm" id="procifrm" width="100%" height="0" frameborder="0" src="{% static '/rest_detail_img/saved_resource.html' %}"></iframe>
-<!-- 스크랩/sns : Start -->
-	<div class="funcBtn_wrap">
+            </div>
 
-		<div class="funcBtn">
-		<div class="funcBtnB">
-			<dl class="btnGood">
-				<dt>
+            <iframe name="procifrm" id="procifrm" width="100%" height="0" frameborder="0"
+                    src="{% static '/rest_detail_img/saved_resource.html' %}"></iframe>
+            <!-- 스크랩/sns : Start -->
+            <div class="funcBtn_wrap">
 
-					<a href="javascript:;" onclick="fn_recommend();"><img src="{% static 'rest_detail_img/btn_good.gif' %}" alt="좋아요"></a>
+                <div class="funcBtn">
+                    <div class="funcBtnB">
+                        <dl class="btnGood">
+                            <dt>
 
-				</dt>
-				<dd><span>92</span>명이 좋아합니다.</dd>
-			</dl>
+                                <a href="javascript:;" onclick="fn_recommend();"><img
+                                        src="{% static 'rest_detail_img/btn_good.gif' %}" alt="좋아요"></a>
 
-		</div>
-	</div><!-- .funcBtn_wrap -->
-	</div>
+                            </dt>
+                            <dd><span>92</span>명이 좋아합니다.</dd>
+                        </dl>
+
+                    </div>
+                </div><!-- .funcBtn_wrap -->
+            </div>
 
 
-	<script language="javascript">
+            <script language="javascript">
 	<!--
 		function fn_cpn_tab_click(p_clicked_idx) {
 			$('#cpnlist li').each(function(p_idx) {
@@ -426,82 +354,41 @@
 		//-- init handler
 		(function() { init_cpn_tab() })();
 	//-->
-	</script>
 
 
-	<script language="javascript">
-	<!--
-		//
-		function fn_show_send_sms_cp(p_cpid) {
-			var n_top = 150;
-			$('#id_ly_sms_cp').data('cpid', p_cpid).css({top:(n_top + 'px')}).show();
-		}
-		// SMS전송
-		function fn_send_sms_cp() {
-			var a_id = ['id_rhp_1_cp', 'id_rhp_2_cp', 'id_rhp_3_cp'];
-			var a_val = new Array(a_id.length);
-			for (n_ii = 0; n_ii < a_val.length; n_ii++) {
-				a_val[n_ii] = $('#' + a_id[n_ii]).val();
-				if ((a_val[n_ii].length == 0) || (IsNumber(a_val[n_ii])) == false) {
-					alert('휴대폰번호를 정확히 입력해주세요');
-					$('#' + a_id[n_ii]).focus();
-					return false;
-				}
-			}
-			var o_param = {
-				type:'cp', cbfn:'parent.fn_cb_send_sms_cp',
-				rhp:(a_val[0] + a_val[1] + a_val[2]),
-				cpid:$('#id_ly_sms_cp').data('cpid'), aname:'목우촌웰빙마을'
-			};
-			var jq_form = $('<form></form>');
-			jq_form.attr('target', 'procifrm').attr('action', '/restaurant/onepage_201401/sms_proc.asp').attr('method', 'post');
-			$('body').append(jq_form);
-			for (var s_key in o_param) { jq_form.append($('<input></input>').attr('type', 'hidden').attr('name', s_key).attr('value', o_param[s_key])); }
-			jq_form.submit();
-			jq_form.empty();
-		}
-		// SMS전송 callback
-		function fn_cb_send_sms_cp(p_b_ret, p_s_msg) {
-			if (p_b_ret) {
-				$('#id_rhp_2_cp, #id_rhp_3_cp').val('');
-				$('#id_ly_sms_cp').hide();
-			}
-			if (p_s_msg.length > 0) { alert(p_s_msg); }
-		}
-		//-->
-	</script>
+            </script>
 
 
-
-	<script language="javascript">
+            <script language="javascript">
 	<!--
 	  function fn_OnlineReserve(p_acode){
 		window.open("/restaurant/onlineservice/or_request.asp?acode="+p_acode);
 	  }
 	//-->
-	</script>
 
 
-		<!-- //benefit - AType -->
-
-		<!-- benefit - BType -->
-
-		<!-- //benefit - BType -->
-
-		<!-- GP Card -->
-
-		<!-- //GP Card -->
-
-		<!-- info -->
+            </script>
 
 
+            <!-- //benefit - AType -->
 
-	</div><!-- .mainArea01 -->
-	<!-- //mainArea01 -->
+            <!-- benefit - BType -->
+
+            <!-- //benefit - BType -->
+
+            <!-- GP Card -->
+
+            <!-- //GP Card -->
+
+            <!-- info -->
 
 
-				<!-- google rich snippets { //-->
-				<div class="hreview-aggregate">
+        </div><!-- .mainArea01 -->
+        <!-- //mainArea01 -->
+
+
+        <!-- google rich snippets { //-->
+        <div class="hreview-aggregate">
 					<span class="item">
 						<span class="fn"><span class="value-title" title="목우촌웰빙마을"></span>
 					</span>
@@ -512,15 +399,15 @@
 					<span class="votes"><span class="value-title" title="0"></span>
 					<span class="count"><span class="value-title" title="55"></span>
 				</span></span></span></span></span></div>
-				<!-- google rich snippets } //-->
+        <!-- google rich snippets } //-->
 
 
-	<!-- mainArea02 -->
-	<div class="mainArea02">
+        <!-- mainArea02 -->
+        <div class="mainArea02">
 
-		<!-- 메뉴 -->
+            <!-- 메뉴 -->
 
-<script language="javascript">
+            <script language="javascript">
 <!--
 	function recommand(mcode) {
 		var rcmd_cnt = parseInt('0', 10);
@@ -544,524 +431,170 @@
 		alert('이미 추천하신 메뉴 입니다.');
 	}
 //-->
-</script>
-<form id="menuform" name="menuform" method="post">
-	<div class="tabMenu">
-		<div id="tab2"></div>
-   	<h3><img src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
-
-		<div class="dh"><ul class="n3 dg bq"><li class="n4 n5"><div class="mv mw dw dx ax">Picked for you</div><div class="ca"></div><ul class="gl j8 gp gq gr ja n6"><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9lMWFlZmY1ZC04MjM2LTRhYjktODIzNC0xZDE1MTNkNGVlNWIuanBlZw=="><img alt="Shish Tawook Kabab Dinner" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/e1aeff5d-8236-4ab9-8234-1d1513d4ee5b.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Shish Tawook Kabab Dinner</span></div><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9mYzQ2MzZhYS1lZDQ0LTQ3ZGMtYWViZC01MzlmN2I5NzZmYTkuanBlZw=="><img alt="Fresh Fish Kabob Dinner " src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/fc4636aa-ed44-47dc-aebd-539f7b976fa9.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Fresh Fish Kabob Dinner </span></div><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC81MTZlZTJlMi1mZTI2LTQxODEtYTMzMi1lZWFlZWY3NmEzM2YuanBlZw=="><img alt="Classic Chicken Combo Dinner" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/516ee2e2-fe26-4181-a332-eeaeef76a33f.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Classic Chicken Combo Dinner</span></div><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9jOTE0MWZjNS0xM2JjLTRkNWItYjFmMy03YWRkOTNhZTRkYjkuanBlZw=="><img alt="Classic Chicken Shawarma Wrap" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/c9141fc5-13bc-4d5b-b1f3-7add93ae4db9.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Classic Chicken Shawarma Wrap</span></div><div class="ba bt e3 c1 ax"><span class="">?8</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9mZjk1NzE2OS1iNzU0LTRjNGQtYjE1OS0zMmRlZDUxYjFmODYuanBlZw=="><img alt="Big B Shawarma Dinner" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/ff957169-b754-4c4d-b159-32ded51b1f86.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Big B Shawarma Dinner</span></div><div class="ba bt e3 c1 ax"><span class="">?22</span></div></div></div></div></li></ul></li><li class="n4 n5"><div class="mv mw dw dx ax">Appetizers &amp; Sandwiches</div><div class="ca"></div><ul class="gl j8 gp gq gr ja n6"><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9lNDEyOTU0OC00NzNjLTRjYmUtOGQ0NC04MTUyMDAyZTNiOWQuanBlZw=="><img alt="Classic Chickpea Hummus (8 oz) with Pita Bread" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/e4129548-473c-4cbe-8d44-8152002e3b9d.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Classic Chickpea Hummus (8 oz) with Pita Bread</span></div><div class="ba bt e3 c1 ax"><span class="">?8</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9jOTE0MWZjNS0xM2JjLTRkNWItYjFmMy03YWRkOTNhZTRkYjkuanBlZw=="><img alt="Classic Chicken Shawarma Wrap" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/c9141fc5-13bc-4d5b-b1f3-7add93ae4db9.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Classic Chicken Shawarma Wrap</span></div><div class="ba bt e3 c1 ax"><span class="">?8</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9jMDgyZjZkOC00MjA1LTQ1MjYtODA0Zi1jMzJiMWZjNDVmMmEuanBlZw=="><img alt="Big B Classic Shawarma" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/c082f6d8-4205-4526-804f-c32b1fc45f2a.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Big B Classic Shawarma</span></div><div class="ba bt e3 c1 ax"><span class="">?8</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9jNTA3YjdiNS0xMDg0LTRhYzQtOTQzNC1mMDQ4MjM4NjY0YWMuanBlZw=="><img alt="Great Gyro Sandwich Wrap" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/c507b7b5-1084-4ac4-9434-f048238664ac.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Great Gyro Sandwich Wrap</span></div><div class="ba bt e3 c1 ax"><span class="">?7</span></div></div></div></div></li></ul><div class="dc"></div><ul class="gl j8 gp gq gr ja n6"><li class="jb k4 k5 np n8 n9 na nb"><div tabindex="0" class="ah do mt bc nq"><div class="ah ai dh ae ag cf"><div class="ah do am"><div class="ah do lb nr ai"><div class="ba c0 bb c1 ax"><span class="">Chicken Sandwich</span></div><div class="nf ah g1"><div class="ba bt e3 c1 ax"><span class="">?7</span></div></div><div class="nf k0 ns k1 cf nt bz"><div class="ba bt e3 c1 ax"><span class="ng">Served over rice and cucumber salad with pita bread, a side of tahini sauce, and a side of hot sauce.</span></div></div></div></div></div></div></li></ul></li><li class="n4 n5"><div class="mv mw dw dx ax">Combination Dinners </div><div class="ca"></div><ul class="gl j8 gp gq gr ja n6"><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC81MTZlZTJlMi1mZTI2LTQxODEtYTMzMi1lZWFlZWY3NmEzM2YuanBlZw=="><img alt="Classic Chicken Combo Dinner" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/516ee2e2-fe26-4181-a332-eeaeef76a33f.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Classic Chicken Combo Dinner</span></div><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9mZjk1NzE2OS1iNzU0LTRjNGQtYjE1OS0zMmRlZDUxYjFmODYuanBlZw=="><img alt="Big B Shawarma Dinner" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/ff957169-b754-4c4d-b159-32ded51b1f86.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Big B Shawarma Dinner</span></div><div class="ba bt e3 c1 ax"><span class="">?22</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9lMWFlZmY1ZC04MjM2LTRhYjktODIzNC0xZDE1MTNkNGVlNWIuanBlZw=="><img alt="Shish Tawook Kabab Dinner" src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/e1aeff5d-8236-4ab9-8234-1d1513d4ee5b.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nj"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Shish Tawook Kabab Dinner</span></div><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><picture><source type="image/webp" srcset="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9mYzQ2MzZhYS1lZDQ0LTQ3ZGMtYWViZC01MzlmN2I5NzZmYTkuanBlZw=="><img alt="Fresh Fish Kabob Dinner " src="./Order Middle Feast (729 Rainier Ave S,) Delivery Online _ Seattle _ Menu &amp; Prices _ Uber Eats_files/fc4636aa-ed44-47dc-aebd-539f7b976fa9.jpeg" aria-hidden="true" class="m2 nd dh ds bp ni nk"></picture></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Fresh Fish Kabob Dinner </span></div><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div></div></div></li></ul><div class="dc"></div><ul class="gl j8 gp gq gr ja n6"><li class="jb k4 k5 np n8 n9 na nb"><div tabindex="0" class="ah do mt bc nq"><div class="ah ai dh ae ag cf"><div class="ah do am"><div class="ah do lb nr ai"><div class="ba c0 bb c1 ax"><span class="">Gyro Dinner</span></div><div class="nf ah g1"><div class="ba bt e3 c1 ax"><span class="">?7</span></div></div><div class="nf k0 ns k1 cf nt bz"><div class="ba bt e3 c1 ax"><span class="ng">Thin cuts of gyro wrapped in pita bread, tahini or garlic sauce, pickles, French fries, hummus, and onion marinated in sumac.</span></div></div></div></div></div></div></li><li class="jb k4 k5 np n8 n9 na nb"><div tabindex="0" class="ah do mt bc nq"><div class="ah ai dh ae ag cf"><div class="ah do am"><div class="ah do lb nr ai"><div class="ba c0 bb c1 ax"><span class="">BBQ Chicken Dinner</span></div><div class="nf ah g1"><div class="ba bt e3 c1 ax"><span class="">?14</span></div></div><div class="nf k0 ns k1 cf nt bz"><div class="ba bt e3 c1 ax"><span class="ng">Pita sandwich made with a combination of white cheeses, BBQ chicken.</span></div></div></div></div></div></div></li></ul></li><li class="n4 n5"><div class="mv mw dw dx ax">Beverages</div><div class="ca"></div><ul class="gl j8 gp gq gr ja n6"><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><div class="f8 f9 fa fb fc fd ag ne nd"></div></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Soda</span></div><div class="ba bt e3 c1 ax"><span class="">?2</span></div></div></div></div></li><li class="jb k4 k5 n7 n8 n9 na nb"><div tabindex="0" class="ah do mt bc"><div class="dh ah nc ag"><div class="nd dh bp cf"><div class="lazyload-wrapper "><div class="f8 f9 fa fb fc fd ag ne nd"></div></div></div><div class="nf ah ai ae"><div class="ba c0 bb c1 ax"><span class="">Water Bottle</span></div><div class="ba bt e3 c1 ax"><span class="">?1</span></div></div></div></div></li></ul></li></ul></div>
-
-	</div>
-</form>
-<script language="javascript">
-<!--
-	function open_menulayer(grpcount){
-		var totalcnt	= 5;
-		for (var i = 0; i <  totalcnt; i++) {
-			$('#listR_wrap_'+i).hide();
-			$('#menu_class1_'+i).removeClass('on');
-			$('#menu_class2_'+i).removeClass('checked');
-		}
-		$('#listR_wrap_'+grpcount).show();
-		$('#menu_class1_'+grpcount).addClass('on');
-		$('#menu_class2_'+grpcount).addClass('checked');
-	}
-
-	function fn_menuCnt(idx, tp) {
-
-		if ($('#s_mcode_'+idx).is(":checked")){
-			toprice = $('#menu_price_'+idx).val() * parseInt($("#cnt_"+idx).val());
-			$('#totalprice').text(n_form(parseInt($('#totalprice').text().replace(',',''))-toprice));
-		}
-		if (tp == "u") {
-			if ($("#cnt_"+idx).val() < 10) {
-				$("#cnt_"+idx).val(parseInt($("#cnt_"+idx).val())+1);
-			}
-		}
-		else if(tp == "d") {
-			if ($("#cnt_"+idx).val() > 1) {
-				$("#cnt_"+idx).val(parseInt($("#cnt_"+idx).val())-1);
-			}
-		}
-		if ($('#s_mcode_'+idx).is(":checked")){
-			$('#menuselect_li_'+idx).remove();
-			inputprice(idx);
-		}
-	}
-
-	function fn_menuCnt2(tp) {
-		if (tp == "u") {
-			if ($("#memCnt").val() < 10) {
-				$("#memCnt").val(parseInt($("#memCnt").val())+1);
-			}
-		}
-		else if(tp == "d") {
-			if ($("#memCnt").val() > 1) {
-				$("#memCnt").val(parseInt($("#memCnt").val())-1);
-			}
-		}
-
-		var pre_totalprice;
-		pre_totalprice = parseInt($('#totalprice').text().replace(',',''));
-		var memCnt;
-		memCnt = parseInt($('#memCnt').val());
-		if(pre_totalprice>0){
-			$('#memPrice').text(n_form(parseInt((pre_totalprice)/memCnt)));
-		}
-	}
-
-	function reflash_menu(){
-		$('.tabMenu .list_wrap input:checkbox').attr("checked",false);
-		$('.tabMenu .list_wrap input:text').val('1');
-		$('#menuselect > li').remove();
-		$('.c_default').show();
-		$('#totalprice').text(0);
-		$('#memPrice').text(0);
-		$('#memCnt').val("1")
-	}
-
-	function inputprice(idx){
-		var totalprice;
-		$('.c_default').hide();
-		var pre_totalprice;
-		pre_totalprice = parseInt($('#totalprice').text().replace(',',''));
-		var memCnt;
-		memCnt = parseInt($('#memCnt').val());
-		if ($('#s_mcode_'+idx).is(":checked")){
-			var toprice;
-			toprice = $('#menu_price_'+idx).val() * $('#cnt_'+idx).val();
-			if($('#menu_ps_'+idx).val() == null){
-				$('#menuselect').append('<li class="list" id="menuselect_li_'+idx+'"><p class="mTitle">'+$('#menu_mname_'+idx).val()+'</p><p class="mDetail"><font color="#ffffff">a</font></p><p class="price">'+n_form($('#menu_price_'+idx).val())+'원</p><p class="quantity" id="menuselect_li_cnt_'+idx+'">'+$('#cnt_'+idx).val()+'</p><p class="t_price" id="menuselect_li_price_'+idx+'">'+n_form(toprice)+'원</p></li>');
-			}else{
-				$('#menuselect').append('<li class="list" id="menuselect_li_'+idx+'"><p class="mTitle">'+$('#menu_mname_'+idx).val()+'</p><p class="mDetail">'+$('#menu_ps_'+idx).val()+'</p><p class="price">'+n_form($('#menu_price_'+idx).val())+'원</p><p class="quantity" id="menuselect_li_cnt_'+idx+'">'+$('#cnt_'+idx).val()+'</p><p class="t_price" id="menuselect_li_price_'+idx+'">'+n_form(toprice)+'원</p></li>');
-			}
-
-			$('#totalprice').text(n_form(pre_totalprice+toprice));
-			$('#memPrice').text(n_form(parseInt((pre_totalprice+toprice)/memCnt)));
-		}else{
-			var toprice;
-			toprice = $('#menu_price_'+idx).val() * $('#cnt_'+idx).val();
-			$('#totalprice').text(n_form(pre_totalprice-toprice));
-			$('#memPrice').text(n_form(parseInt((pre_totalprice-toprice)/memCnt)));
-			$('#menuselect_li_'+idx).remove();
-		}
-		if(parseInt($('#totalprice').text().replace(',',''))==0){
-			$('.c_default').show();
-		}
-
-	}
-
-	function n_form(input){
-		var input = String(input);
-		var reg = /(\-?\d+)(\d{3})($|\.\d+)/;
-		if(reg.test(input)){
-			return input.replace(reg, function(str, p1,p2,p3){
-					return n_form(p1) + "," + p2 + "" + p3;
-				}
-			);
-		}else{
-			return input;
-		}
-	}
-//-->
-</script>
-
-		<!-- //메뉴 -->
-
-		<!-- 리뷰 -->
-		<div class="tabReview">
-	<div id="tab3"></div>
-	<h3><img src="{% static '/rest_detail_img/title_tabreview.gif' %}" alt="리뷰&amp;평가"></h3>
-	<div class="reviewWrap">
-
-		<!-- 한줄평가 : Start -->
-		<div class="memberReview">
-
-			<!-- 평가하기 Layer : Start -->
-
-	<script language="javascript">
-	<!--
-		function fn_openPoint_review(){
-			if (!check_login()) { return; }
-			$("#layerPoint_review").show();
-		}
-		function fn_OpenmemberLogin(){
-
-			$(".memberLogin").show();
-
-		}
-
-		function check_nomemlogin(){
-
-			go_nomemlogin();
-
-		}
-
-		function go_nomemlogin() {
-			var h = 370;
-			var w = 410;
-			var scr = 'no';
-			var rs = 'no';
-			var ntop = (screen.height- h) / 2;
-			var nleft = (screen.width - w) / 2;
-			var wndnm = 'nomem_popup';
-			var url = '/popup/nomem_info/nomem_info_pop.asp?returnpage=%2Frestaurant%2Fonepage%2Easp%3Facode%3DH492109';
-			var strParam  = 'height='+h+',width='+w+',top='+ntop+',left='+nleft+',scrollbars='+scr+',resizable='+rs+',status=no,directories=no,location=no,menubar=no,toolbar=no';
-			var wnd = window.open(url, wndnm, strParam);
-			wnd.focus();
-		}
-
-		function fn_closePoint_review(){
-			$("#layerPoint_review").hide();
-		}
-	//-->
-	</script>
-	<script language="javascript">
-	<!--
-	function re_ch_img(p_idx, p_sel)  {
-		if (!check_login()) { return; }
-		var oFrm = document.frm_Edit_review;
-		if (!((p_idx >= 1) && (p_idx <= 4))) { return; }
-		if (!((p_sel >= 1) && (p_sel <= 5))) { return; }
-		var prefix = 'f_re' + p_idx;
-		var f_val;
-		for (var i = 1; i <= 5; i++) {
-			t_obj = document.getElementById(prefix + '_' + i);
-			t_obj.src = '/image/restaurant/onepage/ic_makestar_' + ((i <= p_sel) ? '10' : '00') + '.gif';
-			t_obj = document.getElementById(prefix + '_vw');
-			f_val = p_sel;
-			t_obj.innerHTML = f_val;
-		}
-		oFrm['f' + p_idx].value = p_sel;
-		var f1	= parseInt($("#id_f1").val());
-		var f2	= parseInt($("#id_f2").val());
-		var f3	= parseInt($("#id_f3").val());
-		var f4	= parseInt($("#id_f4").val());
-		var totpoint	= (f1+f2+f3+f4)/4;
-		$("#totPoint_review").text(totpoint);
-	}
-	function re_valuation() {
-		if (!check_login()) { return; }
-		var oFrm = document.frm_Edit_review;
-		if (oFrm.acode.value == 0) { alert('평가대상이 설정되지 않았습니다.'); return; }
-		if (oFrm.f1.value == 0) { alert('맛을 평가해 주세요.'); return; }
-		if (oFrm.f2.value == 0) { alert('서비스를 평가해 주세요.'); return; }
-		if (oFrm.f3.value == 0) { alert('분위기를 평가해 주세요.'); return; }
-		if (oFrm.f4.value == 0) { alert('가격을 평가해 주세요.'); return; }
-		if (reCount(oFrm.comment.value) < 20)	{	alert('보다 정확한 리뷰를 위해 20byte 이상 작성해주시기 바랍니다.'); return;	}
-		if (!confirm('평가 하시겠습니까?')) { return; }
-		oFrm.proc.value = 'y';
-		oFrm.target	= 'pointifrm_re';
-		oFrm.submit();
-	}
-	function check_login() {
-		var oFrm = document.frm_Edit_review;
-
-		login_popup('%2Frestaurant%2Fonepage%2Easp%3Facode%3DH492109');
-		return false;
-
-	}
-
-	//-- Byte 체크 function {
-	function cutMsg(str, strlen){
-		var i, msglen = 0;
-		var ret = '';
-		for (i = 0; i < str.length; i++) {
-			var ch = str.charAt(i);
-			if (escape(ch).length  > 4) {
-				msglen += 2;
-			}
-			else {
-				msglen++;
-			}
-			if (msglen > strlen) break;
-			ret += ch;
-		}
-		return ret;
-	}
-
-	function reCount(str){
-		var i, msglen = 0;
-		for(i = 0; i < str.length; i++) {
-			var ch = str.charAt(i);
-			if (escape(ch).length  > 4) {
-				msglen += 2;
-			}
-			else {
-				msglen++;
-			}
-		}
-		return msglen;
-	}
-
-	function byteCheck(cf, vf, txtlimit){
-		var text = cf.value;
-		var msglen = 0;
-		msglen = reCount(text);
-		if (msglen > txtlimit) {
-			rem = msglen - txtlimit;
-			alert('입력하신 문장의 총길이는 ' + msglen + '입니다.\n초과되는 ' + rem + '바이트는 삭제됩니다.');
-			cf.value = cutMsg(text, txtlimit);
-			msglen = reCount(cf.value);
-		}
-		var jq = $('#' + vf);
-		if (jq.length == 1) {
-			jq.html(msglen + ' byte/' + txtlimit + ' byte');
-		}
-	}
-	//-- Byte 체크 function }
-	/*-- [drm][20121029][close]
-	$(document).ready(function() {
-		byteCheck(document.frm_Edit_review.comment, 'chkCommentByte_review', 200);
-	});
-	--*/
-	//-->
-	</script>
-	<script language="javascript">
-	<!--
-		function init_re_valuation() {
-			re_ch_img(1, 0);
-			re_ch_img(2, 0);
-			re_ch_img(3, 0);
-			re_ch_img(4, 0);
-		}
-
-	//-->
-	</script>
-	<div class="layerPoint" id="layerPoint_review" style="display:none">
-		<form name="frm_Edit_review" action="http://www.menupan.com/restaurant/onepage_201401/include/maininfo_point_review_proc.asp" method="post">
-			<input type="hidden" name="acode" value="H492109">
-			<input type="hidden" name="mid" value="">
-			<input type="hidden" name="mseq" value="">
-			<input type="hidden" name="nickname" value="">
-			<input type="hidden" name="email" value="">
-			<input type="hidden" name="nomem_sessionid" value="220118_814260449.51">
-			<input type="hidden" name="nomem_nickname" value="">
-			<input type="hidden" name="nomem_email" value="">
-			<input type="hidden" name="proc">
-			<div class="topPoint">
-				<h4><img src="{% static '/rest_detail_img/title_point.gif' %}" alt="평가하기"></h4>
-
-				<p>맛집 평가는 재평가 가능하나, 최종 평가 내용으로 점수가 반영됩니다.</p>
-			</div>
-			<dl class="tablePoint">
-				<dt class="pointNavi"><span class="nItem">항목</span><span class="nStar">별점</span><span class="nPoint">(각 항목별 5점 만점)</span></dt>
-				<dd class="pointList">
-					<ul>
-						<li>
-							<dl class="listItem">
-								<dt class="itemStar">맛</dt>
-								<dd class="makeStar">
-
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re1_1" onclick="re_ch_img(1, 1);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re1_2" onclick="re_ch_img(1, 2);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re1_3" onclick="re_ch_img(1, 3);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re1_4" onclick="re_ch_img(1, 4);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re1_5" onclick="re_ch_img(1, 5);"></a>
-								</dd>
-								<dd class="pointStar"><span id="f_re1_vw">0</span>점</dd>
-								<input type="hidden" name="f1" id="id_f1" value="0">
-							 </dl>
-						 </li>
-						 <li>
-							<dl class="listItem">
-								<dt class="itemStar">서비스</dt>
-								<dd class="makeStar">
-
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re2_1" onclick="re_ch_img(2, 1);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re2_2" onclick="re_ch_img(2, 2);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re2_3" onclick="re_ch_img(2, 3);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re2_4" onclick="re_ch_img(2, 4);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re2_5" onclick="re_ch_img(2, 5);"></a>
-								</dd>
-								<dd class="pointStar"><span id="f_re2_vw">0</span>점</dd>
-								<input type="hidden" name="f2" id="id_f2" value="0">
-							 </dl>
-						 </li>
-						 <li>
-							<dl class="listItem">
-								<dt class="itemStar">분위기</dt>
-								<dd class="makeStar">
-
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re3_1" onclick="re_ch_img(3, 1);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re3_2" onclick="re_ch_img(3, 2);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re3_3" onclick="re_ch_img(3, 3);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re3_4" onclick="re_ch_img(3, 4);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re3_5" onclick="re_ch_img(3, 5);"></a>
-								</dd>
-								<dd class="pointStar"><span id="f_re3_vw">0</span>점</dd>
-								<input type="hidden" name="f3" id="id_f3" value="0">
-							 </dl>
-						 </li>
-						 <li>
-							<dl class="listItem">
-								<dt class="itemStar">가격</dt>
-								<dd class="makeStar">
-
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re4_1" onclick="re_ch_img(4, 1);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re4_2" onclick="re_ch_img(4, 2);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re4_3" onclick="re_ch_img(4, 3);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re4_4" onclick="re_ch_img(4, 4);"></a>
-									<a><img src="{% static '/rest_detail_img/ic_makestar_00.gif' %}" id="f_re4_5" onclick="re_ch_img(4, 5);"></a>
-								</dd>
-								<dd class="pointStar"><span id="f_re4_vw">0</span>점</dd>
-								<input type="hidden" name="f4" id="id_f4" value="0">
-							 </dl>
-						 </li>
-					 </ul>
-				</dd>
-				<dd class="pointTotal">
-					<span class="totalItem">계</span>
-					<span class="totalPoint"><p><span class="count" id="totPoint_review">0</span>점</p>/5점</span>
-					<!--<span class="totalBtn"><a href="javascript:;" onClick="rv_valuation();"><img src="/image/restaurant/onepage/btn_regist.gif" alt="등록" /></a></span>-->
-				</dd>
-			</dl>
-			<dl class="writePoint">
-				<dt><span class="nWrite">평가</span><span class="nByte" id="chkCommentByte_review" name="chkCommentByte_review">0 byte / 200 byte</span></dt>
-				<dd class="writeDetail"><textarea id="id_comment" name="comment" style="background:url(/image/restaurant/onepage/bg_layerPoint_textarea.gif) 50% 50% no-repeat;" onclick="javascript:document.getElementById(&#39;id_comment&#39;).style.background=&#39;&#39;;" onkeydown="byteCheck(this, &#39;chkCommentByte_review&#39;, 200);" onkeyup="byteCheck(this, &#39;chkCommentByte_review&#39;, 200);" onchange="byteCheck(this, &#39;chkCommentByte_review&#39;, 200);"></textarea></dd>
-				<dd class="btnRegist"><a href="javascript:;" onclick="re_valuation();"><img src="{% static '/rest_detail_img/btn_regist02.gif' %}" alt="작성완료"></a></dd>
-			</dl>
-			<dl class="bottomPoint">
-				<dt>지금까지 <span class="count">78명</span>의 회원님이 평가에 참여하였습니다.</dt>
-				<dd>
-					<span class="name">목우촌웰빙마을</span>의 최근 1년간의 평균점수는 <span class="average">3.5점</span> 입니다.
-				</dd>
-			</dl>
-			<p class="btnClose"><a href="javascript:;" onclick="fn_closePoint_review();"><img src="{% static '/rest_detail_img/btn_x.gif' %}" alt="닫기"></a></p>
-		</form>
-		<iframe width="100%" height="0" name="pointifrm_re" id="pointifrm_re" frameborder="1" style="display:none;" src="{% static '/rest_detail_img/saved_resource(2).html' %}"></iframe>
-	</div>
-
-			<!-- 평가하기 Layer  : End -->
-
-			<!-- 한줄평가 로그인 레이어 { -->
-			<div class="memberLogin" style="display:none;">
-				<p class="tit">메뉴판닷컴 회원이세요?</p>
-				<button class="btnClose" onclick="javascript:$(&#39;.memberLogin&#39;).hide();">닫기</button>
-				<div class="btn">
-					<p class="btn1"><button class="btnRecognize1" type="button" onclick="fn_openPoint_review();">회원평가</button></p>
-					<p class="btn2"><button class="btnRecognize2" type="button" onclick="javascript:check_nomemlogin();">비회원평가</button></p>
-				</div>
-				<p class="txt">* 회원평가 시 메뉴판닷컴 포인트(씨앗)이 적립됩니다.<br>* 메뉴판닷컴 회원가입은 PC(<span class="red">www.menupan.com</span>)에서<br>&nbsp;&nbsp;&nbsp;가능합니다.</p>
-			</div>
-			<!-- 한줄평가 로그인 레이어 } -->
-
-			<div id="ajax_comment">
-		<ul class="review"><!-- 1페이지당 <li> 5개까지 노출 -->
 
 
-			<!-- 기본 댓글 -->
-			<li class="re_badge_area">
-				<p class="re_badge"><img src="{% static '/rest_detail_img/re_badge.png' %}"></p>
-				<dl>
-					<dt><img src="{% static '/rest_detail_img/mbr_user.gif' %}"><span>고랑쥬고랑쥬고랑쥬쥬</span></dt>
-					<dd class="date">2013/07/26</dd>
-					<dd class="vote"><a id="id_like_624701" class="like" href="javascript:;" onclick="fn_commentgood(&#39;624701&#39;,&#39;1&#39;);" title="유용해요">유용해요</a><a id="id_dislike_624701" class="dislike" href="javascript:;" onclick="fn_commentgood(&#39;624701&#39;,&#39;-1&#39;);" title="별로에요">별로에요</a></dd>
-					<dd class="rate">
-						<p class="point"><span class="star" style="width:76%"></span><!-- ☆☆☆☆☆ //--></p>
-						<p class="score">3.8</p>
-					</dd>
-					<dd class="content">정말 먹어본 고기중에 손에 꼽을만큼 신선하고 맛있어요~ 여기서 고기 맛을 본 후로는 다른 곳은 잘 안가게 되네요</dd>
-				</dl>
-			</li>
+            </script>
+            <form id="menuform" name="menuform" method="post">
+                <div class="tabMenu">
+                    <div id="tab2"></div>
+                    <h3><img src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
 
 
-			<!-- 기본 댓글 -->
-			<li class="re_badge_area">
-				<p class="re_badge"><img src="{% static '/rest_detail_img/re_badge.png' %}"></p>
-				<dl>
-					<dt><img src="{% static '/rest_detail_img/mbr_user.gif' %}"><span>flair</span></dt>
-					<dd class="date">2014/04/27</dd>
-					<dd class="vote"><a id="id_like_654114" class="like" href="javascript:;" onclick="fn_commentgood(&#39;654114&#39;,&#39;1&#39;);" title="유용해요">유용해요</a><a id="id_dislike_654114" class="dislike" href="javascript:;" onclick="fn_commentgood(&#39;654114&#39;,&#39;-1&#39;);" title="별로에요">별로에요</a></dd>
-					<dd class="rate">
-						<p class="point"><span class="star" style="width:90%"></span><!-- ☆☆☆☆☆ //--></p>
-						<p class="score">4.5</p>
-					</dd>
-					<dd class="content">믿고 먹을 수있는 육질좋은 곳.가족과 함께하기 좋네요.</dd>
-				</dl>
-			</li>
+                    <!-- Page Content-->
+                    <section class="pt-4">
+                        <div class="container px-lg-5">
+                            <!-- Page Features-->
+                            <div class="row gx-lg-5">
+                                {% for menu in rest_menus %}
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card bg-light border-0 h-100">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <img width="300" height="300" src="{{menu.img_url}}">
+                                            <br>
+                                            <h2 class="fs-4 fw-bold">{{menu.name}}</h2>
+                                            <p class="mb-0">{{menu.price}} won</p>
+                                            <p class="mb-0">Ingredient : {{menu.ingredient}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Bootstrap core JS-->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                    <!-- Core theme JS-->
+                    <script src="{% static 'menu_list/js/scripts.js' %}"></script>
+
+                </div>
+            </form>
+
+            <!-- //메뉴 -->
+
+            <!-- 리뷰 -->
+            <div class="tabReview">
+                <div id="tab3"></div>
+                <div>
+                    <div>
+                        <div data-role="review_write_toast" class="review_toast_recommend" style="display:none;">
+                            <p class="text">추천해주셔서 감사합니다.</p>
+                        </div>
+                        <div class="review_write_box">
+                            <h3 class="blind">구매상품 정보</h3>
+
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="review_write_input">
+                                <h2 class="review_write_title type2">상품 평가하기</h2>
+                                <div class="review_write_rate">
+                                    <h3 class="blind">구매상품 평점</h3>
+                                    <div class="star_score">
+                                        <div>
+                                            <div>
+
+                                                <button type="button" id="b1" value="1" onclick="on(this)">☆</button>
+                                                <button type="button" id="b2" value="2" onclick="on(this)">☆</button>
+                                                <button type="button" id="b3" value="3" onclick="on(this)">☆</button>
+                                                <button type="button" id="b4" value="4" onclick="on(this)">☆</button>
+                                                <button type="button" id="b5" value="5" onclick="on(this)">☆</button>
+                                                <h4 id='star'>0</h4>
+                                                <input id ='star_input'type="hidden" name="star" value="0">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <script>
+        function on(event){
+            if(event.id=="b1"){
+            event.innerText="★";
+            document.getElementById('b2').innerText="☆";
+            document.getElementById('b3').innerText="☆";
+            document.getElementById('b4').innerText="☆";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="1";
+            document.getElementById('star_input').value="1";
+            }
+            else if(event.id=="b2"){
+            document.getElementById('b1').innerText="★";
+            event.innerText="★";
+            document.getElementById('b3').innerText="☆";
+            document.getElementById('b4').innerText="☆";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="2";
+            document.getElementById('star_input').value="2";
+            }
+            else if(event.id=="b3"){
+            event.innerText="★";
+            document.getElementById('b1').innerText="★";
+            document.getElementById('b2').innerText="★";
+            document.getElementById('b4').innerText="☆";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="3";
+            document.getElementById('star_input').value="3";
+            }
+            else if(event.id=="b4"){
+            event.innerText="★";
+            document.getElementById('b1').innerText="★";
+            document.getElementById('b2').innerText="★";
+            document.getElementById('b3').innerText="★";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="4";
+            document.getElementById('star_input').value="4";
+            }
+            else if(event.id=="b5"){
+            event.innerText="★";
+            document.getElementById('b1').innerText="★";
+            document.getElementById('b2').innerText="★";
+            document.getElementById('b3').innerText="★";
+            document.getElementById('b4').innerText="★";
+            document.getElementById('star').innerText="5";
+            document.getElementById('star_input').value="5";
+            }
+        }
 
 
-			<!-- 기본 댓글 -->
-			<li class="">
-
-				<dl>
-					<dt><img src="{% static '/rest_detail_img/mbr_user.gif' %}"><span>떠돌이</span></dt>
-					<dd class="date">2014/12/29</dd>
-					<dd class="vote"><a id="id_like_700126" class="like" href="javascript:;" onclick="fn_commentgood(&#39;700126&#39;,&#39;1&#39;);" title="유용해요">유용해요</a><a id="id_dislike_700126" class="dislike" href="javascript:;" onclick="fn_commentgood(&#39;700126&#39;,&#39;-1&#39;);" title="별로에요">별로에요</a></dd>
-					<dd class="rate">
-						<p class="point"><span class="star" style="width:76%"></span><!-- ☆☆☆☆☆ //--></p>
-						<p class="score">3.8</p>
-					</dd>
-					<dd class="content">누님집에 놀러왔다 저녁사준다해서 갔는데 정말 맛나게 잘 먹고 왔습니다. 등심에 곰치싸서 먹는데 환상이네요.
-콜라비, 매실짱아찌, 동치미 등 반찬류도 싱싱하고 좋네요. 직접 담아주는거랍니다. </dd>
-				</dl>
-			</li>
+                            </script>
 
 
-			<!-- 기본 댓글 -->
-			<li class="">
+                            <section class="review_write_out">
+                                <div class="review_write_header">
+                                    <h1 class="review_write_title type2">리뷰 작성하기</h1>
+                                </div>
 
-				<dl>
-					<dt><img src="{% static '/rest_detail_img/mbr_user.gif' %}"><span>차이단닷컴</span></dt>
-					<dd class="date">2015/12/09</dd>
-					<dd class="vote"><a id="id_like_737496" class="like" href="javascript:;" onclick="fn_commentgood(&#39;737496&#39;,&#39;1&#39;);" title="유용해요">유용해요</a><a id="id_dislike_737496" class="dislike" href="javascript:;" onclick="fn_commentgood(&#39;737496&#39;,&#39;-1&#39;);" title="별로에요">별로에요</a></dd>
-					<dd class="rate">
-						<p class="point"><span class="star" style="width:86%"></span><!-- ☆☆☆☆☆ //--></p>
-						<p class="score">4.3</p>
-					</dd>
-					<dd class="content">가족들이랑 생일이나 기념일마다 외식하러 자주가는 데 갔다올 때마다 잘먹고 온 것 같아서 기분 좋아요 여기 분위기도 그렇고 인테리어도 깨끗하고 따듯해여 가보세요
-~</dd>
-				</dl>
-			</li>
+                                <div class="review_write_textarea">
+                                    <textarea name='contents' id="reviewContents" title="구매후기 작성" name="reviewContents"
+                                              maxlength="600"></textarea>
+                                </div>
+                                <button class="btn btn-primary btn-xl" id="submitButton" type="submit">등록</button>
+                            </section>
 
 
-			<!-- 기본 댓글 -->
-			<li class="">
+                        </form>
+                        <br>
+                        {% for cmt in cmts %}
+                            <h5> ▶  {{cmt.star}} {{cmt.contents}}</h5>
+                        {% endfor %}
+                    </div>
 
-				<dl>
-					<dt><img src="{% static '/rest_detail_img/mbr_none.gif' %}"><span>수원맛집탐방</span></dt>
-					<dd class="date">2017/11/15</dd>
-					<dd class="vote"><a id="id_like_764003" class="like" href="javascript:;" onclick="fn_commentgood(&#39;764003&#39;,&#39;1&#39;);" title="유용해요">유용해요</a><a id="id_dislike_764003" class="dislike" href="javascript:;" onclick="fn_commentgood(&#39;764003&#39;,&#39;-1&#39;);" title="별로에요">별로에요</a></dd>
-					<dd class="rate">
-						<p class="point"><span class="star" style="width:100%"></span><!-- ☆☆☆☆☆ //--></p>
-						<p class="score">5.0</p>
-					</dd>
-					<dd class="content">육질도 좋고 분위기도 좋고 정말 맛있는것 같습니다 가격에 맛에 감동 !!</dd>
-				</dl>
-			</li>
 
-		</ul>
-		<!-- 페이징 : Start -->
-		<div class="paging">
-<a href="javascript:goPage2(1);" class="imgBtn"><img src="{% static '/rest_detail_img/btn_page_first.gif' %}"></a>
-<a href="javascript:;" class="imgBtn"><img src="{% static '/rest_detail_img/btn_page_pre.gif' %}"></a>
-<span class="pgClick">1</span>
-<a href="javascript:goPage2(2);">2</a>
-<a href="javascript:goPage2(3);">3</a>
-<a href="javascript:goPage2(4);">4</a>
-<a href="javascript:goPage2(5);">5</a>
-<a href="javascript:goPage2(6);">6</a>
-<a href="javascript:goPage2(7);">7</a>
-<a href="javascript:goPage2(8);">8</a>
-<a href="javascript:goPage2(9);">9</a>
-<a href="javascript:goPage2(10);" class="last">10</a>
-<a href="javascript:goPage2(11);" class="imgBtn"><img src="{% static '/rest_detail_img/btn_page_next.gif' %}"></a>
-<a href="javascript:goPage2(11);" class="imgBtn"><img src="{% static '/rest_detail_img/btn_page_final.gif' %}"></a>
+                    <div id="criteo-tags-div" style="display: none;">
+                        <iframe src="{% static 'rest_star_img/syncframe.html' %}" id="criteo-syncframe-onetag" width="0"
+                                height="0"
+                                frameborder="0" style="border-width:0px; margin:0px; display:none"
+                                title="Criteo GUM iframe"></iframe>
+                    </div>
 
-		</div>
-</div>
 
-			<form name="procfrm2" id="procfrm2" method="post">
-				<input type="hidden" name="acode" value="H492109">
-				<input type="hidden" name="nomem_sessionid" value="220118_814260449.51">
-			</form>
-			<iframe name="procifrm2" id="procifrm2" width="100%" height="0" frameborder="0" src="{% static '/rest_detail_img/saved_resource(3).html' %}"></iframe>
+                    <!--		리뷰평가 작성-->
 
-		</div><!-- .memberReview -->
 
-		<script language="javascript">
+                    <script language="javascript">
 		<!--
 
 			function Chg_order(orderid){
@@ -1126,8 +659,10 @@
 				sform.submit();
 			}
 		//-->
-		</script>
-		<script language="javascript">
+
+
+                    </script>
+                    <script language="javascript">
 		<!--
 			function goPage2(page){
 
@@ -1135,25 +670,28 @@
 				ajax_comment(sparam);
 			}
 		//-->
-		</script>
-		<!-- //한줄평가 : End -->
 
 
-	</div><!-- .mainArea02 -->
-	<!-- //mainArea02 -->
-
-	<div class="hSpace70"><!-- 여백 70 --></div>
-
-	<div class="hSpace30"><!-- 여백 30 --></div>
-
-	<!-- bnrWing - AType노출 -->
+                    </script>
+                    <!-- //한줄평가 : End -->
 
 
+                </div><!-- .mainArea02 -->
+                <!-- //mainArea02 -->
 
-</div><!-- .WrapMain -->
-<!-- //Main 영역 -->
+                <div class="hSpace70"><!-- 여백 70 --></div>
 
+                <div class="hSpace30"><!-- 여백 30 --></div>
+
+                <!-- bnrWing - AType노출 -->
+
+
+            </div><!-- .WrapMain -->
+            <!-- //Main 영역 -->
+        </div>
+    </div>
 </center>
 
 
-</body></html>
+</body>
+</html>

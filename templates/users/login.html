@@ -99,6 +99,15 @@
                             <button data-baseweb="button" aria-label="Submit Form" data-e2e-id="msf.submit-button" class="bu bv bo bw bx by bz c0 c1 c2 c3 c4 be c5 c6 c7 c8 c9 ca cb cc h6 q6 b8 b6 bj b7 cf fr ch lu e6 e7 e8 e9 q7 q8 q9 qa gc fw h7 h8 bp">
                                 Submit
                             </button>
+                            {% if messages %}
+
+                            <ul class="messages">
+                                {% for message in messages %}
+                                <li {% if message.tags %}
+                                    class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
                         </form>
                     </div>
                 </div>
