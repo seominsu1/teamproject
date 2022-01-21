@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
-from restaurant.forms import ResinputForm
+from restaurant.forms import ResinputForm,ComForm
 from menu.forms import MenuinputForm
-from restaurant.models import restaurant
+from restaurant.models import restaurant,comment
+from menu.models import Menu
 from django.db.models import Q
 
 # Create your views here.
@@ -34,18 +35,31 @@ def rest_input(request):
 #음식점 세부정보 사이트
 def rest_detail(request,bid):
     rest=restaurant.objects.get(Q(id=bid))
-
+    rest_menu=Menu.objects.filter(Q(restaurant_id=bid))
+    cmts=comment.objects.all()
+    cmp_input=ComForm()
     # 음식점 세부 정보+지도+메뉴 띄우는 건 get 방식(음식점id만 있으면 출력)
     if request.method=='GET':
+        print("GET")
         rest_info=ResinputForm(instance=rest)
-        return render(request,'rest_detail.html',{'rest_info':rest_info})
+        return render(request,'rest_detail.html',{'rest_info':rest_info,'rest_menus':rest_menu,'cmts':cmts,'cmp_input':cmp_input,'rest_id':bid})
     # 같은 화면 내에 댓글+평점 창도 있으니깐, 그때는 post
     # 기존에 생성되어있는 댓글 목록 보여져야 됨 (음식점id 외래키로 하는 review 모두 출력)
-    else:
-        return render(request,'test.html')
+    elif request.method=='POST':
+        print("POST")
+        rest_info = ResinputForm(instance=rest)
+        comform=ComForm(request.POST)
+        if comform.is_valid() :
+            print("VALID")
+            cmt=comform.save(commit=False)
+            cmt.user_id=1
+            cmt.restaurant_id=bid
+            cmt.save()
+        return redirect('/rest_detail/'+str(bid))
+
 
 def testtest(request):
-    return render(request,'testtest.html')
+    return render(request,'index.html')
 
 def rest_menu_input(request,bid):
     rest = restaurant.objects.get(Q(id=bid))
@@ -62,3 +76,6 @@ def rest_menu_input(request,bid):
             menuinput.restaurant_id=bid
             menuinput.save()
             return redirect('/staff/menuInput/'+str(bid))
+
+def Tmon(request):
+    return render(request,'rest_star.html')

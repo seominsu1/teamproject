@@ -23,10 +23,11 @@ import menu.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('staff/restInput', restaurant.views.rest_input),
     path('staff/menuInput/<bid>',restaurant.views.rest_menu_input),
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
     path('main', app01.views.main_page),
+    path('testtest',restaurant.views.testtest),
+    path('Tmon_star',restaurant.views.Tmon)
 ]
