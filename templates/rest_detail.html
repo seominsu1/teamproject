@@ -571,13 +571,14 @@
                                     <textarea name='contents' id="reviewContents" title="구매후기 작성" name="reviewContents"
                                               maxlength="600"></textarea>
                                 </div>
-
+                                <button class="btn btn-primary btn-xl" id="submitButton" type="submit">등록</button>
                             </section>
 
-                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">등록</button>
+
                         </form>
+                        <br>
                         {% for cmt in cmts %}
-                        <h4>cmt.star cmt.contents</h4>
+                            <h5> ▶  {{cmt.star}} {{cmt.contents}}</h5>
                         {% endfor %}
                     </div>
 
