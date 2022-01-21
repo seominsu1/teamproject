@@ -1,15 +1,14 @@
 from django.db.models import Q
 from django.shortcuts import render, redirect
 from review.models import Review
-import review.forms
+from review.forms import ReviewForm
 
 def register(request):
-
     if request.method == "GET":
-        reviewForm = reviewForm()
+        reviewForm = ReviewForm()
         return render(request, 'review/revw_register.html', {'reviewForm': reviewForm})
     elif request.method == "POST":
-        reviewForm = reviewForm(request.POST)
+        reviewForm = ReviewForm(request.POST)
         if reviewForm.is_valid():
             review = reviewForm.save(commit=False)
             review.save()
