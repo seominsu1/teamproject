@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-
 import app01.views
 import restaurant.views
+import users.views
 import menu.views
+import review.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,7 +28,24 @@ urlpatterns = [
     path('staff/menuInput/<bid>',restaurant.views.rest_menu_input),
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
+
     path('main', app01.views.main_page),
-    path('testtest',restaurant.views.testtest),
-    path('Tmon_star',restaurant.views.Tmon)
+
+  
+    path('reviewRegister', review.views.register),
+    path('reviewList', review.views.posts),
+    path('reviewRead/<int:bid>', review.views.read),
+    path('reviewDelete/<int:bid>', review.views.delete),
+    
+    path('users/test', users.views.home),
+    path('usersbase', users.views.base),
+
+    path('users/signup', users.views.signup),  # 가입
+
+    path('users/login', users.views.userlogin),  # 로그인
+    path('users/logout', users.views.userlogout),  # 로그아웃
+
+    path('users/pwchange', users.views.userpwchange),  # 비밀번호 변경
+    path('users/delete', users.views.userdelete),  # 회원탈퇴 
 ]
+

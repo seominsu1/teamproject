@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app01',
     'restaurant',
-    'menu'
+    'menu',
+    'review'
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tp',
-        'USER': 'user3',
+        'USER': 'user2',
         'PASSWORD': 'qwer1234',
         'HOST': '172.30.1.109',
         'PORT': '3306',
