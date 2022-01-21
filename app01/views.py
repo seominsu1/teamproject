@@ -8,7 +8,17 @@ def home(request):
 
 #메인화면
 def main_page(request):
-    return render(request, 'main.html')
+    rest=restaurant.objects.all()
+    if request.method=='GET':
+        print("GET")
+        return render(request,'main.html',{'rest_all':rest})
+
+def main_page_with_tag(request,cate):
+    rest=restaurant.objects.filter(Q(large_cate=cate))
+    if request.method=='GET':
+        print("GET")
+        return render(request,'main_with_tag.html',{'rest_all':rest})
+
 
 #음식점 위치 (테스트버전)
 def rest_map(request):

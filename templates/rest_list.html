@@ -265,17 +265,18 @@ function getReload(m) {
         {% endfor %}
         {% endif %}
 
+        {% for rest in rests %}
         <!--음식점 1 버튼-->
         <div class="item short">
-            <div class="img-grade button" onClick="location.href='/profile.php?rid=JdxicS542nrR'">
+            <div class="img-grade button" onClick="location.href='/rest_detail/{{ forloop.counter }}'">
                 <!--음식점 1 대표사진-->
                 <div class="img"><img
-                        src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121012345_photo1_26c47b4327c0.jpg"/>
+                        src="{{rest.pic_url}}"/>
                 </div>
                 <!--음식점 이름~주소-->
                 <div>
-                    <p class="btxt">알촌 <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">| 경기 안산시 상록구 학사길 2</span>
+                    <p class="btxt">{{rest.name}} <span
+                            style="color:#9999a0;font-weight:normal;font-size:13px;">{{rest.address}}</span>
                     </p>
                     <p class="star"><span style="width:80%"></span></p>
                 </div>
@@ -283,24 +284,25 @@ function getReload(m) {
             <div class="grade-list">
             </div>
             <div class="ctxt">
-                <div class="content-text-area">운영시간:</div>
+                <div class="content-text-area">{{rest.time}}</div>
             </div>
             <div class="ctxt">
-                <div class="content-text-area">전화번호:</div>
+                <div class="content-text-area">{{rest.phonenum}}</div>
             </div>
             <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
             </div>
-            <!--음식점 1 사진-->
-            <p class="img" style="height:130px; overflow:hidden;">
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121012345_photo1_26c47b4327c0.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     />
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121012347_menu1_26c47b4327c0.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     />
-            </p>
+<!--            &lt;!&ndash;음식점 1 사진&ndash;&gt;-->
+<!--            <p class="img" style="height:130px; overflow:hidden;">-->
+<!--                <img src="{{rest_menu.}}"-->
+<!--                     class="button" style="width:195px; margin-top:-35px;"-->
+<!--                     />-->
+<!--                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121012347_menu1_26c47b4327c0.jpg"-->
+<!--                     class="button" style="width:195px; margin-top:-35px;"-->
+<!--                     />-->
+<!--            </p>-->
         </div>
         <!--음식점 1 끝-->
+        {% endfor %}
 
         <!--음식점 2 시작-->
         <div class="item short">

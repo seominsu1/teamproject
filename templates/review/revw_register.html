@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<button onclick="location.href='/commentList'">목록</button >
-<form action="/commentRegister" method="post">
+<button onclick="location.href='/reviewList'">목록</button >
+<form action="/reviewRegister" method="post">
     {% csrf_token %}
     {{ reviewForm }}
     <input type = "submit">
