@@ -548,9 +548,6 @@ font-weight: 400;
                     <div>
                         <div class="ah ai b6 b7">
                             <div>
-                                <a rel="nofollow"
-                                   href="https://www.ubereats.com/login-redirect/?campaign=signin_universal_link&amp;marketing_vistor_id=5bbc47bf-e6ad-45e1-818e-24efd3525cd2&amp;redirect=%2F%3Fslr%3D1"
-                                   class="b8 b9 ba bb bc bd be ah bf bg b0 bh bi bj bk bl bm bn bo bp">회원가입</a>
                                 <div class="bq br ah ai">
                                     <ul>
                                         <li class="bs"><a href="//www.uber.com/business/eats" class="ba bt bb bu bv">Create
@@ -670,10 +667,47 @@ font-weight: 400;
                                 </div>
                                 <div class="do"></div>
                                 <div class="spacer _24"></div>
+
+                                {% if user.is_authenticated %}
+                                {% csrf_token %}
                                 <a rel="nofollow" tabindex="0"
-                                   href="https://www.ubereats.com/login-redirect/?campaign=signin_universal_link&amp;marketing_vistor_id=5bbc47bf-e6ad-45e1-818e-24efd3525cd2&amp;redirect=%2F%3Fslr%3D1"
+                                   href="http://127.0.0.1:8000/users/logout"
                                    data-test="header-sign-in"
-                                   class="c0 c1 ba bb bc dp be ah bf bg b0 bh c5 ch ax c6 c7 c8 bn bo">회원가입</a></div>
+                                   class="c0 c1 ba bb bc dp be ah bf bg b0 bh c5 ch ax c6 c7 c8 bn bo">
+                                    로그아웃
+                                </a>
+
+                                <a rel="nofollow" tabindex="0"
+                                   href="http://127.0.0.1:8000/users/pwchange"
+                                   data-test="header-sign-in"
+                                   class="c0 c1 ba bb bc dp be ah bf bg b0 bh c5 ch ax c6 c7 c8 bn bo">
+                                    정보 변경
+                                </a>
+
+                                <a rel="nofollow" tabindex="0"
+                                   href="http://127.0.0.1:8000/users/delete"
+                                   data-test="header-sign-in"
+                                   class="c0 c1 ba bb bc dp be ah bf bg b0 bh c5 ch ax c6 c7 c8 bn bo">
+                                    회원 탈퇴
+                                </a>
+
+                                {% else %}
+                                <a rel="nofollow" tabindex="0"
+                                   href="http://127.0.0.1:8000/users/login"
+                                   data-test="header-sign-in"
+                                   class="c0 c1 ba bb bc dp be ah bf bg b0 bh c5 ch ax c6 c7 c8 bn bo">
+                                    로그인
+                                </a>
+                                 <a rel="nofollow" tabindex="0"
+                                   href="http://127.0.0.1:8000/users/signup"
+                                   data-test="header-sign-in"
+                                   class="c0 c1 ba bb bc dp be ah bf bg b0 bh c5 ch ax c6 c7 c8 bn bo">
+                                    회원가입
+                                </a>
+
+                                {% endif %}
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -885,6 +919,7 @@ font-weight: 400;
                     <div class="eu"></div>
                 </div>
             </main>
+
             <footer id="footer" class="fx fy fz">
                 <div class="d3 d4 d5 b0 d6">
                     <div class="ah">
