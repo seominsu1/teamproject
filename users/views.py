@@ -1,6 +1,5 @@
 from turtledemo.chaos import g
 
-import bp
 from django.contrib import messages
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
