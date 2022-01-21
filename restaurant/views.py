@@ -80,5 +80,3 @@ def rest_menu_input(request,bid):
             menuinput.save()
             return redirect('/staff/menuInput/'+str(bid))
 
-def Tmon(request):
-    return render(request,'rest_star.html')
