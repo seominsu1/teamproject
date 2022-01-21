@@ -814,7 +814,7 @@ font-weight: 400;
                                                             <div class="b0 dg bz jc f0 f1 br f2">
                                                                 <a class="dg ag eu jd cf"
                                                                    id="친구"
-                                                                   href="/za/category/bloemfontein-fs/breakfast-and-brunch">
+                                                                   href="/main/친구">
                                                                     <img alt="Breakfast &amp; brunch"
                                                                          src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Breakfast_CuisineCarousel@2x.png"
                                                                          aria-hidden="true" class="cc ao da ae">
@@ -828,7 +828,7 @@ font-weight: 400;
                                                             <div class="b0 dg bz jc f0 f1 br f2">
                                                                 <a class="dg ag eu jd cf"
                                                                    id="외국인"
-                                                                   href="/za/category/bloemfontein-fs/american"><img
+                                                                   href="/main/외국인"><img
                                                                         alt="American Food"
                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/American_CuisineCarousel@2x.png"
                                                                         aria-hidden="true" class="cc ao da ae">
@@ -843,7 +843,7 @@ font-weight: 400;
                                                                 <a
                                                                     class="dg ag eu jd cf"
                                                                     id="밤"
-                                                                    href="/za/category/bloemfontein-fs/mexican"><img
+                                                                    href="/main/밤"><img
                                                                     alt="Mexican Food"
                                                                     src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Mexican_CuisineCarousel@2x.png"
                                                                     aria-hidden="true" class="cc ao da ae">
@@ -858,7 +858,7 @@ font-weight: 400;
                                                                 <a
                                                                         class="dg ag eu jd cf"
                                                                         id="포장"
-                                                                        href="/za/category/bloemfontein-fs/chinese"><img
+                                                                        href="/main/포장"><img
                                                                         alt="Chinese Food"
                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Chinese_CuisineCarousel@2x.png"
                                                                         aria-hidden="true" class="cc ao da ae">
@@ -873,7 +873,7 @@ font-weight: 400;
                                                                 <a
                                                                         class="dg ag eu jd cf"
                                                                         id="날씨"
-                                                                        href="/za/category/bloemfontein-fs/italian"><img
+                                                                        href="/main/날씨"><img
                                                                         alt="Italian Food"
                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Italian_CuisineCarousel@2x.png"
                                                                         aria-hidden="true" class="cc ao da ae">
@@ -902,11 +902,10 @@ font-weight: 400;
 
 
 
-         {% for rest in rests %}
-         {% if rest.large_cate==" "}
+         {% for rest in rest_all %}
         <!--음식점 1 버튼-->
         <div class="item short">
-            <div class="img-grade button" onClick="location.href='/rest_detail/{{ forloop.counter }}'">
+            <div class="img-grade button">
                 <!--음식점 1 대표사진-->
                 <div class="img"><img
                         src="{{rest.pic_url}}"/>
