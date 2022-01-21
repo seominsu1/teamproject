@@ -11,6 +11,7 @@
     <thread>
         <th> [기능]</th>
         <th> [번호]</th>
+        <th> [작성자]</th>
         <th> [제목]</th>
         <th> [내용]</th>
         <th> [작성일시]</th>
@@ -20,6 +21,7 @@
             <tr>
                 <td><button onclick="location.href='/reviewRead/{{ post.id }}'">이동</button></td>
                 <td>{{ post.id}}</td>
+                <td>{{ post.writer}}</td>
                 <td>{{ post.title}}</td>
                 <td>{{ post.contents}}</td>
                 <td>{{ post.create_date}}</td>

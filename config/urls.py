@@ -31,7 +31,6 @@ urlpatterns = [
 
     path('main', app01.views.main_page),
 
-  
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),
     path('reviewRead/<int:bid>', review.views.read),
