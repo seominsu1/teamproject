@@ -28,6 +28,7 @@ urlpatterns = [
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
     path('main', app01.views.main_page),
+    path('restList', restaurant.views.list),
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),
     path('reviewRead/<int:bid>', review.views.read),
