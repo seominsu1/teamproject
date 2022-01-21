@@ -30,6 +30,7 @@ urlpatterns = [
     path('test', restaurant.views.home),
 
     path('main', app01.views.main_page),
+
   
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),
@@ -47,3 +48,4 @@ urlpatterns = [
     path('users/pwchange', users.views.userpwchange),  # 비밀번호 변경
     path('users/delete', users.views.userdelete),  # 회원탈퇴 
 ]
+
