@@ -80,3 +80,8 @@ def rest_menu_input(request,bid):
             menuinput.save()
             return redirect('/staff/menuInput/'+str(bid))
 
+def rest_list(request):
+    rests=restaurant.objects.all()
+    rest_menu = Menu.objects.all()
+    if request.method=='GET':
+        return render(request,'rest_list.html',{'rests':rests,'rest_menu':rest_menu})

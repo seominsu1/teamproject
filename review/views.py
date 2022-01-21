@@ -11,6 +11,7 @@ def register(request):
         reviewForm = ReviewForm(request.POST)
         if reviewForm.is_valid():
             review = reviewForm.save(commit=False)
+            review.writer=request.user
             review.save()
             return redirect('/reviewRegister')
 

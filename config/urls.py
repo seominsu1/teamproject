@@ -28,8 +28,10 @@ urlpatterns = [
     path('staff/menuInput/<bid>',restaurant.views.rest_menu_input),
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
+    path('rest_list', restaurant.views.rest_list),
 
     path('main', app01.views.main_page),
+    path('main/<str:cate>', app01.views.main_page_with_tag),
 
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),
