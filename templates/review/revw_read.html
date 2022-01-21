@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="location.href='/commentList'">목록</button >
+<button onClick="location.reload();">새로고침</button >
+<button onclick="location.href='/commentUpdate/{{ post.id}}'">수정</button >
+<table>
+    <thread>
+        <th> [번호]</th>
+        <th> [제목]</th>
+        <th> [내용]</th>
+        <th> [작성일시]</th>
+    </thread>
+    {% if post %}
+        <tr>
+            <td>{{ post.id}}</td>
+            <td>{{ post.title}}</td>
+            <td>{{ post.contents}}</td>
+            <td>{{ post.create_date}}</td>
+        </tr>
+    {% endif %}
+    </table>
+</body>
+</html>
