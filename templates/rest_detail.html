@@ -203,12 +203,12 @@
 
                         <div id="map" style="width:430px;height:300px;"></div>
                         <script type="text/javascript"
-                                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6705e088381883f2fca8b417fc628bb"></script>
+                                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0626f55649c67965df5c80b94f791fe"></script>
                         <script>
 				var container = document.getElementById('map');
 				var options = {
 					center: new kakao.maps.LatLng({{rest_info.latitude.value}}, {{rest_info.longitude.value}}),
-					level: 2
+					level: 1
 				};
 
 				var map = new kakao.maps.Map(container, options);
