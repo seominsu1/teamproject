@@ -213,6 +213,13 @@
 
 				var map = new kakao.maps.Map(container, options);
 
+				var mapMarker = {
+				    position: new kakao.maps.LatLng({{rest_info.latitude.value}}, {{rest_info.longitude.value}}),
+				    map: map
+				};
+
+				var marker = new kakao.maps.Marker(mapMarker);
+
 
                         </script>
 
