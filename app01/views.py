@@ -55,3 +55,6 @@ def rest_detail(request,bid):
     # 기존에 생성되어있는 댓글 목록 보여져야 됨 (음식점id 외래키로 하는 review 모두 출력)
     else:
         return render(request,'test.html')
+
+def apitest(request):
+    return render(request,'')
