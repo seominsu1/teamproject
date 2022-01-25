@@ -743,8 +743,7 @@ font-weight: 400;
                                 <div class="ai ag do e1">
                                     <label id="location-typeahead-home-label"
                                            for="location-typeahead-home-input"
-                                           class="cc cd ce cf cg ch ci">Enter delivery
-                                        address</label>
+                                           class="cc cd ce cf cg ch ci">Enter food</label>
                                     <div class="e2">
                                         <div class="ba c0 e3 b9 e4 e5 aw ax af b0 e6 e7 ah ag">
                                             <div class="e8 ah bp bf">
@@ -762,7 +761,7 @@ font-weight: 400;
                                                    id="location-typeahead-home-input" aria-autocomplete="list"
                                                    aria-controls="location-typeahead-home-menu"
                                                    aria-labelledby="location-typeahead-home-label" autocomplete="off"
-                                                   type="text" name="searchTerm" placeholder="Enter delivery address"
+                                                   type="text" name="searchTerm" placeholder="Enter Cuisine"
                                                    class="do aw ea eb ec ed ee ef eg" value="">
                                             <div class="spacer _8"></div>
                                         </div>
@@ -801,7 +800,7 @@ font-weight: 400;
                                                                    onclick="cate_find(this)"
                                                                    href="/main/연인">
                                                                     <img alt="Fast Food"
-                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/FastFood_CuisineCarousel@2x.png"
+                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Breakfast_CuisineCarousel@2x.png"
                                                                          aria-hidden="true" class="cc ao da ae">
                                                                     <div class="b0 ag ba b8 bb b9 ax je jf jg">
                                                                         <div class="jh ji jj cf"
@@ -816,7 +815,7 @@ font-weight: 400;
                                                                    id="친구"
                                                                    href="/za/category/bloemfontein-fs/breakfast-and-brunch">
                                                                     <img alt="Breakfast &amp; brunch"
-                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Breakfast_CuisineCarousel@2x.png"
+                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/FastFood_CuisineCarousel@2x.png"
                                                                          aria-hidden="true" class="cc ao da ae">
                                                                     <div class="b0 ag ba b8 bb b9 ax je jf jg">
                                                                         <div class="jh ji jj cf "
@@ -908,8 +907,8 @@ font-weight: 400;
         <div class="item short">
             <div class="img-grade button" onClick="location.href='/rest_detail/{{ forloop.counter }}'">
                 <!--음식점 1 대표사진-->
-                <div class="img"><img
-                        src="{{rest.pic_url}}"/>
+                <div class="img">
+                    <img src="{{rest.pic_url}}" style="width:200px; height:200px;"/>
                 </div>
                 <!--음식점 이름~주소-->
                 <div>
@@ -953,11 +952,12 @@ font-weight: 400;
                 <div class="ah">
                 </div>
             </div>
-            <hr class="e5 cd g5 g6">
+            <hr class="e5 cd g5 g6" style="margin: 0px 50px 50px 50px">
             <div class="ah">
-                <div class="bz bj ah am">
-                    <div class="ah"><a href="//www.facebook.com/ubereats"><span
-                            class="cc cd ce cf cg ch ci">Facebook</span>
+                <div class="bz bj ah am" style="margin: 0px 50px 0px 50px">
+                    <div class="ah">
+                        <a href="//www.facebook.com/ubereats">
+                            <span class="cc cd ce cf cg ch ci">Facebook</span>
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16" class="c9 ca bz cb">
                             <path d="M14.667 0H1.333C.597 0 0 .597 0 1.333v13.334C0 15.403.597 16 1.333 16h7.334v-6h-2V7.333h2V5.61c0-2.067 1.262-3.192 3.106-3.192.883 0 1.642.066 1.863.095v2.16h-1.279c-1.002 0-1.196.477-1.196 1.176v1.485h2.96L13.454 10h-2.293v6h3.506c.736 0 1.333-.597 1.333-1.333V1.333C16 .597 15.403 0 14.667 0z"></path>
                         </svg>
@@ -979,30 +979,10 @@ font-weight: 400;
                         </a></div>
                 </div>
                 <div class="g7"></div>
-                <div class="ah">
-                    <div class="ah"><a href="//www.uber.com/legal/privacy/users/"
-                                       class="ba bt e3 c1 bj bs ah g3">Privacy Policy</a>
-                        <div class="spacer _40"></div>
-                        <a href="//www.uber.com/terms" class="ba bt e3 c1 bj bs ah g3">Terms</a>
-                        <div class="spacer _40"></div>
-                        <a href="//help.uber.com/ubereats/article/uber-eats-pricing?nodeId=2adbed88-9822-4690-9529-3061c4821755"
-                           class="ba bt e3 c1 bj bs ah g3">Pricing</a>
-                        <div class="spacer _40"></div>
-                        <a href="//privacy.uber.com/privacy/california/" class="ba bt e3 c1 bj bs ah g3">Do not
-                            sell my info (California)</a></div>
-                </div>
+                <div class="ah"></div>
             </div>
             <div class="ah">
                 <div class="g7"></div>
-                <div class="ah">
-                    <div class="ba bt e3 c1 bj">This site is protected by reCAPTCHA and the Google <a
-                            rel="nofollow" href="//policies.google.com/privacy" class="ba bt e3 c1 bj g3">Privacy
-                        Policy</a> and <a rel="nofollow" href="//policies.google.com/terms"
-                                          class="ba bt e3 c1 bj g3">Terms of Service</a> apply.
-                    </div>
-                    <div class="spacer _40"></div>
-                    <div dir="ltr" class="ba bt e3 c1 bj">© 2022 Uber Technologies Inc.</div>
-                </div>
             </div>
     </div>
     </footer>
