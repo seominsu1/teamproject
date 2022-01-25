@@ -1,9 +1,9 @@
 @import url(/common/style/common2011/basic.css);
-@charset "euc-kr";
+@charset "UTF-8";
 
-/******* ¿øÆäÀÌÁö *******/
+/******* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ *******/
 html {/*overflow-y:scroll; height:100%;*/}
-body	{height:100%; margin:0; padding:0; font-family:Dotum, "µ¸¿ò"; font-size:12px; color:#4b4b4b;
+body	{height:100%; margin:0; padding:0; font-family:Dotum, "ï¿½ï¿½ï¿½ï¿½"; font-size:12px; color:#4b4b4b;
 
 scrollbar-face-color:#ffffff;
 scrollbar-arrow-color:#9ba7be;
@@ -21,7 +21,7 @@ a:hover	{text-decoration:underline;}
 ul, ol, li	{margin:0; padding:0; list-style:none;}
 div, li, dl, dt, dd	{margin:0; padding:0;}
 h1, h2, h3, h4, h5	{margin:0; padding:0;}
-input, textarea, select	{font-family:µ¸¿ò; font-size:12px; color:#858585; margin:0; padding:0;}
+input, textarea, select	{font-family:ï¿½ï¿½ï¿½ï¿½; font-size:12px; color:#858585; margin:0; padding:0;}
 form, p, fieldset	{margin:0; padding:0;}
 table, tr, th, td	{margin:0; padding:0; border-collapse:collapse;}
 input {margin:0; padding:0;}
@@ -45,12 +45,12 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .WrapMain	{position:relative; clear:both; width:980px; text-align:left; margin:0 auto; z-index:1; }
 .WrapFooter	{clear:both; width:980px; text-align:center; margin:0 auto;}
 
-/* _C¹öÁ¯¿ë */
+/* _Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .WrapTop_c	{clear:both; width:100%; height:141px; text-align:left; margin:0 auto;  background:url(/image/restaurant/onepage/bg_navi_141.png) repeat-x;}
 .WrapTop_c .container	{width:980px; height:143px; margin:0 auto; }
 .WrapMain_c				{position:relative; clear:both; width:980px; text-align:left; margin:0 auto; z-index:1;}
 
-/********** Top ¿µ¿ª **********/
+/********** Top ï¿½ï¿½ï¿½ï¿½ **********/
 .WrapTop  {}
 .WrapTop .container	{position:relative; width:980px; height:143px; margin:0 auto;}
 
@@ -79,11 +79,11 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 
 
 
-/********** Main ¿µ¿ª **********/
+/********** Main ï¿½ï¿½ï¿½ï¿½ **********/
 .WrapMain	{position:relative; top:174px; left:0; z-index:100;}
 
 
-/***** layer Æò°¡ÇÏ±â1 *****/
+/***** layer ï¿½ï¿½ï¿½Ï±ï¿½1 *****/
 /*-- [drm][20121029][close] maininfo_point.inc
 .layerPoint	{
 	position:absolute; top:40px; right:0px; width:418px; height:438px; background:#ffffff; border:1px solid #aeafb2; z-index:30;
@@ -147,7 +147,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 
 
 
-/**** ¼¶³×ÀÏ - À¯»ó°¡¸ÍÁ¡ ****/
+/**** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ó°¡¸ï¿½ï¿½ï¿½ ****/
 
 .areaThumbnail	{float:left; width:500px;}
 .areaThumbnail dl {position:relative;}
@@ -163,7 +163,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaThumbnail .listThumbnail li .cover	{position:absolute;  float:left; top:0; left:5px; width:100%; height:100%; background:url(/image/restaurant/onepage/cover_60_select.gif) no-repeat;}
 
 
-/**** ¼¶³×ÀÏ - ¹«»ó°¡¸ÍÁ¡ ****/
+/**** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ó°¡¸ï¿½ï¿½ï¿½ ****/
 
 .areaFreeThumbnail	{float:left; position:relative; width:500px;}
 .areaFreeThumbnail dl {float:left; width:500px;}
@@ -193,11 +193,11 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 */
 
 
-/**** ±âº»Á¤º¸ ****/
+/**** ï¿½âº»ï¿½ï¿½ï¿½ï¿½ ****/
 
 .areaBasic 	{position:relative; float:right; width:440px; margin:20px 0 0px 0; display:inline; z-index:20;}
 .areaBasic dl			{width:440px;}
-.areaBasic dl dt	{float:left; width:85px; font:normal 12px/150% 'Dotum'; letter-spacing:0px; color:#6079a8;}
+.areaBasic dl dt	{float:left; width:85px; font:bold 15px/100% 'Dotum'; letter-spacing:0px; color:#6079a8;}
 .areaBasic dl dd	{float:right; font:normal 12px/150% 'Dotum'; letter-spacing:0px; color:#4b4b4b;}
 
 .areaBasic .restName 	{position:relative; float:left; width:440px; margin:0 0 15px 0;}
@@ -264,7 +264,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaBasic .restPrice {width:85px; height:70px; float:left; padding:12px 15px 20px 15px; border-top:1px solid #e4e4e4; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; background:#f5f5f5; text-align:center; font-size:12px;}
 .areaBasic .restPrice .price {width:85px; display:block; float:left; padding-top:10px; text-align:center;}
 .areaBasic .restPrice .price .block {display:block;}
-.areaBasic .restPrice strong {font-size:18px; font-family:'tahoma','dotum','µ¸¿ò'; color:#6079a8;}
+.areaBasic .restPrice strong {font-size:18px; font-family:'tahoma','dotum','ï¿½ï¿½ï¿½ï¿½'; color:#6079a8;}
 .areaBasic .restPrice .price_stit {font-size:11px; color:#919191; text-align:left; float:left; letter-spacing:-1px;}
 
 /*.areaBasic .thumb_like {width:88px; height:44px; float:left; padding:25px 0; border-top:1px solid #e4e4e4; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; background:#f5f5f5; cursor:pointer;}
@@ -348,12 +348,12 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaBasic .share .btnSns .blog .ly	{position:absolute; top:-25px; left:0px; width:81px; height:24px; background:url('/image/restaurant/onepage/thumb_balloon.png') no-repeat -267px 0;}
 .areaBasic .share .lySMS			{position:absolute; top:-230px; right:0px; *z-index:10;}
 
-/**** ÇÒÀÎÇýÅÃ - À¯»ó°¡¸ÍÁ¡ ****/
+/**** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ó°¡¸ï¿½ï¿½ï¿½ ****/
 .areaBenefit			{position:relative; clear:both; float:left; width:980px;  margin:25px 0 0 0; background:#d1d6db; border-bottom:1px solid #d1d6db; z-index:10;}
 .areaBenefit .bgBenefit	{float:left; width:976px; padding:0 0 30px 0; margin:1px 1px 1px 1px; display:inline; background:#f5f5f5; border:1px solid #fafafa;}
 
 
-/** ÇÒÀÎÇýÅÃ; ¿ÞÂÊ¿µ¿ª **/
+/** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½; ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ **/
 .areaBenefit .listBenefit		{float:left; width:400px; margin:30px 0 0 39px; display:inline;}
 .areaBenefit .listBenefit h4	{float:left; margin:0 0 14px 0;}
 
@@ -391,7 +391,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaBenefit .listBenefit .benefitCaution .listCaution .bg	{position:relative; top:0; left:0; background:#676d76; color:#ffffff; padding:2px 6px 0px 6px;}
 
 
-/** ÇÒÀÎÇýÅÃ; ¿À¸¥ÂÊ¿µ¿ª **/
+/** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½; ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ **/
 
 .areaBenefit .listView	{position:relative; /*position:absolute; top:52px; left:456px;*/ float:right; width:490px; height:260px; margin:52px 15px 0 0; display:inline; background:url(/image/restaurant/onepage/bg_iphone.jpg) no-repeat;}
 .areaBenefit .listView .viewCoupon	{position:absolute; top:0; left:0; float:left; width:310px; height:205px; margin:19px 0 0 88px; display:inline; background:url(/image/restaurant/onepage/bg_iphone_coupon.gif) no-repeat;}
@@ -418,13 +418,13 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaBenefit .listView .viewOnline .condition li dd	{float:right; width:190px;}
 .areaBenefit .listView .viewOnline .btnIphone {position:absolute; top:166px; left:60px; float:left;}
 
-/* ÇÒÀÎÇýÅÃ; ¿À¸¥ÂÊ¿µ¿ª_ ¹®ÀÚÄíÆù ·¹ÀÌ¾î_20130522 */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½; ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½_ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½_20130522 */
 .areaBenefit .helme_layer {position:absolute; float:left; left:493px; top:260px; width:448px; height:92px; background:url(/image/restaurant/onepage/helme_layer.png) left top no-repeat; z-index:1;}
 .areaBenefit .helme_layer .helme_close {float:right; margin-right:24px; margin-top:33px;}
 .areaBenefit .helme_layer .helme_btn {float:right; margin-right:-16px; margin-top:55px;}
 
 
-/**** ÇÒÀÎÇýÅÃ - ¹«»ó°¡¸ÍÁ¡ ****/
+/**** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ó°¡¸ï¿½ï¿½ï¿½ ****/
 
 .areaFreeBenefit 	{clear:both; float:left; width:980px; margin:25px 0 0 0; padding:0 0 1px 0; background:#d1d6db;}
 .areaFreeBenefit .bgBenefit {float:left; width:976px; position:relative; padding:0 0 30px 0; margin:1px 1px 0 1px; display:inline; background:#f5f5f5; border:1px solid #fafafa;}
@@ -451,7 +451,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaFreeBenefit .benefitCaution .listCaution .bg	{position:relative; top:0; left:0; background:#676d76; color:#ffffff; padding:2px 6px 0px 6px;}
 
 
-/* ·¹ÀÌ¾î : smsº¸³»±â*/
+/* ï¿½ï¿½ï¿½Ì¾ï¿½ : smsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .lySMS{ width:280px; height:360px; background:url('/image/restaurant/onepage/bg_ly_sms_360.gif') no-repeat; z-index:100; *position:relative; position:absolute; top:380px; left:90px; }
 .lySMS h4		{float:left; margin:14px 0 10px 17px; display:inline-block;}
 .lySMS .btnClose	{float:right; width:32px; height:32px; cursor:pointer; border:none; text-indent:-5000px; background:url(/image/restaurant/onepage/btn_sms_close.gif) no-repeat; margin:12px 13px 0 0; }
@@ -461,7 +461,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .lySMS .mobileNum dd select	{float:left; display:inline-block; font-size:14px;}
 .lySMS .mobileNum dd .num1, .lySMS .mobileNum dd .num2{float:left; width:70px; height:17px; padding:2px 0 0 0; font-size:14px; text-align:center; background:#eee; border:1px solid #d4d6df;}
 .lySMS .mobileNum dd .hyphen	{float:left; display:inline-block; width:6px; height:20px; padding:0 5px 0 5px; background:url(/image/restaurant/onepage/ic_hyphen.gif) 5px 9px no-repeat;}
-/* °³ÀÎÁ¤º¸Á¦°øµ¿ÀÇ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .lySMS .mobileagree	{clear:both; float:left; width:250px; padding:10px 10px 0 15px; font-size:12px;}
 .lySMS .mobileagree dt{width:100%;}
 .lySMS .mobileagree dd	{width:100%; line-height:1.25; color:#999;}
@@ -476,7 +476,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .areaBenefit .bgBenefit .lySMS {width:280px; height:242px; background:url(/image/restaurant/onepage/bg_ly_sms.gif) no-repeat; z-index:100; *position:relative; position:absolute; top:380px; left:630px; margin-top:65px; }
 
 
-/* ¹®ÀÚÄíÆù »ç¿ë¼³¸í */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ë¼³ï¿½ï¿½ */
 .cpnUseWay	{clear:both; margin:20px 0 0 0;}
 .cpnWay		{position:relative; float:left; width:920px; padding:25px 30px 25px 30px; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; background:url(/image/restaurant/onepage/bg_cpnWay.gif) repeat-y;}
 .cpnWay h3	{width:920px; height:30px;}
@@ -490,7 +490,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .mainArea02	{clear:both; width:980px;}
 
 
-/** ÅÜ1; »ó¼¼Á¤º¸ **/
+/** ï¿½ï¿½1; ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ **/
 
 .tabInfo	{clear:both; position:relative; float:left; width:980px; padding:70px 0 0px 0; z-index:5; }
 .tabInfo h3	{padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0; z-index:5;}
@@ -526,7 +526,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .tabInfo .infoTable .tableLR li dl 	{float:left; /*width:490px;*/  background:#f8f8f8; display:table-row;}
 .tabInfo .infoTable .tableLR li dl dt	{float:left; padding:18px 0 15px 0; text-align:center; font-weight:bold; width:145px; /*display:table-cell;*/}
 /*.tabInfo .infoTable .tableLR li dl dt .txt {vertical-align:middle;}
-.tabInfo .infoTable .tableLR li dl dt .va {display:inline-block; overflow:hidden; vertical-align:middle; width:145px; height:100%;} /* ³ôÀÌ °íÁ¤À» À§ÇÑ ºó ÅÂ±× */
+.tabInfo .infoTable .tableLR li dl dt .va {display:inline-block; overflow:hidden; vertical-align:middle; width:145px; height:100%;} /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Â±ï¿½ */
 .tabInfo .infoTable .tableLR li dl dd .va {float:left; display:inline-block; overflow:hidden; vertical-align:middle; width:305px; height:14px; background:#fff;}
 .tabInfo .infoTable .tableLR li dl dd	{float:left; padding:18px 20px 15px 20px; width:305px; height:100%; text-align:left; background:#fff;/*display:table-cell;*/}
 .tabInfo .infoTable .tableLR li dl dd.helme {float:left; padding:0 20px 0 20px; width:305px; text-align:left;}
@@ -576,7 +576,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .tabInfo .helme_bnr .h_stit .htxt span{font-size:18px; font-weight:bold; letter-spacing:-4px;}
 .tabInfo .helme_bnr .h_stit .hlogo{float:left; margin:-5px 0 0 10px;}
 
-/**ÇØÁÖ¼¼¿ä¹è³Ê **/
+/**ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ï¿½ **/
 .helmeBnr {width:978px; height:65px; border:#ebe4d8 1px solid; background:#f8f4e9; text-align:center;}
 .helmeBnr .center { height:65px; display:inline-block;}
 .helmeBnr .hour {width:50px; height:65px; display:inline-block; float:left; background:url('/image/restaurant/onepage/helme_img.png') no-repeat 0 0; text-indent:-100000px;}
@@ -584,14 +584,14 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .helmeBnr .red {color:#bf0000;}
 .helmeBnr .tel {width:301px; height:65px; display:inline-block; float:left; background:url('/image/restaurant/onepage/helme_img.png') no-repeat -50px 0; text-indent:-100000px;}
 
-/** 20150116_GPÄ«µå¹è³Ê **/
+/** 20150116_GPÄ«ï¿½ï¿½ï¿½ï¿½ **/
 .gpcardbnr {position:relative;float:left;display:inline-block;text-align:left;width:980px;height:140px;background:url('/image/restaurant/onepage/gpcard_btn_bnr.png') no-repeat 0 0;margin:70px 0 20px 0;}
 .gpcardbnr .gpcard {position:relative;float:left;display:inline-block;top:30px;left:155px;width:765px;height:50px;font-size:26px;letter-spacing:-1px;font-weight:bold;color:#fff;overflow:hidden; white-space:nowrap; text-overflow:ellipsis;text-decoration:none;}
 .gpcardbnr .gp_title {position:relative;float:left;display:inline-block;top:10px;}
 .gpcardbnr .red {color:#ed0e0e;font-size:37px;}
 
 
-/** ÅÜ2; ¸Þ´º **/
+/** ï¿½ï¿½2; ï¿½Þ´ï¿½ **/
 
 .tabMenu	{clear:both; float:left; /*position:relative;*/ width:980px; padding:100px 0 0 0;}
 .tabMenu h3 	{padding:0 0 9px 0; float:left; width:980px; border-bottom:2px solid #626262; margin:0 0 25px 0;}
@@ -631,7 +631,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .tabMenu .goodMember p	{position:absolute; top:253px; right:30px; /*float:left; margin:18px 0 0 29px;*/ width:325px; color:#adadad; text-align:right; display:inline;}
 .tabMenu .goodMember p span	{color:#db6565;}
 
-/* ¸Þ´ºÆÇ */
+/* ï¿½Þ´ï¿½ï¿½ï¿½ */
 .listmenupan {width:980px; clear:both; position:relative; top:-24px; background:url('/image/restaurant/onepage/bookbg.gif') no-repeat 0 0; padding-top:24px; z-index:5;}
 
 .listmenupan .wrap {width:978px; float:left; position:relative; height:auto; border:#d4d6df 1px solid; background:url('/image/restaurant/onepage/menubookbg.png') repeat-y 233px 0; padding-top:43px; z-index:150;  }
@@ -764,7 +764,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 
 
 
-/** ÅÜ3; ¸®ºä **/
+/** ï¿½ï¿½3; ï¿½ï¿½ï¿½ï¿½ **/
 .tabReview	{/*position:relative;*/ clear:both; width:980px; padding:70px 0 0 0; z-index:1;}
 .tabReview h3	{float:left; width:980px; padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0;}
 .tabReview h3	 img	{float:left;}
@@ -772,7 +772,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .tabReview h3	 .btnPortal span	{float:left; font:normal 11px "Dotum"; color:#4b4b4b; margin:6px 8px 0 0;}
 .tabReview h3	 .btnPortal a img	{display:inline-block;}
 
-/* layer Æò°¡ÇÏ±â2 */
+/* layer ï¿½ï¿½ï¿½Ï±ï¿½2 */
 .tabReview .reviewWrap	{float:left; position:relative;}
 .tabReview .layerPoint				{position:absolute; top:-15px; right:0px; width:418px; height:538px; background:#ffffff; border:1px solid #aeafb2; z-index:30; -moz-box-shadow: 0px 1px 2px #ccc; -webkit-box-shadow: 0px 1px 2px #ccc; box-shadow: 0px 1px 2px #ccc; filter: progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=-180, Strength=3);}
 .tabReview .layerPoint .topPoint	{clear:both; margin:18px 0 0 37px; width:345px;}
@@ -810,7 +810,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .tabReview .layerPoint .bottomPoint dd .average	{color:#db6565;}
 .tabReview .layerPoint .btnClose	{position:absolute; bottom:-1px; right:-1px;}
 
-/* ¿©¸§ÀÌº¥Æ® Æò°¡ÇÏ±â */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½Ï±ï¿½ */
 .tabReview .layerPoint .summer_eve {clear:both; width:340px; margin:0 auto; padding-top:10px; font-size:12px; color:#888; letter-spacing:-1px;}
 .tabReview .layerPoint .summer_eve a { display:block; color:#fff; width:150px; font-weight:bold; padding:3px 5px; background:#578bec; text-align:center; font-size:11px; text-decoration:none; float:right; margin-top:10px;}
 
@@ -972,7 +972,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .tabReview .goodReview .paging span.imgBtn{display:inline-block; vertical-align:middle; padding:0 3px; margin-left:-4px;}
 
 
-/** ÅÜ4; Ã£¾Æ°¡´Â±æ **/
+/** ï¿½ï¿½4; Ã£ï¿½Æ°ï¿½ï¿½Â±ï¿½ **/
 
 .tabMap	{clear:both; float:left; width:980px; padding:70px 0 0 0; position:; z-index:10;}
 .tabMap2	{clear:both; float:left; width:980px;position:relative; z-index:50;}
@@ -1059,7 +1059,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .map_poi .couponBtn {width:46px; height:15px; position:absolute; right:29px; bottom:15px; background:url('/image/restaurant/onepage/onepage_ic.png') no-repeat 0 -79px; padding:5px; color:#6b6d70; text-align:center; text-decoration:none;}
 .map_poi .couponBtn .red {color:#ef4b53; font-weight:bold;}
 
-/** ÅÜ5; ¾÷ÁÖ°ü¸® **/
+/** ï¿½ï¿½5; ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ **/
 
 .tabOwner	{float:left;  width:980px; padding:70px 0 0 0;}
 .tabOwner h3	{padding:0 0 9px 0; border-bottom:2px solid #626262; margin:0 0 25px 0;}
@@ -1079,7 +1079,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 
 
 
-/** ÁÖº¯¸ÀÁý **/
+/** ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½ **/
 /*.nearRest	{clear:both; float:left; width:980px; padding:70px 0 0 0;}
 .nearRest h3	{width:980px; margin:0 0 8px 0;}
 .nearRest .list	{width:956px; height:150px; padding:18px 0 0 22px; border:1px solid #e0e0e0;}
@@ -1185,9 +1185,9 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .wing_first dl dd {width:84px; height:62px; padding:0px 8px 0 8px; overflow:hidden; font-size:11px; letter-spacing:-1px; color:#6c6d71; display:block;}
 
 
-/*********¿À¸¥ÂÊ À®¹è³Ê*********/
+/*********ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½*********/
 
-/*Google ¹ø¿ª±â*/
+/*Google ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .transTo				{width:107px; margin:0 auto; }
 .transTo .titleGoogle	{margin-top:20px;}
 .transTo ul				{}
@@ -1195,12 +1195,12 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .transTo .transTxt		{float:left;}
 
 
-/* ¸ÅÀå Á¤º¸¼öÁ¤¿äÃ» ¹öÆ° */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã» ï¿½ï¿½Æ° */
 .errorBtn	{ position:absolute; top:78px; right:0px; display:block; z-index:5;}
 .errorBtn a { font-size:11px; color:#6079a8; letter-spacing:-1px;}
 
 
-/* ÇÑÁÙÆò°¡ ·Î±×ÀÎ ·¹ÀÌ¾î 201309 */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ 201309 */
 .memberLogin {width:270px; height:192px; position:absolute; top:20px; right:0px; border:#400003 1px solid; background:#fff; z-index:999;}
 .memberLogin .tit { background:#d2323b; padding:20px 0 0 17px; text-align:left; height:38px; display:block; font-size:18px; color:#fff; letter-spacing:-1px; line-height:100%; font-weight:bold;}
 .memberLogin .btnClose { position:absolute; top:12px; right:12px; width:32px; height:32px; cursor:pointer; border:none; text-indent:-5000px; background:#9f0008 url('/image/restaurant/onepage/ico_ly_close.png') 7px 7px no-repeat; -wibkit-background-size: 32px 32px;}
@@ -1217,7 +1217,7 @@ legend {padding:0px; margin:0px; color:#000; text-indent:-100000px; font-size:0p
 .memberLogin .txt .red {color:#FF0000;}
 
 
-/* Ã£¾Æ°¡´Â ±æ ·Îµåºä Ãß°¡ 201404 */
+/* Ã£ï¿½Æ°ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ï¿½ ï¿½ß°ï¿½ 201404 */
 .departure_wrap {width:309px; height:148px; float:right; margin:0 25px; padding-top:17px; z-index:10;}
 .departure_wrap .departure_tit {font-weight:bold; margin-bottom:15px; }
 .departure_wrap .departure, .departure_wrap .arrival { display:block; float:left; width:309px; margin-bottom:5px;}
