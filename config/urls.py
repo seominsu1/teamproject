@@ -30,8 +30,8 @@ urlpatterns = [
     path('test', restaurant.views.home),
     path('rest_list', restaurant.views.rest_list),
 
-    path('main', app01.views.main_page),
-    path('main/<str:cate>', app01.views.main_page_with_tag),
+    path('main', app01.views.main_page),                      # 메인페이지
+    path('main/<str:cate>', app01.views.main_page_with_tag),  # 메인페이지에서 카테고리 눌렀을 때
 
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),
