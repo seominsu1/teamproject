@@ -14,7 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.template.defaulttags import url
+from django.urls import path, include
+from django.views.generic import TemplateView
 
 import app01.views
 import restaurant.views
@@ -25,7 +27,7 @@ import review.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('staff/restInput', restaurant.views.rest_input),
-    path('staff/menuInput/<bid>',restaurant.views.rest_menu_input),
+    path('staff/menuInput/<bid>', restaurant.views.rest_menu_input),
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
     path('rest_list', restaurant.views.rest_list),
@@ -37,7 +39,7 @@ urlpatterns = [
     path('reviewList', review.views.posts),
     path('reviewRead/<int:bid>', review.views.read),
     path('reviewDelete/<int:bid>', review.views.delete),
-    
+
     path('users/test', users.views.home),
     path('usersbase', users.views.base),
 
@@ -47,6 +49,14 @@ urlpatterns = [
     path('users/logout', users.views.userlogout),  # 로그아웃
 
     path('users/pwchange', users.views.userpwchange),  # 비밀번호 변경
-    path('users/delete', users.views.userdelete),  # 회원탈퇴 
+    path('users/delete', users.views.userdelete),  # 회원탈퇴
+
+    path('accounts/', include('allauth.urls')),
+
+    # path('kakao', users.views.kakao_login),  # 먼저 실행하면 토큰을 oauth라는 애한테 보냄
+    # path('oauth', users.views.kakao_login2),
+
+    path('kakao', users.views.kakao_api),  # 먼저 실행하면 토큰을 oauth라는 애한테 보냄
+    path('oauth', users.views.kakao_api1),
 ]
 
