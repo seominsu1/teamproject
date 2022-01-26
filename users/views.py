@@ -12,6 +12,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 # 내가 가입시킨 사용자가 몇명인지 궁금하면 auth_user 테이블을 보면 됌.
@@ -48,6 +50,7 @@ def signup(request):
             messages.info(request, '비밀번호가 일치하지 않습니다.')
             return redirect('/users/signup')
 
+@csrf_exempt
 def userlogin(request):
     if request.method == "GET":
         loginForm = AuthenticationForm()
@@ -66,6 +69,7 @@ def userlogin(request):
 def userlogout(request):
         logout(request)
         return redirect('/main')
+
 
 @login_required
 def userpwchange(request):

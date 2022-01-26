@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-op3d!cj^&flft=h44r4l4*+#%-vcmboios#s5$tpfeymd8zxn_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
