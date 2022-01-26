@@ -13,6 +13,67 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from analytics.ga_api2 import get_all_data
+
+import httplib2
+from apiclient.discovery import build
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.file import Storage
+from oauth2client import tools
+import argparse
+
+
+def get_accounts_ids(service):
+    accounts = service.management().accounts().list().execute()
+    ids = []
+    props=[]
+    tmp_id = ""
+    properties=''
+    if accounts.get('items'):
+        for account in accounts['items']:
+            tmp_id=account['id']
+            ids.append(tmp_id)
+        properties=service.management().webproperties().list(accountId=tmp_id).execute().get('items')
+        # print(properties)
+        for num in range(len(properties)):
+            # print(num)
+            if properties[num].get('id'):
+                props.append(properties[num].get('defaultProfileId'))
+
+    return ids, props
+
+def get_page_data(props,start_date,end_date):
+    ids = "ga:" + props[0]
+    metrics = "ga:pageviews,ga:timeOnPage"
+    dimensions = "ga:pagePath,ga:pageTitle"
+    data = service.data().ga().get(
+        ids=ids, start_date=start_date, end_date=end_date, metrics=metrics,
+        dimensions=dimensions).execute()
+    # return dict(
+    #     data["rows"] + [["total", data["totalsForAllResults"][metrics]]])
+    return data['rows']
+
+def get_user_data(props,start_date,end_date):
+    ids = "ga:" + props[0]
+    metrics = "ga:users"
+    dimensions = "ga:date"
+    data = service.data().ga().get(
+        ids=ids, start_date=start_date, end_date=end_date, metrics=metrics,
+        dimensions=dimensions).execute()
+    # return dict(
+    #     data["rows"] + [["total", data["totalsForAllResults"][metrics]]])
+    return data['rows']
+
+def get_device_data(props,start_date,end_date):
+    ids = "ga:" + props[0]
+    metrics = "ga:users"
+    dimensions = "ga:deviceCategory"
+    data = service.data().ga().get(
+        ids=ids, start_date=start_date, end_date=end_date, metrics=metrics,
+        dimensions=dimensions).execute()
+    # return dict(
+    #     data["rows"] + [["total", data["totalsForAllResults"][metrics]]])
+    return data['rows']
 
 
 
@@ -133,3 +194,24 @@ def kakao_api1(request):
         #token = token.decode("utf-8")
         return redirect('/main')
         # JsonResponse({"token": token}, status=200)
+
+def staff_manage_page(request):
+    page_data,user_data,device_data=get_all_data()
+
+    #user data 정리 -> 선그래프
+    user_date=[]
+    user_num=[]
+    for row in user_data:
+        user_date.append(str(row[0]))
+        user_num.append(row[1])
+    # print(user_date)
+
+    #device data 정리 -> 원그래프
+    device_name=[]
+    device_num=[]
+    for row in device_data:
+        device_name.append(row[0])
+        device_num.append(row[1])
+    print(device_name)
+
+    return render(request, 'staff_index.html',{'user_date':user_date,'user_num':user_num,'device_name':device_name,'device_num':device_num,'page_data':page_data})
