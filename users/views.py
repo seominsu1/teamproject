@@ -5,6 +5,9 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.messages.storage import session
+import requests
+import jwt
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
@@ -18,6 +21,9 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 import getpass
+
+from config.settings import SECRET_KEY
+
 
 def home(request):
     return render(request, 'test.html')
@@ -90,3 +96,40 @@ def userdelete(request):
         return redirect('/main')
     return render(request, 'users/delete.html')
 
+def kakao_api(request):
+    return redirect('https://kauth.kakao.com/oauth/authorize?client_id=063c80f58fac2db741db46dc4b3d203e&redirect_uri=http://127.0.0.1:8000/oauth&response_type=code')
+    # 문자열로 하면 안받아옴 client_id = redierct_uri 이거 둘다 중요한것임.
+
+def kakao_api1(request):
+    print(request.GET.get('code'))  # 인가코드 받아오는 애
+    headers = {"Content-Type": "application/x-www-form-urlencoded"}  # h를
+    data = {"grant_type": 'authorization_code',
+            'client_id': '063c80f58fac2db741db46dc4b3d203e',
+            'redirect_uri': 'http://127.0.0.1:8000/oauth',
+            'code': request.GET.get('code')}  # 인가코드
+
+    res = requests.post('https://kauth.kakao.com/oauth/token', data=data, headers=headers)
+
+    token_json = res.json()
+    access_token = token_json.get("access_token")
+
+    profile_request = requests.get("https://kapi.kakao.com/v2/user/me", headers={"Authorization": f"Bearer {access_token}"},)
+    profile_json = profile_request.json()
+
+    kakao_account = profile_json.get("kakao_account")
+    email = kakao_account.get("email", None)
+    kakao_id = profile_json.get("id")
+
+    if User.objects.filter(email=email).exists():
+        token = jwt.encode({"email": email}, SECRET_KEY, algorithm="HS256")
+        #token = token.decode("utf-8")
+        return redirect('/main')
+
+    else:
+        User(
+            email=email,
+        ).save()
+        token = jwt.encode({"email": email}, SECRET_KEY, algorithm="HS256")
+        #token = token.decode("utf-8")
+        return redirect('/main')
+        # JsonResponse({"token": token}, status=200)
