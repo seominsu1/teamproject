@@ -52,11 +52,12 @@ urlpatterns = [
     path('users/pwchange', users.views.userpwchange),  # 비밀번호 변경
     path('users/delete', users.views.userdelete),  # 회원탈퇴
 
-    path('accounts/', include('allauth.urls')),
-    path('kakao', users.views.kakao_api),  # 먼저 실행하면 토큰을 oauth라는 애한테 보냄
+    path('accounts/', include('allauth.urls')), # 구글
+    path('kakao', users.views.kakao_api),  # 카카오
     path('oauth', users.views.kakao_api1),
 
     path('apitest',app01.views.apitest),
+
 
 ]
 
