@@ -8,6 +8,9 @@ from menu.models import Menu
 from django.db.models import Q
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+import urllib.request
+import json
+import requests
 
 # Create your views here.
 def home(request):
@@ -41,13 +44,13 @@ def rest_input(request):
 def rest_detail(request,bid):
     rest=restaurant.objects.get(Q(id=bid))
     rest_menu=Menu.objects.filter(Q(restaurant_id=bid))
-    cmts=comment.objects.all()
+    cmts=comment.objects.filter(Q(restaurant_id=bid))
     cmp_input=ComForm()
     # 음식점 세부 정보+지도+메뉴 띄우는 건 get 방식(음식점id만 있으면 출력)
     if request.method=='GET':
         print("GET")
         rest_info=ResinputForm(instance=rest)
-        return render(request,'rest_detail.html',{'rest_info':rest_info,'rest_menus':rest_menu,'cmts':cmts,'cmp_input':cmp_input,'rest_id':bid})
+        return render(request,'rest_detail.html', {'rest_info':rest_info,'rest_menus':rest_menu,'cmts':cmts})
     # 같은 화면 내에 댓글+평점 창도 있으니깐, 그때는 post
     # 기존에 생성되어있는 댓글 목록 보여져야 됨 (음식점id 외래키로 하는 review 모두 출력)
     elif request.method=='POST':
@@ -87,3 +90,11 @@ def rest_list(request):
     rest_menu = Menu.objects.all()
     if request.method=='GET':
         return render(request,'rest_list.html',{'rests':rests,'rest_menu':rest_menu})
+
+
+def getNut(request):
+    menu = request.GET.get('menu','')
+    url = "http://openapi.foodsafetykorea.go.kr/api/fdbae01fb2e04ad49e5b/I2790/json/1/1000/DESC_KOR=" + menu
+    res = requests.get(url)
+    result = json.loads(res.text)
+    return render(request, 'getNut.html', {'menu':menu, 'result': result['I2790']['row'][0]})

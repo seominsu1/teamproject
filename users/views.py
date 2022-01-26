@@ -1,12 +1,14 @@
 from turtledemo.chaos import g
 
+import bid as bid
 from django.contrib import messages
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, user_logged_in
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.messages.storage import session
 import requests
 import jwt
+from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
@@ -83,11 +85,6 @@ def get_device_data(props,start_date,end_date):
 
 import getpass
 
-from config.settings import SECRET_KEY
-
-
-def home(request):
-    return render(request, 'test.html')
 
 def base(request):
     return render(request, 'usersbase.html')
@@ -122,7 +119,7 @@ def userlogin(request):
         loginForm = AuthenticationForm(request, request.POST) # 애먄 두개임
         if loginForm.is_valid():
             login(request, loginForm.get_user()) # 사용자가 입력한 아이디와 패스워드를 입력하는것
-            return redirect('/main') # 로그인이 되면 메인으로
+            return redirect('/main') # 로그인이 되면 리스트로
         else:
             messages.info(request, '아이디와 비밀번호가 일치하지 않습니다.')
             return redirect('/users/login')
@@ -173,27 +170,27 @@ def kakao_api1(request):
 
     token_json = res.json()
     access_token = token_json.get("access_token")
-
     profile_request = requests.get("https://kapi.kakao.com/v2/user/me", headers={"Authorization": f"Bearer {access_token}"},)
     profile_json = profile_request.json()
 
-    kakao_account = profile_json.get("kakao_account")
-    email = kakao_account.get("email", None)
-    kakao_id = profile_json.get("id")
+    # kakao_account = profile_json.get("kakao_account")
+    # email = kakao_account.get("email", None)
 
-    if User.objects.filter(email=email).exists():
-        token = jwt.encode({"email": email}, SECRET_KEY, algorithm="HS256")
-        #token = token.decode("utf-8")
+    kakao_id = profile_json.get("id")
+    email = profile_json['kakao_account']['email']
+    #kakao_id = profile_json['kakao_account']['id']
+
+    if User.objects.filter(username=email).exists():
+        user = User.objects.get(username=email)
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return redirect('/main')
 
     else:
-        User(
-            email=email,
-        ).save()
-        token = jwt.encode({"email": email}, SECRET_KEY, algorithm="HS256")
-        #token = token.decode("utf-8")
+        User(username=email, email=email,).save()
+        User.objects.filter(username=email).exists()
+        user = User.objects.get(username=email)
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return redirect('/main')
-        # JsonResponse({"token": token}, status=200)
 
 def staff_manage_page(request):
     page_data,user_data,device_data=get_all_data()
@@ -215,3 +212,8 @@ def staff_manage_page(request):
     print(device_name)
 
     return render(request, 'staff_index.html',{'user_date':user_date,'user_num':user_num,'device_name':device_name,'device_num':device_num,'page_data':page_data})
+
+
+
+
+
