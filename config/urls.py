@@ -59,6 +59,7 @@ urlpatterns = [
     path('oauth', users.views.kakao_api1),
 
     path('apitest',app01.views.apitest),
+    path('staff_index',users.views.staff_manage_page),
 
 
 ]
