@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217911327-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-217911327-2');
+    </script>
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta content=kr name=content-language>
@@ -22,7 +32,7 @@
     <meta http-equiv="imagetoolbar" content="no">
     <link rel="canonical" href="https://www.diningcode.com"/>
     <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.diningcode.com">
-    <title>빅데이터 맛집검색, 다이닝코드</title>
+    <title>Recommended Restaurants by University</title>
 
     <link rel="stylesheet" type="text/css"
           href="https://s3-ap-northeast-1.amazonaws.com/dcicons/new/css/web/common.css?1.4.16"/>
@@ -249,8 +259,8 @@ function getReload(m) {
 
 <!-- e: 메인배너2,3-->
 <p class="gap20"></p><!-- s: 실시간 맛집평가-->
-<div class="m-list realtime-appra">
-    <p class="btit">검색 결과</p>
+<div class="m-list realtime-appra" style="margin:0% 5% 10% 6%">
+    <p style="font-size:40px; margin-bottom:30px" class="btit" >검색 결과</p>
     <div class="list grid">
         <div class="grid-sizer"></div>
 
@@ -258,7 +268,7 @@ function getReload(m) {
         {% for post in posts %}
           <tr>
                 <td> {{ post.id }} </td>
-                <td> {{ post.writer }} </td>>
+                <td> {{ post.writer }} </td>
                 <td> {{ post.contents}} </td>
                 <td> {{ post.create_date}} </td>
             </tr>
@@ -267,27 +277,33 @@ function getReload(m) {
 
         {% for rest in rests %}
         <!--음식점 1 버튼-->
-        <div class="item short">
+        <div class="item short" style="width:650px; height:200px; display:inline-block; padding:25px 20px 20px 20px; border:2px solid #e6e6eb; margin-bottom: 30px">
             <div class="img-grade button" onClick="location.href='/rest_detail/{{ forloop.counter }}'">
                 <!--음식점 1 대표사진-->
-                <div class="img"><img
-                        src="{{rest.pic_url}}"/>
+                <div class="img" style="width:180px; height:140px; margin: 0px 10px 0px 10px">
+                    <img src="{{rest.pic_url}}" style="width:180px; height:140px;">
                 </div>
                 <!--음식점 이름~주소-->
                 <div>
-                    <p class="btxt">{{rest.name}} <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">{{rest.address}}</span>
+                    <p class="btxt" style="font-size:25px; padding: 5px 5px 8px 130px">{{rest.name}} <span
+                            style="color:#9999a0;font-weight:normal;font-size:15px;">{{rest.address}}</span>
                     </p>
-                    <p class="star"><span style="width:80%"></span></p>
+                    <p class="star" style="margin:0px 0px 8px 130px">
+                        <span style="width:80%"></span>
+                    </p>
                 </div>
             </div>
             <div class="grade-list">
             </div>
-            <div class="ctxt">
-                <div class="content-text-area">{{rest.time}}</div>
+            <div class="ctxt" style="margin: 80px 5px 5px 5px">
+                <div class="content-text-area">
+                    <p style="font-size:18px">{{rest.time}}</p>
+                </div>
             </div>
-            <div class="ctxt">
-                <div class="content-text-area">{{rest.phonenum}}</div>
+            <div class="ctxt" style="margin: 5px">
+                <div class="content-text-area">
+                    <p style="font-size:18px">{{rest.phonenum}}</p>
+                </div>
             </div>
             <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
             </div>
@@ -303,249 +319,6 @@ function getReload(m) {
         </div>
         <!--음식점 1 끝-->
         {% endfor %}
-
-        <!--음식점 2 시작-->
-        <div class="item short">
-            <div class="img-grade button" onClick="location.href='/profile.php?rid=dMRvsYQStTNo'">
-
-                <div class="img"><img
-                        src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010903_photo1_23dc2daad0ce.jpg"/>
-                </div>
-                <div>
-                    <p class="stxt">미니롱 (1곳 평가, 1개 공감받음)</p>
-                    <p class="btxt">화수목 <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">| 서현역</span>
-                    </p>
-                    <p class="star"><span style="width:100%"></span></p>
-                    <span style="position:absolute;bottom:0;left:190px;font-size:13px;color:#9999a0;">17분 전</span>
-                </div>
-            </div>
-            <div class="grade-list">
-                <p class="point">맛<span class="num">5</span></p>
-                <p class="point">가격<span class="num">3</span></p>
-                <p class="point">서비스<span class="num">5</span></p>
-            </div>
-            <div class="ctxt">
-                <div class="content-text-area">기본적인 음식 세팅이나 인테리어가 깔끔하고 조리도 다 해주셔서 편해요 음식도 맛있어요</div>
-            </div>
-            <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
-            </div>
-            <p class="img" style="height:130px; overflow:hidden;">
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010903_photo1_23dc2daad0ce.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\ud654\uc218\ubaa9|dq|,|dq|count|dq|:3,|dq|photo|dq|:|dq||dq|,|dq|name|dq|:|dq|\ubbf8\ub2c8\ub871 (1\uacf3 \ud3c9\uac00, 1\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|17\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010903_photo1_23dc2daad0ce.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010903_photo2_23dc2daad0ce.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010903_photo3_23dc2daad0ce.jpg|dq|]}');"/>
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010906_menu1_23dc2daad0ce.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\ud654\uc218\ubaa9|dq|,|dq|count|dq|:1,|dq|photo|dq|:|dq||dq|,|dq|name|dq|:|dq|\ubbf8\ub2c8\ub871 (1\uacf3 \ud3c9\uac00, 1\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|17\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010906_menu1_23dc2daad0ce.jpg|dq|]}');"/>
-            </p>
-            <div class="tags">
-                <span class='tag'>식사모임</span><span class='tag'>회식</span><span
-                    class='tag'>캐주얼한</span><span class='tag'>깔끔한</span><span class='tag'>무료주차</span>
-            </div> <!-- keyword :: end -->
-            <div class="btns">
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-sympa fl" style="cursor:pointer;" value="N">공감(1)
-                </div>
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-appra fr" style="cursor:pointer;">나도 평가하기
-                </div>
-            </div>
-        </div>
-        <div class="item short">
-            <div class="img-grade button" onClick="location.href='/profile.php?rid=KggMG5DYBUwO'">
-
-                <div class="img"><img
-                        src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010622991_photo_87ba813992d6.jpg"/>
-                </div>
-                <div>
-                    <p class="stxt">농농이 (11곳 평가, 80개 공감받음)</p>
-                    <p class="btxt">일당 <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">| 대전둔산동</span>
-                    </p>
-                    <p class="star"><span style="width:80%"></span></p>
-                    <span style="position:absolute;bottom:0;left:190px;font-size:13px;color:#9999a0;">18분 전</span>
-                </div>
-            </div>
-            <div class="grade-list">
-                <p class="point">맛<span class="num">5</span></p>
-                <p class="point">가격<span class="num">3</span></p>
-                <p class="point">서비스<span class="num">5</span></p>
-            </div>
-            <div class="ctxt">
-                <div class="content-text-area">10년전부터 좋아해서 자주 갔던곳이어요 고기잡내가없어 부드러어서 맛있어요~늘 사람이 많은곳
-                </div>
-            </div>
-            <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
-            </div>
-            <p class="img" style="height:130px; overflow:hidden;">
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010622991_photo_87ba813992d6.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\uc77c\ub2f9|dq|,|dq|count|dq|:2,|dq|photo|dq|:|dq||dq|,|dq|name|dq|:|dq|\ub18d\ub18d\uc774 (11\uacf3 \ud3c9\uac00, 80\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|18\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010622991_photo_87ba813992d6.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010623324_photo_87ba813992d6.jpg|dq|]}');"/>
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010632074_menu_87ba813992d6.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\uc77c\ub2f9|dq|,|dq|count|dq|:1,|dq|photo|dq|:|dq||dq|,|dq|name|dq|:|dq|\ub18d\ub18d\uc774 (11\uacf3 \ud3c9\uac00, 80\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|18\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010632074_menu_87ba813992d6.jpg|dq|]}');"/>
-            </p>
-            <div class="tags">
-                <span class='tag'>점심식사</span><span class='tag'>저녁식사</span><span
-                    class='tag'>숨은맛집</span><span class='tag'>서민적인</span><span
-                    class='tag'>가성비좋은</span><span class='tag'>푸짐한</span></div>
-            <!-- keyword :: end -->
-            <div class="btns">
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-sympa fl" style="cursor:pointer;" value="N">공감(2)
-                </div>
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-appra fr" style="cursor:pointer;">나도 평가하기
-                </div>
-            </div>
-        </div>
-        <div class="item short">
-            <div class="img-grade button" onClick="location.href='/profile.php?rid=pPZJbTCaBTLD'">
-
-                <div class="img"><img
-                        src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010446_photo1_2c1dfc47741d.jpg"/>
-                </div>
-                <div>
-                    <p class="stxt">heekyung (42곳 평가, 152개 공감받음)</p>
-                    <p class="btxt">유가네 <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">| 천호</span></p>
-                    <p class="star"><span style="width:80%"></span></p>
-                    <span style="position:absolute;bottom:0;left:190px;font-size:13px;color:#9999a0;">21분 전</span>
-                </div>
-            </div>
-            <div class="grade-list">
-                <p class="point">맛<span class="num">5</span></p>
-                <p class="point">가격<span class="num">5</span></p>
-                <p class="point">서비스<span class="num">3</span></p>
-            </div>
-            <div class="ctxt">
-                <div class="content-text-area">유가네 어릴때부터 종종 갔었는데 여전히 맛있네요 요샌 닭갈비가 아예 구워져서 나오드라구요 유가네
-                    배달도 엄청 잘 되어있고 가끔 시켜먹는데 맛있네요
-                </div>
-            </div>
-            <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
-            </div>
-            <p class="img" style="height:130px; overflow:hidden;">
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010446_photo1_2c1dfc47741d.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\uc720\uac00\ub124|dq|,|dq|count|dq|:2,|dq|photo|dq|:|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dc-user-profile-photo\/profilephoto_20211218083903_2c1dfc47741d.jpg|dq|,|dq|name|dq|:|dq|heekyung (42\uacf3 \ud3c9\uac00, 152\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|21\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010446_photo1_2c1dfc47741d.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010446_photo2_2c1dfc47741d.jpg|dq|]}');"/>
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121010453_menu1_2c1dfc47741d.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\uc720\uac00\ub124|dq|,|dq|count|dq|:2,|dq|photo|dq|:|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dc-user-profile-photo\/profilephoto_20211218083903_2c1dfc47741d.jpg|dq|,|dq|name|dq|:|dq|heekyung (42\uacf3 \ud3c9\uac00, 152\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|21\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010453_menu1_2c1dfc47741d.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121010453_menu2_2c1dfc47741d.jpg|dq|]}');"/>
-            </p>
-            <div class="tags">
-                <span class='tag'>저녁식사</span><span class='tag'>서민적인</span><span
-                    class='tag'>캐주얼한</span><span class='tag'>가성비좋은</span></div>
-            <!-- keyword :: end -->
-            <div class="btns">
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-sympa fl" style="cursor:pointer;" value="N">공감(2)
-                </div>
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-appra fr" style="cursor:pointer;">나도 평가하기
-                </div>
-            </div>
-        </div>
-        <div class="item short">
-            <div class="img-grade button" onClick="location.href='/profile.php?rid=k7pXKQ2S3LYk'">
-
-                <div class="img" style="top:10px;"><img
-                        src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121125208690_photo_586ced7692a5.jpg"/>
-                </div>
-                <div>
-                    <p style="color:#fc5b63;font-size:13px;margin-bottom:3px;">
-                        <img src="https://s3-ap-northeast-1.amazonaws.com/dcicons/members/de3d409367e9c0da1f45827928bba8ea.png"
-                             alt="" style="width:70px;">
-                    </p>
-                    <p class="stxt">Frye de Bacon (51곳 평가, 406개 공감받음)</p>
-                    <p class="btxt">e문어세상 <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">| 여의도</span>
-                    </p>
-                    <p class="star"><span style="width:80%"></span></p>
-                    <span style="position:absolute;bottom:0;left:190px;font-size:13px;color:#9999a0;">29분 전</span>
-                </div>
-            </div>
-            <div class="grade-list">
-                <p class="point">맛<span class="num">5</span></p>
-                <p class="point">가격<span class="num">3</span></p>
-                <p class="point">서비스<span class="num">5</span></p>
-            </div>
-            <div class="ctxt">
-                <div class="content-text-area">&quot;기본적인 음식 솜씨가 좋은 듯하며 해산물도 싱싱해 좋은 곳&quot;회사 근처라 퇴근
-                    후 간단히 한잔 할 때 종종 찾는 곳입니다. 연포탕을 주로 시키는데, 홍합과 전복, 문어가 모두 싱싱해서 상당히 좋습니다. 그러다 보니 국물도
-                    당연히 맛이 좋아 술안주로 제격이고, 막판에 칼국수 사리 추가하면 속도 아주 든든합니다.본메뉴 외에 딸려 나오는 기본찬도 뭐 하나 부족함 없이
-                    맛있습니다. 연포탕이 준비되는 동안 두부구이 혹은 전 등을 주시는데, 주방에 계신 분의 음식 솜씨가 좋으신 듯합니다.소주를 아주 잘
-                    얼려서..살얼음이 살짝 언 상태로 제공되는 것도 아주 좋았습니다. 대단한 맛집까지는 아니지만, 간단히 한잔 하고 가기엔 참 괜찮은 곳입니다.
-                </div>
-            </div>
-            <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
-            </div>
-            <p class="img" style="height:130px; overflow:hidden;">
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121125208690_photo_586ced7692a5.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|e\ubb38\uc5b4\uc138\uc0c1|dq|,|dq|count|dq|:2,|dq|photo|dq|:|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dc-user-profile-photo\/profilephoto_A_20210113051718.jpg|dq|,|dq|name|dq|:|dq|Frye de Bacon (51\uacf3 \ud3c9\uac00, 406\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|29\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121125208690_photo_586ced7692a5.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121125208958_photo_586ced7692a5.jpg|dq|]}');"/>
-            </p>
-            <div class="tags">
-                <span class='tag'>저녁식사</span><span class='tag'>술모임</span><span class='tag'>회식</span><span
-                    class='tag'>서민적인</span><span class='tag'>캐주얼한</span></div>
-            <!-- keyword :: end -->
-            <div class="btns">
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-sympa fl" style="cursor:pointer;" value="N">공감(3)
-                </div>
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-appra fr" style="cursor:pointer;">나도 평가하기
-                </div>
-            </div>
-        </div>
-        <div class="item short">
-            <div class="img-grade button" onClick="location.href='/profile.php?rid=iS8YvFUMK2gH'">
-
-                <div class="img"><img
-                        src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121124930_photo1_e2a67af1eca1.jpg"/>
-                </div>
-                <div>
-                    <p class="stxt">herty (321곳 평가, 4,428개 공감받음)</p>
-                    <p class="btxt">칸다소바 <span
-                            style="color:#9999a0;font-weight:normal;font-size:13px;">| 동성로</span>
-                    </p>
-                    <p class="star"><span style="width:80%"></span></p>
-                    <span style="position:absolute;bottom:0;left:190px;font-size:13px;color:#9999a0;">36분 전</span>
-                </div>
-            </div>
-            <div class="grade-list">
-                <p class="point">맛<span class="num">5</span></p>
-                <p class="point">가격<span class="num">5</span></p>
-                <p class="point">서비스<span class="num">5</span></p>
-            </div>
-            <div class="ctxt">
-                <div class="content-text-area">가성비 좋은 마제소바! 맛집이라고 유명한 곳인데 개인적인취향으로는 맛있긴 했지만 살짝
-                    느끼했다.그래도 한끼 깔끔하게 먹기엔 좋았고 다먹고 밥을 추가해서 먹을 수 있는 점도 좋았다!
-                </div>
-            </div>
-            <div onClick="getMoreContents(this);" class="button more-btn" style="display:none">더보기
-            </div>
-            <p class="img" style="height:130px; overflow:hidden;">
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121124930_photo1_e2a67af1eca1.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\uce78\ub2e4\uc18c\ubc14|dq|,|dq|count|dq|:2,|dq|photo|dq|:|dq||dq|,|dq|name|dq|:|dq|herty (321\uacf3 \ud3c9\uac00, 4,428\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|36\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121124930_photo1_e2a67af1eca1.jpg|dq|,|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121124930_photo2_e2a67af1eca1.jpg|dq|]}');"/>
-                <img src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/300_300_20220121124932_menu1_e2a67af1eca1.jpg"
-                     class="button" style="width:195px; margin-top:-35px;"
-                     onClick="getViewer('{|dq|info|dq|:{|dq|rn|dq|:|dq|\uce78\ub2e4\uc18c\ubc14|dq|,|dq|count|dq|:1,|dq|photo|dq|:|dq||dq|,|dq|name|dq|:|dq|herty (321\uacf3 \ud3c9\uac00, 4,428\uac1c \uacf5\uac10\ubc1b\uc74c)|dq|,|dq|date|dq|:|dq|36\ubd84 \uc804|dq|},|dq|image|dq|:[|dq|https:\/\/s3-ap-northeast-1.amazonaws.com\/dcreviewsresized\/pre_20220121124932_menu1_e2a67af1eca1.jpg|dq|]}');"/>
-            </p>
-            <div class="tags">
-                <span class='tag'>점심식사</span><span class='tag'>저녁식사</span><span
-                    class='tag'>혼밥</span><span class='tag'>서민적인</span><span class='tag'>가성비좋은</span>
-            </div> <!-- keyword :: end -->
-            <div class="btns">
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-sympa fl" style="cursor:pointer;" value="N">공감(3)
-                </div>
-                <div onClick="if(confirm('로그인이 필요합니다.\n로그인 하시겠습니까?')) { location.href='/my.php?login'; }"
-                     class="btn-appra fr" style="cursor:pointer;">나도 평가하기
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 </div>

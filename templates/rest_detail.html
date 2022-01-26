@@ -3,13 +3,24 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217911327-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-217911327-2');
+    </script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Restaurant Details</title>
 
     <!--Bootstrap code-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="/static/menu_list/css/styles.css" rel="stylesheet">
+    <link href="/static/menu_list/css/styles.css?ver=1" rel="stylesheet">
 
     <!--티몬 별 평점 code-->
     <link rel="stylesheet" type="text/css"
@@ -89,7 +100,7 @@
             <!-- areaThumbnail - AType : Start -->
             <div class="areaThumbnail">
                 <dl>
-                    <dt><img id="rest_bigimg" width=500 height=550 src={{rest_info.pic_url.value}}><span
+                    <dt><img style="margin: 30px 0px 0px 0px" id="rest_bigimg" width=500 height=500 src={{rest_info.pic_url.value}}><span
                             id="rest_menuname" class="menu"></span>
 
                     </dt>
@@ -169,7 +180,7 @@
                                                                      style="display:none"></span></dd>
                 </dl>
                 <dl class="restType">
-                    <dt>업종</dt>
+                    <dt>카테고리</dt>
                     <dd class="type">{{rest_info.large_cate.value}} > {{rest_info.small_cate.value}}</dd>
                 </dl>
 
@@ -444,7 +455,7 @@
             <form action="" id="menuform" name="menuform" method="post">
                 <div class="tabMenu">
                     <div id="tab2"></div>
-                    <h3><img src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
+                    <h3 style="margin-bottom:60px"><img style="width: 80px; height:25px; margin-bottom: 20px" src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
 
                     <!-- Page Content-->
                     <section class="pt-4">
@@ -456,11 +467,11 @@
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card bg-light border-0 h-100">
                                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                            <img width="300" height="300" src="{{menu.img_url}}">
+                                            <img style="margin-bottom:15px" width="300" height="300" src="{{menu.img_url}}">
                                             <br>
-                                            <h2 class="fs-4 fw-bold">{{menu.name}}</h2>
-                                            <p class="mb-0">{{menu.price}} won</p>
-                                            <p class="mb-0">Ingredient : {{menu.ingredient}}</p>
+                                            <p class="fs-4 fw-bold" style="margin-bottom:15px; font-size:35px; font-weight: bolder;">{{menu.name}}</p>
+                                            <p class="mb-0" style="font-size:20px; font-weight: bolder;">{{menu.price}}원 </p>
+                                            <p class="mb-0" style="font-size:15px; font-weight: bold;">Ingredient : {{menu.ingredient}}</p>
                                         </div>
                                         <a href="/getNut?menu={{menu.name}}">영양정보</a>
                                     </div>
@@ -495,7 +506,7 @@
                         <form method="post">
                             {% csrf_token %}
                             <div class="review_write_input">
-                                <h2 class="review_write_title type2">상품 평가하기</h2>
+                                <p class="review_write_title type2" style="font-size:30px; font-weight: bolder">상품 평가하기</p>
                                 <div class="review_write_rate">
                                     <h3 class="blind">구매상품 평점</h3>
                                     <div class="star_score">
@@ -572,7 +583,8 @@
 
                             <section class="review_write_out">
                                 <div class="review_write_header">
-                                    <h1 class="review_write_title type2">리뷰 작성하기</h1>
+                                    <p class="review_write_title type2" style="font-size:30px; font-weight: bolder; margin-bottom:10px">
+                                        리뷰 작성하기</p>
                                 </div>
 
                                 <div class="review_write_textarea">

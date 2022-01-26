@@ -15,9 +15,16 @@ def main_page(request):
 
 def main_page_with_tag(request,cate):
     rest=restaurant.objects.filter(Q(large_cate=cate))
+    # rest2=restaurant.objects.filter(Q(name=rest_title))
     if request.method=='GET':
         print("GET")
         return render(request,'main_with_tag.html',{'rest_all':rest})
+
+def main_page_with_rest_img(request,cate,rest_title):
+    # rest = restaurant.objects.filter(Q(large_cate=cate))
+    rest=restaurant.objects.get(Q(name=rest_title))
+    print(rest)
+    return redirect('/rest_detail/'+str(rest.id))
 
 
 #음식점 위치 (테스트버전)
@@ -55,3 +62,6 @@ def rest_detail(request,bid):
     # 기존에 생성되어있는 댓글 목록 보여져야 됨 (음식점id 외래키로 하는 review 모두 출력)
     else:
         return render(request,'test.html')
+
+def apitest(request):
+    return render(request,'')
