@@ -47,6 +47,7 @@ urlpatterns = [
     path('users/logout', users.views.userlogout),  # 로그아웃
 
     path('users/pwchange', users.views.userpwchange),  # 비밀번호 변경
-    path('users/delete', users.views.userdelete),  # 회원탈퇴 
+    path('users/delete', users.views.userdelete),  # 회원탈퇴
+    path('getNut', restaurant.views.getNut),  #영양정보 페이지
 ]
 

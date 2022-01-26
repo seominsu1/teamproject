@@ -441,11 +441,10 @@
 
 
             </script>
-            <form id="menuform" name="menuform" method="post">
+            <form action="" id="menuform" name="menuform" method="post">
                 <div class="tabMenu">
                     <div id="tab2"></div>
                     <h3><img src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
-
 
                     <!-- Page Content-->
                     <section class="pt-4">
@@ -453,6 +452,7 @@
                             <!-- Page Features-->
                             <div class="row gx-lg-5">
                                 {% for menu in rest_menus %}
+                                {% csrf_token %}
                                 <div class="col-lg-6 col-xxl-4 mb-5">
                                     <div class="card bg-light border-0 h-100">
                                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
@@ -462,6 +462,7 @@
                                             <p class="mb-0">{{menu.price}} won</p>
                                             <p class="mb-0">Ingredient : {{menu.ingredient}}</p>
                                         </div>
+                                        <a href="/getNut?menu={{menu.name}}">영양정보</a>
                                     </div>
                                 </div>
                                 {% endfor %}
