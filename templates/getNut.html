@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{menu}}
+<hr>
+
+<table border="1">
+    <th>
+            열량(kcal)(1회제공량당)
+    </th>
+    <th>
+            탄수화물(g)(1회제공량당)
+    </th>
+    <th>
+            단백질(g)(1회제공량당)
+    </th>
+    <th>
+            지방(g)(1회제공량당)
+    </th>
+    <tr>
+        <td>
+            {{ result.NUTR_CONT1 }}
+        </td>
+        <td>
+            {{ result.NUTR_CONT2 }}
+        </td>
+        <td>
+            {{ result.NUTR_CONT3 }}
+        </td>
+        <td>
+            {{ result.NUTR_CONT4 }}
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
