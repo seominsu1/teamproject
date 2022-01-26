@@ -40,11 +40,9 @@ urlpatterns = [
     path('reviewRead/<int:bid>', review.views.read),
     path('reviewDelete/<int:bid>', review.views.delete),
 
-    path('users/test', users.views.home),
     path('usersbase', users.views.base),
 
     path('users/signup', users.views.signup),  # 가입
-
     path('users/login', users.views.userlogin),  # 로그인
     path('users/logout', users.views.userlogout),  # 로그아웃
 
@@ -52,10 +50,6 @@ urlpatterns = [
     path('users/delete', users.views.userdelete),  # 회원탈퇴
 
     path('accounts/', include('allauth.urls')),
-
-    # path('kakao', users.views.kakao_login),  # 먼저 실행하면 토큰을 oauth라는 애한테 보냄
-    # path('oauth', users.views.kakao_login2),
-
     path('kakao', users.views.kakao_api),  # 먼저 실행하면 토큰을 oauth라는 애한테 보냄
     path('oauth', users.views.kakao_api1),
 ]
