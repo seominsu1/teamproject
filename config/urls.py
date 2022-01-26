@@ -31,6 +31,7 @@ urlpatterns = [
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
     path('rest_list', restaurant.views.rest_list),
+    path('getNut', restaurant.views.getNut),
 
     path('main', app01.views.main_page),                      # 메인페이지
     path('main/<str:cate>', app01.views.main_page_with_tag),  # 메인페이지에서 카테고리 눌렀을 때
@@ -42,6 +43,7 @@ urlpatterns = [
     path('reviewDelete/<int:bid>', review.views.delete),
 
     path('usersbase', users.views.base),
+
 
     path('users/signup', users.views.signup),  # 가입
     path('users/login', users.views.userlogin),  # 로그인
