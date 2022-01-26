@@ -888,8 +888,8 @@ font-weight: 400;
                                                                 <a
                                                                         class="dg ag eu jd cf"
                                                                         id="포장"
-                                                                        href="/main/포장"><img
-                                                                        alt="Chinese Food"
+                                                                        href="/main/포장">
+                                                                    <img alt="Chinese Food"
                                                                         src="https://tb-static.uber.com/prod/web-eats-v2/categories/icons/Chinese_CuisineCarousel@2x.png"
                                                                         aria-hidden="true" class="cc ao da ae">
                                                                     <div class="b0 ag ba b8 bb b9 ax je jf jg">
@@ -940,7 +940,8 @@ font-weight: 400;
                 <div class="img-grade button">
                     <!--음식점 1 대표사진-->
                     <div class="img">
-                        <img src="{{rest.pic_url}}" width="530" height="380"/>
+                        <a href="/main/{{rest.large_cate}}/{{rest.name}}">
+                            <img src="{{rest.pic_url}}" width="530" height="380"/></a>
                     </div>
                     <!--음식점 이름~주소-->
                     <div>

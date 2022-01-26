@@ -34,6 +34,7 @@ urlpatterns = [
 
     path('main', app01.views.main_page),                      # 메인페이지
     path('main/<str:cate>', app01.views.main_page_with_tag),  # 메인페이지에서 카테고리 눌렀을 때
+    path('main/<str:cate>/<str:rest_title>', app01.views.main_page_with_rest_img),
 
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),

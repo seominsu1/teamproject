@@ -15,9 +15,16 @@ def main_page(request):
 
 def main_page_with_tag(request,cate):
     rest=restaurant.objects.filter(Q(large_cate=cate))
+    # rest2=restaurant.objects.filter(Q(name=rest_title))
     if request.method=='GET':
         print("GET")
         return render(request,'main_with_tag.html',{'rest_all':rest})
+
+def main_page_with_rest_img(request,cate,rest_title):
+    # rest = restaurant.objects.filter(Q(large_cate=cate))
+    rest=restaurant.objects.get(Q(name=rest_title))
+    print(rest)
+    return redirect('/rest_detail/'+str(rest.id))
 
 
 #음식점 위치 (테스트버전)
