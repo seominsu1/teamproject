@@ -18,11 +18,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-SECRET_KEY = 'django-insecure-#=krx4znlnc@esh5y1x99k&n!4r!9xesx+c0m9qe(!flqt(1^e'
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-op3d!cj^&flft=h44r4l4*+#%-vcmboios#s5$tpfeymd8zxn_'
+
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -91,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tp',
-        'USER': 'user1',
+        'USER': 'user2',
         'PASSWORD': 'qwer1234',
         'HOST': '172.30.1.109',
         'PORT': '3306',

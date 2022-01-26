@@ -32,17 +32,20 @@ urlpatterns = [
     path('test', restaurant.views.home),
     path('rest_list', restaurant.views.rest_list),
 
-    path('main', app01.views.main_page),
-    path('main/<str:cate>', app01.views.main_page_with_tag),
+    path('main', app01.views.main_page),                      # 메인페이지
+    path('main/<str:cate>', app01.views.main_page_with_tag),  # 메인페이지에서 카테고리 눌렀을 때
+    path('main/<str:cate>/<str:rest_title>', app01.views.main_page_with_rest_img),
 
     path('reviewRegister', review.views.register),
     path('reviewList', review.views.posts),
     path('reviewRead/<int:bid>', review.views.read),
     path('reviewDelete/<int:bid>', review.views.delete),
 
+    path('users/test', users.views.home),
     path('usersbase', users.views.base),
 
     path('users/signup', users.views.signup),  # 가입
+
     path('users/login', users.views.userlogin),  # 로그인
     path('users/logout', users.views.userlogout),  # 로그아웃
 
@@ -52,5 +55,8 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('kakao', users.views.kakao_api),  # 먼저 실행하면 토큰을 oauth라는 애한테 보냄
     path('oauth', users.views.kakao_api1),
+
+    path('apitest',app01.views.apitest),
+
 ]
 
