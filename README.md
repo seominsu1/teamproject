@@ -99,3 +99,4 @@
 - django + mysql 모델링 및 DB 구성
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
+ [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)]
