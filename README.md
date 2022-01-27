@@ -23,7 +23,7 @@
 
 
 
-# Recommended Restaurants by ERICA
+### Recommended Restaurants by ERICA
  
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
  
