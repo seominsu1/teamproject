@@ -26,7 +26,6 @@
 # Recommended Restaurants by ERICA
 
 ## 구현 기능
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) FrontEnd
 - 메인 페이지 레이아웃 구현
 - 유저 관련 레이아웃 구현
@@ -71,6 +70,8 @@
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
 
+ ## 사용 기술
+ 
  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
  ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) Database
- 
+ - Mysql
