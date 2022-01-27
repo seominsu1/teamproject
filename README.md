@@ -24,8 +24,9 @@
 
 
 # Recommended Restaurants by ERICA
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)]
+
 ## 구현 기능
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) FrontEnd
 - 메인 페이지 레이아웃 구현
 - 유저 관련 레이아웃 구현
