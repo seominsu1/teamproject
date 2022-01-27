@@ -16,7 +16,7 @@
 * **청결함**: 누가봐도 보기 쉽게 깔끔하게 정리했습니다. 벌레 한마리도 보이지 않습니다!
 
 <details>
-<summary><img src="https://user-images.githubusercontent.com/97927143/151295683-4e778ca4-1d33-4e7e-977d-a6a2a827cbfd.PNG"></summary>
+<summary img src="https://user-images.githubusercontent.com/97927143/151295683-4e778ca4-1d33-4e7e-977d-a6a2a827cbfd.PNG"><img src="https://user-images.githubusercontent.com/97927143/151295683-4e778ca4-1d33-4e7e-977d-a6a2a827cbfd.PNG"></summary>
  <br />
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
