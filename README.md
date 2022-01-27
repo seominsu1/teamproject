@@ -43,7 +43,6 @@
 - 리뷰 쓰기 기능
 - 영양정보 페이지 레이아웃 구현
  
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) BackEnd
 - 유저
   - 로그인 및 가입
@@ -69,12 +68,13 @@
 - django + mysql 모델링 및 DB 구성
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
-
- ## 개발환경
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
+ ## ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)개발환경
 - Django
 - Python
 - GitHub
- ## 사용 기술
+ ## ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)사용 기술
  
  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
  ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) Database
