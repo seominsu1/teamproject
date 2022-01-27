@@ -114,16 +114,16 @@
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
  
- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
  
- ### ERD 모델
+### ERD 모델
  
- ![이미지1](https://user-images.githubusercontent.com/97927143/151311018-5409cd60-cade-46bb-bd53-9098177c8ee7.png)
+![이미지1](https://user-images.githubusercontent.com/97927143/151311018-5409cd60-cade-46bb-bd53-9098177c8ee7.png)
  
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
  
- ### 시스템 구조
+### 시스템 구조
 ![이미지2](https://user-images.githubusercontent.com/97927143/151311349-03c71e68-5962-417f-941a-a7bfeca05cd7.png)
 
-  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
- 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+
