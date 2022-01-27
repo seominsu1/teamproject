@@ -1,7 +1,7 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
-  <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="150" height="150" />
+  <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="125" height="125" />
 </p>
-<h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151293101-c6f48dc1-1ec4-40aa-958d-30068b8b32f5.png">
+<h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151293101-c6f48dc1-1ec4-40aa-958d-30068b8b32f5.png" width="50" height="65">
  맛있는 README </h1>
 <p align="center">
 	
@@ -14,12 +14,12 @@
   <sub>Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.<sub>
 </p>
 
-* **Simple**: Extremely simple to use - so simple that it almost feels like magic!
-* **Powerful**: Customize almost everything - add your own templates and variables if you like
-* **Awesome**: The tool you don't know you need before you have many different repositories that all need maintenance
+* **맛있음**: 코드만 봐도 배가 고파집니다. 정성을 가득 담았기 때문입니다!
+* **간단함**: 사용이 매우 간단합니다. 너무 간단하여 거의 마술처럼 느껴집니다!
+* **깔끔함**: 누가봐도 보기 쉽게 깔끔하게 정리했습니다. 벌레 한마리도 보이지 않습니다!
 
 <details>
-<summary>📖 Table of Contents</summary>
+<summary>📖 메인 메뉴 </summary>
 <br />
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
