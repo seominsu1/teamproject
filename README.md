@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151305190-37858cc2-1fc2-4820-9d1e-a4199ab5f3d0.PNG" width="60" height="40">
- 맛있는 README </h1>
+ 맛있는 README <img src="https://user-images.githubusercontent.com/97927143/151305190-37858cc2-1fc2-4820-9d1e-a4199ab5f3d0.PNG" width="60" height="40"></h1>
 <p align="center"></ㅔ>
 
 <p align="center">
