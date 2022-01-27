@@ -1,16 +1,10 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
 <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="125" height="125" />
 </p>
-(https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
-
 
 <h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151293101-c6f48dc1-1ec4-40aa-958d-30068b8b32f5.png" width="30" height="45">
  맛있는 README </h1>
-<p align="center">
-	
-<a href="https://github.com/badges/shields"><img alt="Custom badge" src="https://img.shields.io/badge/custom-badge-f39f37.svg" height="20"/></a>
-<a href="https://github.com/andreasbm/readme/graphs/commit-activity"><img alt="Maintained" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" height="20"/></a>
-	</p>
+<p align="center"></ㅔ>
 
 <p align="center">
   <b>Automatically generate a beautiful best-practice README file based on the contents of your repository</b></br>
@@ -19,7 +13,7 @@
 
 * **맛있음**: 코드만 봐도 배가 고파집니다. 정성을 가득 담았기 때문입니다!
 * **간단함**: 사용이 매우 간단합니다. 너무 간단하여 거의 마술처럼 느껴집니다!
-* **깔끔함**: 누가봐도 보기 쉽게 깔끔하게 정리했습니다. 벌레 한마리도 보이지 않습니다!
+* **청결함**: 누가봐도 보기 쉽게 깔끔하게 정리했습니다. 벌레 한마리도 보이지 않습니다!
 
 <details>
 <summary>📖 메인 메뉴 </summary>
