@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/97927143/151304045-848c0db1-a9c4-4115-8efd-743e881babcc.PNG" width="400" height="400">
+<img src="https://user-images.githubusercontent.com/97927143/151304045-848c0db1-a9c4-4115-8efd-743e881babcc.PNG" width="900" height="400">
 </p>
 
  * **맛있음**: 코드만 봐도 배가 고파집니다. 정성을 가득 담았기 때문입니다!
