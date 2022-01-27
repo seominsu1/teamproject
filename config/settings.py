@@ -32,7 +32,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 # Application definition
-
+CSRF_TRUSTED_ORIGINS = ['https://2e01-125-133-75-24.ngrok.io']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

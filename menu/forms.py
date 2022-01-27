@@ -5,4 +5,4 @@ from menu.models import Menu
 class MenuinputForm(forms.ModelForm):
     class Meta:
         model=Menu
-        fields=('name','price','img_url','ingredient')
+        fields=('name','general_name','price','img_url','ingredient')

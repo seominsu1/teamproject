@@ -1,6 +1,6 @@
 from turtledemo.chaos import g
 
-import bid as bid
+
 from django.contrib import messages
 from django.contrib.auth import login, logout, user_logged_in
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm

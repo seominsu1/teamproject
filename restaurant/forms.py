@@ -10,4 +10,4 @@ class ResinputForm(forms.ModelForm):
 class ComForm(forms.ModelForm):
     class Meta:
         model=comment
-        fields=('contents','star')
+        fields=('contents','star','user')
