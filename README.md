@@ -126,4 +126,11 @@
 ![이미지2](https://user-images.githubusercontent.com/97927143/151311349-03c71e68-5962-417f-941a-a7bfeca05cd7.png)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
+### 프로젝트를 진행하며 어려웠던 점 & 해결방안
+ 
+ 김빛가람 : 
+ 서민수 : 
+ 장서현 : 
+ 천서희 : 
 
