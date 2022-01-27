@@ -54,6 +54,9 @@
 - REST API
 - HTTP 통신
 - Git 버전관리
+ 
+ ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
 ## 구현 기능
 ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) FrontEnd
 - 메인 페이지 레이아웃 구현
@@ -90,13 +93,17 @@
 - 지도
   - 위도 경도를 이용한 위치
   - 선택한 가게를 표시해주는 마크
+ 
 - 영양정보
   - 식품안전처 데이터 센터 연결
+ 
 - Google Analytics
   - 요일별 및 시간대별 이용자 추적 가능
   - 페이지별 이용자 수 및 이용시간 기록
   - device category (computer, mobile) 
+ 
 - django + mysql 모델링 및 DB 구성
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
- [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)]
+ 
+ ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
