@@ -7,8 +7,8 @@
 <p align="center"></ㅔ>
 
 <p align="center">
-  <b>Automatically generate a beautiful best-practice README file based on the contents of your repository</b></br>
-  <sub>Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.<sub>
+  <b>모든 사람들을 만족 시킬 수 있는 음식점 추천 프로그램</b></br>
+  <sub>이 프로그램을 사용하면 삼시세끼 메뉴 걱정할때마다 드는 시간과 정신적 자원을 아껴 더 좋은 코드를 만들 수 있습니다<sub>
 </p>
 
 * **맛있음**: 코드만 봐도 배가 고파집니다. 정성을 가득 담았기 때문입니다!
