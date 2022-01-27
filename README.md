@@ -1,5 +1,5 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png" alt="Logo" width="150" height="150" />
+  <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="150" height="150" />
 </p>
 <h1 align="center">@teamproject</h1>
 <p align="center">
