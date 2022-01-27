@@ -115,3 +115,7 @@
   - 음식점별 메뉴 데이터
  
  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
+ ### ERD 모델
+ 
+ ![이미지1](https://user-images.githubusercontent.com/97927143/151311018-5409cd60-cade-46bb-bd53-9098177c8ee7.png)
