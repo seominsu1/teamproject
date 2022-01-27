@@ -70,6 +70,10 @@
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
 
+ ## 개발환경
+- Django
+- Python
+- GitHub
  ## 사용 기술
  
  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
