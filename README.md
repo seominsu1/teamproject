@@ -1,7 +1,10 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
-  <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="125" height="125" />
+<img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="125" height="125" />
 </p>
-<h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151293101-c6f48dc1-1ec4-40aa-958d-30068b8b32f5.png" width="30" height="50">
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
+
+
+<h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151293101-c6f48dc1-1ec4-40aa-958d-30068b8b32f5.png" width="30" height="45">
  맛있는 README </h1>
 <p align="center">
 	
