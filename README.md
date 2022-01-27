@@ -1,7 +1,7 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
   <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="150" height="150" />
 </p>
-<h1 align="center">@teamproject</h1>
+<h1 align="center"> 맛있는 README </h1>
 <p align="center">
 <a href="https://npmcharts.com/compare/@appnest/readme?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@appnest/readme.svg" height="20"/></a>
 <a href="https://www.npmjs.com/package/@appnest/readme"><img alt="NPM Version" src="https://img.shields.io/npm/v/@appnest/readme.svg" height="20"/></a>
