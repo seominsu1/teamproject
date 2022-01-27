@@ -17,8 +17,7 @@
 - 리뷰 쓰기 기능
 - 영양정보 페이지 레이아웃 구현
  
-![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)
-### BackEnd
+### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) BackEnd
 - 메뉴 db 생성
 - 음식점 및 메뉴 데이터 입력
 - 회원가입
