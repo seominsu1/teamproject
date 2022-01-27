@@ -124,3 +124,6 @@
  
  ### 시스템 구조
 ![이미지2](https://user-images.githubusercontent.com/97927143/151311349-03c71e68-5962-417f-941a-a7bfeca05cd7.png)
+
+  ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
