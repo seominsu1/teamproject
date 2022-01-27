@@ -24,6 +24,36 @@
 
 
 # Recommended Restaurants by ERICA
+ 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
+### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)개발 환경
+- GitHub
+ 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
+### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)사용 기술
+- FrontEnd
+  - JavaScript
+  - HTML
+  - CSS
+  - Bootstrap
+- BackEnd
+  - Django
+  - Python
+  - JWT
+  - Mysql Workbench ERD
+  - KAKAO API
+  - Google API
+- Database
+  - Mysql
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+
+### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)키워드
+- REST API
+- HTTP 통신
+- Git 버전관리
 ## 구현 기능
 ### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG) FrontEnd
 - 메인 페이지 레이아웃 구현
@@ -69,33 +99,3 @@
 - django + mysql 모델링 및 DB 구성
   - 음식점 세부 정보, 음식점별 comment
   - 음식점별 메뉴 데이터
- 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
- 
-### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)개발 환경
-- GitHub
- 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
- 
-### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)사용 기술
-- FrontEnd
-  - JavaScript
-  - HTML
-  - CSS
-  - Bootstrap
-- BackEnd
-  - Django
-  - Python
-  - JWT
-  - Mysql Workbench ERD
-  - KAKAO API
-  - Google API
-- Database
-  - Mysql
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
-
-### ![1](https://user-images.githubusercontent.com/97927143/151285581-31827794-08e5-44fa-9825-2693e211c610.PNG)키워드
-- REST API
-- HTTP 통신
-- Git 버전관리
