@@ -119,3 +119,8 @@
  ### ERD 모델
  
  ![이미지1](https://user-images.githubusercontent.com/97927143/151311018-5409cd60-cade-46bb-bd53-9098177c8ee7.png)
+ 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
+ 
+ ### 시스템 구조
+![이미지2](https://user-images.githubusercontent.com/97927143/151311349-03c71e68-5962-417f-941a-a7bfeca05cd7.png)
