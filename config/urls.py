@@ -42,7 +42,7 @@ urlpatterns = [
     path('reviewRead/<int:bid>', review.views.read),
     path('reviewDelete/<int:bid>', review.views.delete),
 
-    path('users/test', users.views.home),
+    # path('users/test', users.views.home),
     path('usersbase', users.views.base),
 
 

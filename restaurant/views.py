@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 import urllib.request
 import json
 import requests
+from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
 def home(request):
@@ -40,6 +41,7 @@ def rest_input(request):
         print('유효하지 않음')
 
 #음식점 세부정보 사이트
+# @csrf_protect
 @login_required(login_url='/users/login')
 def rest_detail(request,bid):
     rest=restaurant.objects.get(Q(id=bid))

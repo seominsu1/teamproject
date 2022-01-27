@@ -14,6 +14,7 @@
       gtag('config', 'UA-217911327-2');
     </script>
 
+    <link href="/static/staff_index/css/styles.css" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>Restaurant Details</title>
@@ -453,6 +454,7 @@
 
             </script>
             <form action="" id="menuform" name="menuform" method="post">
+            {% csrf_token %}
                 <div class="tabMenu">
                     <div id="tab2"></div>
                     <h3 style="margin-bottom:60px"><img style="width: 80px; height:25px; margin-bottom: 20px" src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
@@ -472,8 +474,9 @@
                                             <p class="fs-4 fw-bold" style="margin-bottom:15px; font-size:35px; font-weight: bolder;">{{menu.name}}</p>
                                             <p class="mb-0" style="font-size:20px; font-weight: bolder;">{{menu.price}}원 </p>
                                             <p class="mb-0" style="font-size:15px; font-weight: bold;">Ingredient : {{menu.ingredient}}</p>
+                                            <a class="mb-0" style="font-size:15px; font-weight: bold;" href="/getNut?menu={{menu.general_name}}">영양정보</a>
                                         </div>
-                                        <a href="/getNut?menu={{menu.name}}">영양정보</a>
+
                                     </div>
                                 </div>
                                 {% endfor %}
@@ -597,9 +600,48 @@
 
                         </form>
                         <br>
-                        {% for cmt in cmts %}
-                            <h5> ▶  {{cmt.star}} {{cmt.contents}}</h5>
-                        {% endfor %}
+
+                        <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Score</th>
+                                            <th>Comments</th>
+                                            <th>Writer</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                           <th>Score</th>
+                                            <th>Comments Name</th>
+                                            <th>Writer</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+<!--                                    [ {% for date in user_date %} "{{ date }}", {% endfor %} ],-->
+                                        {% for cmt in cmts %}
+                                        <tr>
+
+                                        <td>
+                                            {{cmt.star}}
+                                        </td>
+                                        <td>
+                                            {{cmt.contents}}
+                                        </td>
+                                        <td>
+                                            {{cmt.user}}
+                                        </td>
+
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+<!--                        {% for cmt in cmts %}-->
+<!--                            <h5> ▶  {{cmt.star}} {{cmt.contents}}</h5>-->
+<!--                        {% endfor %}-->
                     </div>
 
 
@@ -613,7 +655,12 @@
 
                     <!--		리뷰평가 작성-->
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{% static 'staff_index/js/scripts.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="{% static 'staff_index/js/datatables-simple-demo.js' %}"></script>
                     <script language="javascript">
 		<!--
 
