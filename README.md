@@ -11,7 +11,7 @@
   <sub>이 프로그램을 사용하면 삼시세끼 메뉴 걱정할때마다 드는 시간과 정신적 자원을 아껴 더 좋은 코드를 만들 수 있습니다<sub>
 </p>
 
-<img src="https://user-images.githubusercontent.com/97927143/151304045-848c0db1-a9c4-4115-8efd-743e881babcc.PNG" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/97927143/151304045-848c0db1-a9c4-4115-8efd-743e881babcc.PNG" width="400" height="400">
  
 * **맛있음**: 코드만 봐도 배가 고파집니다. 정성을 가득 담았기 때문입니다!
 * **간단함**: 사용이 매우 간단합니다. 너무 간단하여 거의 마술처럼 느껴집니다!
