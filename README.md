@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/97927143/151292746-dc755417-de3d-407c-a380-5aaee2079f7e.PNG" alt="Logo" width="125" height="125" />
 </p>
 
-<h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151293101-c6f48dc1-1ec4-40aa-958d-30068b8b32f5.png" width="30" height="45">
+<h1 align="center"><img src="https://user-images.githubusercontent.com/97927143/151305031-2e64f459-c67d-47b6-919a-ed079b4d67a8.PNG" width="50" height="30">
  맛있는 README </h1>
 <p align="center"></ㅔ>
 
