@@ -1,14 +1,15 @@
 # Recommended Restaurants by ERICA
 
 
-<FrontEnd>
+## FrontEnd
 - 레스토랑 세부 정보
 - 레스토랑 DB 구성
 - 레스토랑별 리뷰 및 평점관리
 - 지도 API를 사용한 음식점 위치 표시
 - Google Analytics API를 사용한 관리자 페이지 구성 
 
-<BackEnd>
+  
+## BackEnd
 - django + mysql 모델링 및 DB 구성
   - Restaurnat app : 음식점 세부 정보, 음식점별 comment
   - menu app : 음식점별 메뉴 데이터
