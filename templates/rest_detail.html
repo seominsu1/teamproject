@@ -453,7 +453,7 @@
 
 
             </script>
-            <form action="" id="menuform" name="menuform" method="post">
+<!--            <form action="" id="menuform" name="menuform" method="post">-->
             {% csrf_token %}
                 <div class="tabMenu">
                     <div id="tab2"></div>
@@ -490,7 +490,7 @@
                     <script src="{% static 'menu_list/js/scripts.js' %}"></script>
 
                 </div>
-            </form>
+<!--            </form>-->
 
             <!-- //메뉴 -->
 
@@ -607,14 +607,14 @@
                                         <tr>
                                             <th>Score</th>
                                             <th>Comments</th>
-                                            <th>Writer</th>
+<!--                                            <th>Writer</th>-->
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                            <th>Score</th>
                                             <th>Comments Name</th>
-                                            <th>Writer</th>
+<!--                                            <th>Writer</th>-->
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -628,9 +628,9 @@
                                         <td>
                                             {{cmt.contents}}
                                         </td>
-                                        <td>
-                                            {{cmt.user}}
-                                        </td>
+<!--                                        <td>-->
+<!--                                            {{cmt.user}}-->
+<!--                                        </td>-->
 
                                         </tr>
                                         {% endfor %}
