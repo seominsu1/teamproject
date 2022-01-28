@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0059)http://www.menupan.com/restaurant/onepage.asp?acode=H492109 -->
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217911327-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-217911327-2');
+    </script>
+
+    <link href="/static/staff_index/css/styles.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Restaurant Details</title>
+
+    <!--Bootstrap code-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/menu_list/css/styles.css?ver=1" rel="stylesheet">
+
+    <!--티몬 별 평점 code-->
+    <link rel="stylesheet" type="text/css"
+          href="https://img1.tmon.kr/fe/release/service/static/review/p/css/myreview.css?v=1642190059388">
+
+    <meta name="subject" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
+    <meta name="description"
+          content="경기 고양시 일산동구 풍동 위치. 꽃등심,삼겹살,사시미,육회,차돌박이,육회 메뉴 및 가격정보 제공. 한식,한우고기전문점. 메뉴판닷컴, 전국맛집TOP1000 추천맛집.">
+    <meta name="keywords" content="가족외식, 어른과 함께라면, 술 마시는 친구와 함께, 구이, 한우전문점, 소주, 고기 보양식">
+    <!-- for facebook { -->
+    <meta property="og:title" content="목우촌웰빙마을 - 경기 고양시 일산동구 풍동 지역맛집">
+    <meta property="og:description"
+          content="경기 고양시 일산동구 풍동 위치. 꽃등심,삼겹살,사시미,육회,차돌박이,육회 메뉴 및 가격정보 제공. 한식,한우고기전문점. 메뉴판닷컴, 전국맛집TOP1000 추천맛집.">
+    <meta property="og:url" content="http://www.menupan.com/restaurant/onepage.asp?acode=H492109">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="메뉴판닷컴,전국맛집TOP1000 추천맛집">
+    <!-- for facebook } -->
+
+    <link rel="stylesheet" type="text/css" href="{% static '/rest_detail_img/onepage_201401.css' %}">
+    <script async="" src="{% static '/rest_detail_img/analytics.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/jquery-latest.min.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/jquery.drm_slides-1.1.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/drm_disp_elem_110717.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/common_popup.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/open_popup.js.다운로드' %}"></script>
+    <script language="javascript" src="{% static '/rest_detail_img/number.js.다운로드' %}"></script>
+    <script type="text/javascript" src="{% static '/rest_detail_img/mp_restact_proc.js.다운로드' %}"></script>
+    <script language="javascript">
+	<!--
+		var g_is_nomovetop = false;
+
+		var g_max_scroll_y = 0;
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var n_scroll_top = $(window).scrollTop();
+				var n_top = ((n_scroll_top <= g_max_scroll_y) ? (n_scroll_top * -1) : (g_max_scroll_y * -1));
+				if (g_is_nomovetop) {
+					n_top = (n_scroll_top * -1);
+				}
+				$('#WrapTop').css({top:n_top});
+			});
+
+			var n_prevent_height = 35;		//-- $('.navi').height();
+			g_max_scroll_y = ($('#WrapTop').height() - n_prevent_height - 10);
+			if (g_is_nomovetop) {
+				g_max_scroll_y += n_prevent_height;
+			}
+			init_menu_tab();
+
+			var fn_auto_menu = (function() {
+				var o_menu_idx = {'b':1, 'm':2, 'grv':3, 'loc':4};
+				fn_menu_tab_click(o_menu_idx[''], 0);
+			});
+			window.setTimeout(fn_auto_menu, 100);	// cus) interval
+
+			fn_mp_restact_ov('H492109', '');		//-- counter
+		});
+	//-->
+
+
+    </script>
+    <script charset="UTF-8" src="{% static '/rest_detail_img/roadview.js.다운로드' %}"></script>
+    <style></style>
+</head>
+
+<body>
+<center>
+
+    <!-- Main 영역 -->
+    <div class="WrapMain">
+
+        <div id="tab1"></div>
+        <!-- mainArea01 -->
+        <div class="mainArea01">
+
+            <!-- photo -->
+            <!-- areaThumbnail - AType : Start -->
+            <div class="areaThumbnail">
+                <dl>
+                    <dt><img style="margin: 30px 0px 0px 0px" id="rest_bigimg" width=500 height=500 src={{rest_info.pic_url.value}}><span
+                            id="rest_menuname" class="menu"></span>
+
+                    </dt>
+
+                </dl>
+            </div>
+            <script language="javascript">
+	<!--
+		function fn_disp_restphoto(p_selected_idx) {
+			$('#id_restphoto_list_ul .cid_restphoto_cover').hide();
+			$('#id_restphoto_list_ul .cid_restphoto_cover').eq(p_selected_idx).show();
+			$('#rest_bigimg').attr('src', $('#restphoto_img_'+p_selected_idx).attr('tag_src_z'));
+			$('#rest_menuname').text($('#restphoto_img_' + p_selected_idx).attr('title'));
+		}
+		function fn_restphoto_slides_init() {
+			var b_is_static = false;
+			if (b_is_static) {
+				$('#id_restphoto_list_ul').remove();
+				$('#id_restphoto_list_src').attr('id', 'id_restphoto_list_ul').addClass('listThumbnail').show();
+			}
+			else {
+				var n_cnt = $('#id_restphoto_list_src li').length;
+				fn_disp_elem_min(('#id_restphoto_list_src li'), ('#id_restphoto_list_ul'), 0, n_cnt, false);
+			}
+			$('#id_restphoto_slides').slides({
+				container: 'listThumbnail',
+				next: 'btnNext',
+				prev: 'btnPre',
+				disp_num: 7,
+				play: 0,
+				pause: 250,
+				slideSpeed: 500,
+				fadeSpeed: 350-350,
+				hoverPause: true,
+				dum:''
+			});
+			//-- event handler {
+			$('#id_restphoto_list_ul li a').bind('mouseover click', function(p_evt) {
+				p_evt.preventDefault();
+				fn_disp_restphoto($('#id_restphoto_list_ul li a').index(this));
+				$(this).blur();
+			});
+			//-- event handler }
+
+			//-- 초기선택
+			fn_disp_restphoto(0);
+		}
+
+		$(document).ready(function() {
+			fn_restphoto_slides_init();
+		});
+	//-->
+
+
+            </script>
+            <!-- //areaThumbnail - AType : End -->
+
+
+            <!-- //photo -->
+
+            <!-- basic -->
+            <script language="javascript" src="{% static '/rest_detail_img/cookie.js.다운로드' %}"></script>
+
+            <!-- 맛집 메달 : Start -->
+            <div class="restMark">
+
+                <span class="mpRest">메뉴판추천 로고</span>
+
+            </div>
+            <!-- //맛집 메달 : End -->
+
+            <div class="areaBasic">
+                <dl class="restName">
+                    <dt>업체명<span style="color:#ffffff;cursor:default;"
+                                 ondblclick="$(&#39;#id_basicdata_reporter&#39;).toggle();">.</span></dt>
+                    <dd class="name"> {{rest_info.name.value}} <span id="id_basicdata_reporter"
+                                                                     style="display:none"></span></dd>
+                </dl>
+                <dl class="restType">
+                    <dt>카테고리</dt>
+                    <dd class="type">{{rest_info.large_cate.value}} > {{rest_info.small_cate.value}}</dd>
+                </dl>
+
+                <dl class="restTel">
+                    <dt>전화번호</dt>
+                    <dd class="tel1">{{rest_info.phonenum.value}}</dd>
+
+                </dl>
+                <dl class="restAdd">
+                    <dt>주소</dt>
+                    <dd class="add1">{{rest_info.address.value}}</dd>
+                </dl>
+
+                <dl class="restHome">
+                    <dt>영업시간</dt>
+                    <dd class="home">{{rest_info.time.value}}</dd>
+                </dl>
+
+                <dl class="restGrade">
+                    <dt>평점</dt>
+                    <dd class="rate">
+                        <p class="point"><span class="star" style="width:70.7692307692308%"></span><!-- ☆☆☆☆☆ //--></p>
+                        <p class="score"><span class="total">3.5</span><span class="line">|</span><span class="count">78명 참여</span>
+                        </p>
+                    </dd>
+                </dl>
+
+                <dl class="restMap">
+
+                    <dt class="loc">
+
+                        <div id="map" style="width:430px;height:300px;"></div>
+                        <script type="text/javascript"
+                                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0626f55649c67965df5c80b94f791fe"></script>
+                        <script>
+				var container = document.getElementById('map');
+				var options = {
+					center: new kakao.maps.LatLng({{rest_info.latitude.value}}, {{rest_info.longitude.value}}),
+					level: 1
+				};
+
+				var map = new kakao.maps.Map(container, options);
+
+				var mapMarker = {
+				    position: new kakao.maps.LatLng({{rest_info.latitude.value}}, {{rest_info.longitude.value}}),
+				    map: map
+				};
+
+				var marker = new kakao.maps.Marker(mapMarker);
+
+
+                        </script>
+
+                    </dt>
+                </dl>
+                <!-- layer : sms : Start -->
+                <div class="lySMS" id="id_ly_sms" style="display:none;">
+                    <h4><img src="{% static '/rest_detail_img/title_sms.gif' %}" alt="추천 SMS 보내기"></h4>
+                    <button class="btnClose" onclick="$(&#39;#id_ly_sms&#39;).hide();return false;">닫기</button>
+                    <dl class="mobileNum">
+                        <dt>추천하는 사람(메뉴판닷컴)</dt>
+                        <dd>
+                            02-2017-7700
+                            <!--
+                            <select id="id_shp_1"><option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option></select>
+                            <span class="hyphen"></span><input type="text" id="id_shp_2" class="num1" maxlength="4" pattern="[0-9]*"><span class="hyphen"></span><input type="text" id="id_shp_3" class="num2" maxlength="4" pattern="[0-9]*">
+                            //-->
+                        </dd>
+                    </dl>
+                    <dl class="mobileNum">
+                        <dt>추천받는 사람 휴대전화</dt>
+                        <dd>
+                            <select id="id_rhp_1">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            <span class="hyphen"></span><input type="text" id="id_rhp_2" class="num1" maxlength="4"
+                                                               pattern="[0-9]*"><span class="hyphen"></span><input
+                                type="text" id="id_rhp_3" class="num2" maxlength="4" pattern="[0-9]*">
+                        </dd>
+                    </dl>
+                    <dl class="mobileagree">
+                        <dt>개인정보수집 및 이용동의</dt>
+                        <dd>- 제공받는 자: ㈜메뉴판닷컴</dd>
+                        <dd>- 수집 및 이용목적: 문자발송</dd>
+                        <dd>- 수집항목: 연락처</dd>
+                        <dd>- 보유 및 이용기간: 목적 달성 시 파기</dd>
+                        <dd><span>＊입력하신 정보는 기재된 이용목적 이외의 다른 목적으로 이용되지 않습니다.</span></dd>
+                    </dl>
+                    <div class="chek">
+                        <input type="checkbox" class="chkbox" id="id_agree">
+                        <label>개인정보 수집 및 이용에 동의합니다.</label>
+                    </div>
+                    <p class="btn">
+                        <button class="btnRecognize" onclick="javascript:fn_send_sms();return false;">추천하기</button>
+                    </p>
+                </div>
+                <!-- //layer : sms : End -->
+
+
+            </div>
+
+            <iframe name="procifrm" id="procifrm" width="100%" height="0" frameborder="0"
+                    src="{% static '/rest_detail_img/saved_resource.html' %}"></iframe>
+            <!-- 스크랩/sns : Start -->
+            <div class="funcBtn_wrap">
+
+                <div class="funcBtn">
+                    <div class="funcBtnB">
+                        <dl class="btnGood">
+                            <dt>
+
+                                <a href="javascript:;" onclick="fn_recommend();"><img
+                                        src="{% static 'rest_detail_img/btn_good.gif' %}" alt="좋아요"></a>
+
+                            </dt>
+                            <dd><span>92</span>명이 좋아합니다.</dd>
+                        </dl>
+
+                    </div>
+                </div><!-- .funcBtn_wrap -->
+            </div>
+
+
+            <script language="javascript">
+	<!--
+		function fn_cpn_tab_click(p_clicked_idx) {
+			$('#cpnlist li').each(function(p_idx) {
+				if (p_idx == p_clicked_idx) {
+					$(this).attr('class', 'select');
+					var n_cp_type = parseInt($(this).attr('cp_type'), 10);
+
+					var s_cp_ps = $(this).attr('cp_ps');
+					if(n_cp_type == 99){
+						$('.viewCoupon').hide();
+						$('#ps_p2').text(s_cp_ps);
+						var s_cp_detail = $(this).attr('cp_detail')
+						$('#online_notice1').text(s_cp_detail);
+						$('.viewOnline').show();
+						$('#helme_layer2').hide();
+						$('.viewgpcard').hide();
+					}else if(n_cp_type == 88){
+						$('.viewCoupon').hide();
+						$('.viewOnline').hide();
+						$('#ps_p3').text(s_cp_ps);
+						$('.viewgpcard').show();
+						$('#helme_layer2').hide();
+					}
+					else {
+						$('.viewgpcard').hide();
+						$('.viewOnline').hide();
+						$('#helme_layer2').show();
+						var n_cp_id = parseInt($(this).attr('cp_id'), 10);
+						var s_cp_end = $(this).attr('cp_end');
+						var s_cp_detail = $(this).attr('cp_detail')
+
+						$('#ps_c').text(s_cp_ps);
+						$('#cpn_date').text(s_cp_end);
+						$('#cpn_notice1').text(s_cp_detail);
+
+						$('#btn_print').unbind().bind('click', {cp_id:n_cp_id}, function(p_evt) { coupon_popup('H492109', p_evt.data.cp_id); });
+						$('#btn_sms').unbind().bind('click', {cp_id:n_cp_id}, function(p_evt) { fn_show_send_sms_cp(p_evt.data.cp_id); });
+
+						$('.viewCoupon').show();
+					}
+				}
+				else {
+					$(this).attr('class', 'none2');
+				}
+		  });
+		}
+
+		function init_cpn_tab() {
+			$('#cpnlist li a').click(function(p_evt) {
+				p_evt.preventDefault();
+				fn_cpn_tab_click($('#cpnlist li a').index($(this)));
+				$(this).blur();
+			});
+
+			//-- $('#cpnlist li a').mouseover(function(p_evt) { fn_cpn_tab_click($('#cpnlist li a').index($(this))); });
+
+			var n_def_cpn_tab = 0;
+			fn_cpn_tab_click(n_def_cpn_tab);
+		}
+		//-- init handler
+		(function() { init_cpn_tab() })();
+	//-->
+
+
+            </script>
+
+
+            <script language="javascript">
+	<!--
+	  function fn_OnlineReserve(p_acode){
+		window.open("/restaurant/onlineservice/or_request.asp?acode="+p_acode);
+	  }
+	//-->
+
+
+            </script>
+
+
+            <!-- //benefit - AType -->
+
+            <!-- benefit - BType -->
+
+            <!-- //benefit - BType -->
+
+            <!-- GP Card -->
+
+            <!-- //GP Card -->
+
+            <!-- info -->
+
+
+        </div><!-- .mainArea01 -->
+        <!-- //mainArea01 -->
+
+
+        <!-- google rich snippets { //-->
+        <div class="hreview-aggregate">
+					<span class="item">
+						<span class="fn"><span class="value-title" title="목우촌웰빙마을"></span>
+					</span>
+					<span class="rating">
+						<span class="average"><span class="value-title" title="0"></span>
+						<span class="best"><span class="value-title" title="100"></span>
+					</span>
+					<span class="votes"><span class="value-title" title="0"></span>
+					<span class="count"><span class="value-title" title="55"></span>
+				</span></span></span></span></span></div>
+        <!-- google rich snippets } //-->
+
+
+        <!-- mainArea02 -->
+        <div class="mainArea02">
+
+            <!-- 메뉴 -->
+
+            <script language="javascript">
+<!--
+	function recommand(mcode) {
+		var rcmd_cnt = parseInt('0', 10);
+		if (rcmd_cnt < 3) {
+			if (!confirm('선택메뉴를 추천 하시겠습니까?\n(최대 3개 메뉴까지 추천 가능합니다.)')) { return; }
+			var dt = new Date();
+			document.getElementById('frm_rest_menu_list_act').src = "/Restaurant/onepage_201401/include/rest_menu_list_proc.asp?mode=recommand&acode=H492109&MCode="+mcode+"&memid=220118_814260449.51&mseq=0" + "&dum=" + dt.getTime();
+		}
+		else {
+			if (!confirm('이미 3개의 메뉴를 추천하셨습니다.\n메뉴 추천을 다시 하시겠습니까?')) { return; }
+			clearRecommand();
+		}
+	}
+
+	function clearRecommand() {
+		var dt = new Date();
+		document.getElementById('frm_rest_menu_list_act').src = "/Restaurant/onepage_201401/include/rest_menu_list_proc.asp?mode=clear&acode=H492109&memid=220118_814260449.51&mseq=0" + "&dum=" + dt.getTime();
+	}
+
+	function recommanded() {
+		alert('이미 추천하신 메뉴 입니다.');
+	}
+//-->
+
+
+            </script>
+<!--            <form action="" id="menuform" name="menuform" method="post">-->
+            {% csrf_token %}
+                <div class="tabMenu">
+                    <div id="tab2"></div>
+                    <h3 style="margin-bottom:60px"><img style="width: 80px; height:25px; margin-bottom: 20px" src="{% static '/rest_detail_img/title_tabMenu.gif' %}" alt="메뉴"></h3>
+
+                    <!-- Page Content-->
+                    <section class="pt-4">
+                        <div class="container px-lg-5">
+                            <!-- Page Features-->
+                            <div class="row gx-lg-5">
+                                {% for menu in rest_menus %}
+                                {% csrf_token %}
+                                <div class="col-lg-6 col-xxl-4 mb-5">
+                                    <div class="card bg-light border-0 h-100">
+                                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                            <img style="margin-bottom:15px" width="300" height="300" src="{{menu.img_url}}">
+                                            <br>
+                                            <p class="fs-4 fw-bold" style="margin-bottom:15px; font-size:35px; font-weight: bolder;">{{menu.name}}</p>
+                                            <p class="mb-0" style="font-size:20px; font-weight: bolder;">{{menu.price}}원 </p>
+                                            <p class="mb-0" style="font-size:15px; font-weight: bold;">Ingredient : {{menu.ingredient}}</p>
+                                            <a class="mb-0" style="font-size:15px; font-weight: bold;" href="/getNut?menu={{menu.general_name}}">영양정보</a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Bootstrap core JS-->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                    <!-- Core theme JS-->
+                    <script src="{% static 'menu_list/js/scripts.js' %}"></script>
+
+                </div>
+<!--            </form>-->
+
+            <!-- //메뉴 -->
+
+            <!-- 리뷰 -->
+            <div class="tabReview">
+                <div id="tab3"></div>
+                <div>
+                    <div>
+                        <div data-role="review_write_toast" class="review_toast_recommend" style="display:none;">
+                            <p class="text">추천해주셔서 감사합니다.</p>
+                        </div>
+                        <div class="review_write_box">
+                            <h3 class="blind">구매상품 정보</h3>
+
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="review_write_input">
+                                <p class="review_write_title type2" style="font-size:30px; font-weight: bolder">상품 평가하기</p>
+                                <div class="review_write_rate">
+                                    <h3 class="blind">구매상품 평점</h3>
+                                    <div class="star_score">
+                                        <div>
+                                            <div>
+
+                                                <button type="button" id="b1" value="1" onclick="on(this)">☆</button>
+                                                <button type="button" id="b2" value="2" onclick="on(this)">☆</button>
+                                                <button type="button" id="b3" value="3" onclick="on(this)">☆</button>
+                                                <button type="button" id="b4" value="4" onclick="on(this)">☆</button>
+                                                <button type="button" id="b5" value="5" onclick="on(this)">☆</button>
+                                                <h4 id='star'>0</h4>
+                                                <input id ='star_input'type="hidden" name="star" value="0">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <script>
+        function on(event){
+            if(event.id=="b1"){
+            event.innerText="★";
+            document.getElementById('b2').innerText="☆";
+            document.getElementById('b3').innerText="☆";
+            document.getElementById('b4').innerText="☆";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="1";
+            document.getElementById('star_input').value="1";
+            }
+            else if(event.id=="b2"){
+            document.getElementById('b1').innerText="★";
+            event.innerText="★";
+            document.getElementById('b3').innerText="☆";
+            document.getElementById('b4').innerText="☆";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="2";
+            document.getElementById('star_input').value="2";
+            }
+            else if(event.id=="b3"){
+            event.innerText="★";
+            document.getElementById('b1').innerText="★";
+            document.getElementById('b2').innerText="★";
+            document.getElementById('b4').innerText="☆";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="3";
+            document.getElementById('star_input').value="3";
+            }
+            else if(event.id=="b4"){
+            event.innerText="★";
+            document.getElementById('b1').innerText="★";
+            document.getElementById('b2').innerText="★";
+            document.getElementById('b3').innerText="★";
+            document.getElementById('b5').innerText="☆";
+            document.getElementById('star').innerText="4";
+            document.getElementById('star_input').value="4";
+            }
+            else if(event.id=="b5"){
+            event.innerText="★";
+            document.getElementById('b1').innerText="★";
+            document.getElementById('b2').innerText="★";
+            document.getElementById('b3').innerText="★";
+            document.getElementById('b4').innerText="★";
+            document.getElementById('star').innerText="5";
+            document.getElementById('star_input').value="5";
+            }
+        }
+
+
+                            </script>
+
+
+                            <section class="review_write_out">
+                                <div class="review_write_header">
+                                    <p class="review_write_title type2" style="font-size:30px; font-weight: bolder; margin-bottom:10px">
+                                        리뷰 작성하기</p>
+                                </div>
+
+                                <div class="review_write_textarea">
+                                    <textarea name='contents' id="reviewContents" title="구매후기 작성" name="reviewContents"
+                                              maxlength="600"></textarea>
+                                </div>
+                                <button class="btn btn-primary btn-xl" id="submitButton" type="submit">등록</button>
+                            </section>
+
+
+                        </form>
+                        <br>
+
+                        <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Score</th>
+                                            <th>Comments</th>
+<!--                                            <th>Writer</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                           <th>Score</th>
+                                            <th>Comments Name</th>
+<!--                                            <th>Writer</th>-->
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+<!--                                    [ {% for date in user_date %} "{{ date }}", {% endfor %} ],-->
+                                        {% for cmt in cmts %}
+                                        <tr>
+
+                                        <td>
+                                            {{cmt.star}}
+                                        </td>
+                                        <td>
+                                            {{cmt.contents}}
+                                        </td>
+<!--                                        <td>-->
+<!--                                            {{cmt.user}}-->
+<!--                                        </td>-->
+
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+<!--                        {% for cmt in cmts %}-->
+<!--                            <h5> ▶  {{cmt.star}} {{cmt.contents}}</h5>-->
+<!--                        {% endfor %}-->
+                    </div>
+
+
+                    <div id="criteo-tags-div" style="display: none;">
+                        <iframe src="{% static 'rest_star_img/syncframe.html' %}" id="criteo-syncframe-onetag" width="0"
+                                height="0"
+                                frameborder="0" style="border-width:0px; margin:0px; display:none"
+                                title="Criteo GUM iframe"></iframe>
+                    </div>
+
+
+                    <!--		리뷰평가 작성-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{% static 'staff_index/js/scripts.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="{% static 'staff_index/js/datatables-simple-demo.js' %}"></script>
+                    <script language="javascript">
+		<!--
+
+			function Chg_order(orderid){
+				var sparam  = 'ac=H492109&pg=1&pz=5&ord='+orderid;
+				ajax_comment(sparam);
+			}
+
+			function ajax_comment(p_param){
+				$.ajax({
+					type:'get',
+					url: '/restaurant/onepage_201401/include/ajax_comment.asp',
+					data: p_param,
+					success: function(data) { $('#ajax_comment').html(data).show(); },
+					error : function(xhr, status, error) {
+						//-- alert(status + '\n\ + error);
+					}
+				});
+			}
+			$(document).ready(function() {
+				var sparam  = 'ac=H492109&pg=1&pz=5&ord=1';
+				ajax_comment(sparam);
+			});
+
+			function comment_view(idx){
+				var nowclass = $('#id_topcomment_' + idx).attr('class');
+				if (nowclass == 'foldBtn_off') {
+					$('#id_topcomment_'+idx).removeClass('foldBtn_off').addClass('foldBtn_on');
+					$('#id_comment_'+idx).show();
+				}
+				else {
+					$('#id_topcomment_'+idx).removeClass('foldBtn_on').addClass('foldBtn_off');
+					$('#id_comment_'+idx).hide();
+				}
+			}
+
+			function fn_commentgood(idx,grade){
+				if (grade == '1') {
+					var nowclass = $('#id_like_' + idx).attr('class');
+					if (nowclass == 'like') {
+						$('#id_like_' + idx).addClass('on');
+						$('#id_dislike_' + idx).removeClass('on');
+					}
+					else {
+						$('#id_like_' + idx).removeClass('on');
+						$('#id_dislike_' + idx).removeClass('on');
+					}
+				}
+				else {
+					var nowclass = $('#id_dislike_' + idx).attr('class');
+					if (nowclass=='dislike') {
+						$('#id_dislike_'+idx).addClass('on');
+						$('#id_like_'+idx).removeClass('on');
+					}
+					else {
+						$('#id_dislike_'+idx).removeClass('on');
+						$('#id_like_'+idx).removeClass('on');
+					}
+				}
+				var sform = document.getElementById('procfrm2');
+				sform.target  = 'procifrm2';
+				sform.action  = '/restaurant/onepage_201401/include/commentgood_proc.asp?idx='+idx+'&grade='+grade;
+				sform.submit();
+			}
+		//-->
+
+
+                    </script>
+                    <script language="javascript">
+		<!--
+			function goPage2(page){
+
+				var sparam  = "ac=H492109&pg="+page+"&pz=5&ord="+$('#id_pollorder').val();
+				ajax_comment(sparam);
+			}
+		//-->
+
+
+                    </script>
+                    <!-- //한줄평가 : End -->
+
+
+                </div><!-- .mainArea02 -->
+                <!-- //mainArea02 -->
+
+                <div class="hSpace70"><!-- 여백 70 --></div>
+
+                <div class="hSpace30"><!-- 여백 30 --></div>
+
+                <!-- bnrWing - AType노출 -->
+
+
+            </div><!-- .WrapMain -->
+            <!-- //Main 영역 -->
+        </div>
+    </div>
+</center>
+
+
+</body>
+</html>
