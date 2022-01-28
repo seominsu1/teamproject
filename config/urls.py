@@ -31,7 +31,8 @@ urlpatterns = [
     path('rest_detail/<bid>', restaurant.views.rest_detail),
     path('test', restaurant.views.home),
     path('rest_list', restaurant.views.rest_list),
-    path('getNut', restaurant.views.getNut),
+    path('getNut/<str:menu>', restaurant.views.getNut),
+    path('test/<str:menu>', restaurant.views.getNuttest),
 
     path('main', app01.views.main_page),                      # 메인페이지
     path('main/<str:cate>', app01.views.main_page_with_tag),  # 메인페이지에서 카테고리 눌렀을 때

@@ -94,9 +94,28 @@ def rest_list(request):
         return render(request,'rest_list.html',{'rests':rests,'rest_menu':rest_menu})
 
 
-def getNut(request):
-    menu = request.GET.get('menu','')
+def getNuttest(request,menu):
+    return JsonResponse({'menu': menu})
+
+def getNut(request,menu):
     url = "http://openapi.foodsafetykorea.go.kr/api/fdbae01fb2e04ad49e5b/I2790/json/1/1000/DESC_KOR=" + menu
     res = requests.get(url)
     result = json.loads(res.text)
-    return render(request, 'getNut.html', {'menu':menu, 'result': result['I2790']['row'][0]})
+
+    if (result is None):
+        message=False
+        return JsonResponse({'message':message})
+    else:
+        message=True
+        result = result['I2790']['row'][0]
+        cal=result.NUTR_CONT1
+        carbohydrate=result.NUTR_CONT2
+        protein=result.NUTR_CONT3
+        fat=result.NUTR_CONT4
+        return JsonResponse({'message': message,'cal':cal,'carbohydrate':carbohydrate,
+                             'protein':protein,'fat':fat})
+
+
+
+
+    # return render(request, 'rest_detail_nut.html', {'menu':menu, 'result': result})
