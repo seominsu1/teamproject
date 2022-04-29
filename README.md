@@ -28,7 +28,7 @@
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
-주소 : 52.79.235.18/main
+AWS 주소 : 52.79.235.18/main
 
 ### Recommended Restaurants by ERICA
  
@@ -55,6 +55,9 @@
   - Mysql Workbench ERD
 - Database
   - Mysql
+- AWS
+  - EC2
+  - RDS
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 
